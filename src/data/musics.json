@@ -1,10 +1,15 @@
 [
   {
     "title": "Ancient Dragon’s Lament",
+    "artist": "Hylst using AI",
     "filename": "ancient_dragon_s_lament.mp3",
     "imageName": "ancient_dragon_s_lament.webp",
+    "durationSec": 238,
     "duration": "3:58",
     "genre": "mythic orchestral,classical,ambient",
+    "bpm": 75,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "mythic orchestral",
       "ancient dragon’s lament",
@@ -20,14 +25,23 @@
     ],
     "mood": [
       "cinematic ambient"
-    ]
+    ],
+    "usage": [
+      "rpg"
+    ],
+    "story": null
   },
   {
     "title": "Ascend To Glory",
+    "artist": "Hylst using AI",
     "filename": "ascend_to_glory.mp3",
     "imageName": "ascend_to_glory.webp",
+    "durationSec": 157,
     "duration": "2:37",
     "genre": "classical epic cinematic",
+    "bpm": 85,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "fantasy epic",
       "85 bpm",
@@ -38,14 +52,21 @@
       "grandiose",
       "uplifting"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Ascendancy",
+    "artist": "Hylst using AI",
     "filename": "ascendancy.mp3",
     "imageName": "ascendancy.webp",
+    "durationSec": 196,
     "duration": "3:16",
     "genre": "epic cinematic",
+    "bpm": 90,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "epic cinematic",
       "90 bpm",
@@ -58,14 +79,25 @@
     ],
     "mood": [
       "aventurous"
-    ]
+    ],
+    "usage": [
+      "gaming",
+      "reading",
+      "drawing"
+    ],
+    "story": null
   },
   {
     "title": "Atmospheric Spiritual Trip",
+    "artist": "Hylst using AI",
     "filename": "atmospheric_spiritual_trip.mp3",
     "imageName": "atmospheric_spiritual_trip.webp",
+    "durationSec": 224,
     "duration": "3:44",
     "genre": "trippy ambient",
+    "bpm": 70,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "trippy ambient",
       "futuristic sounds",
@@ -82,14 +114,25 @@
     "mood": [
       "zen",
       "trippy"
-    ]
+    ],
+    "usage": [
+      "psyche",
+      "trip",
+      "dream"
+    ],
+    "story": null
   },
   {
     "title": "Awakening Dreams",
+    "artist": "Hylst using AI",
     "filename": "awakening_dreams.mp3",
     "imageName": "awakening_dreams.webp",
+    "durationSec": 193,
     "duration": "3:13",
     "genre": "modern classical,tribal,song",
+    "bpm": 84,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "modern classical",
       "wide dynamic range",
@@ -101,14 +144,21 @@
       "tribal",
       "song"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Awakening Of The Ancients Ritual",
+    "artist": "Hylst using AI",
     "filename": "awakening_of_the_ancients_ritual.mp3",
     "imageName": "awakening_of_the_ancients_ritual.webp",
+    "durationSec": 159,
     "duration": "2:39",
     "genre": "mystical ambient",
+    "bpm": 70,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "primal ambient",
       "70 bpm",
@@ -120,14 +170,21 @@
       "ritualistic",
       "elemental spirit dance"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Awakening Of The Titans",
+    "artist": "Hylst using AI",
     "filename": "awakening_of_the_titan.mp3",
     "imageName": "awakening_of_the_titan.webp",
+    "durationSec": 163,
     "duration": "2:43",
     "genre": "cinematic rock",
+    "bpm": 95,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "cinematic rock",
       "95 bpm",
@@ -140,14 +197,21 @@
       "epic",
       "global power surge"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Awakening Tension",
+    "artist": "Hylst using AI",
     "filename": "awakening_tension.mp3",
     "imageName": "awakening_tension.webp",
+    "durationSec": 161,
     "duration": "2:41",
     "genre": "orchestral,cinematic",
+    "bpm": 90,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "modern cinematic",
       "90 bpm",
@@ -160,14 +224,21 @@
       "tense",
       "uplifting"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Awakening The Earth Ritual",
+    "artist": "Hylst using AI",
     "filename": "awakening_the_earth_ritual.mp3",
     "imageName": "awakening_the_earth_ritual.webp",
+    "durationSec": 160,
     "duration": "2:40",
     "genre": "mystical ambient",
+    "bpm": 70,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "primal ambient",
       "70 bpm",
@@ -179,14 +250,21 @@
       "ritualistic",
       "elemental spirit dance"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Azul Dream",
+    "artist": "Hylst using AI",
     "filename": "azul_dream.mp3",
     "imageName": "azul_dream.webp",
+    "durationSec": 112,
     "duration": "1:52",
     "genre": "relaxed tropical",
+    "bpm": 95,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "relaxed tropical",
       "95 bpm",
@@ -199,14 +277,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "azul"
+    ],
+    "story": null
   },
   {
     "title": "Balade De Pipin",
+    "artist": "Hylst",
     "filename": "balade_de_pipin.mp3",
     "imageName": "balade_de_pipin.webp",
+    "durationSec": 231,
     "duration": "3:51",
     "genre": "dwarven forge ambient",
+    "bpm": null,
+    "year": "2024",
+    "bitrate": 243,
     "keywords": [
       "flute",
       "melody",
@@ -219,14 +306,23 @@
     ],
     "mood": [
       "dreamy"
-    ]
+    ],
+    "usage": [
+      "dreamy"
+    ],
+    "story": null
   },
   {
     "title": "Baroque Elegance In Twilight",
+    "artist": "Hylst using AI",
     "filename": "baroque_elegance_in_twilight.mp3",
     "imageName": "baroque_elegance_in_twilight.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "classical,baroque",
+    "bpm": 85,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "baroque",
       "harpsichord",
@@ -240,14 +336,23 @@
     ],
     "mood": [
       "ambient"
-    ]
+    ],
+    "usage": [
+      "ambient"
+    ],
+    "story": null
   },
   {
     "title": "Battle Of Minds",
+    "artist": "Hylst using AI",
     "filename": "battle_of_minds.mp3",
     "imageName": "battle_of_minds.webp",
+    "durationSec": 84,
     "duration": "1:24",
     "genre": "classical minimalist",
+    "bpm": 70,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "classical minimalist",
       "70 bpm",
@@ -260,14 +365,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "chess"
+    ],
+    "story": null
   },
   {
     "title": "Blessed Soldiers And Dead Heroes",
+    "artist": "Hylst using AI",
     "filename": "blessed_soldiers_and_dead_heroes.mp3",
     "imageName": "blessed_soldiers_and_dead_heroes.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "epic orchestral",
+    "bpm": 130,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "epic orchestral",
       "130 bpm",
@@ -278,14 +392,25 @@
     ],
     "mood": [
       "heroic"
-    ]
+    ],
+    "usage": [
+      "rpg",
+      "courage",
+      "imagination"
+    ],
+    "story": null
   },
   {
     "title": "Blood Moon Ritual",
+    "artist": "Hylst using AI",
     "filename": "blood_moon_ritual.mp3",
     "imageName": "blood_moon_ritual.webp",
+    "durationSec": 240,
     "duration": "4:00",
     "genre": "dark choir,esoteric ambient",
+    "bpm": null,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "dark choir",
       "orchestral ambient",
@@ -299,14 +424,26 @@
       "divine",
       "dark",
       "mystical"
-    ]
+    ],
+    "usage": [
+      "rpg",
+      "ambient",
+      "play",
+      "create"
+    ],
+    "story": null
   },
   {
     "title": "Brewmasters' Dance",
+    "artist": "Hylst using AI",
     "filename": "brewmasters_dance.mp3",
     "imageName": "brewmasters_dance.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "irish folk",
+    "bpm": 120,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "irish folk",
       "upbeat folk",
@@ -322,14 +459,25 @@
     ],
     "mood": [
       "festive"
-    ]
+    ],
+    "usage": [
+      "brewing",
+      "traditions",
+      "dance"
+    ],
+    "story": null
   },
   {
     "title": "Chasing Horizons",
+    "artist": "Hylst using AI",
     "filename": "chasing_horizons.mp3",
     "imageName": "chasing_horizons.webp",
+    "durationSec": 293,
     "duration": "4:53",
     "genre": "aventure soundtrack",
+    "bpm": 88,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "adventure soundtrack",
       "88 bpm",
@@ -343,14 +491,24 @@
     "mood": [
       "cinematic",
       "soundtrack"
-    ]
+    ],
+    "usage": [
+      "cinematic",
+      "soundtrack"
+    ],
+    "story": null
   },
   {
     "title": "Chasing The Horizon",
+    "artist": "Hylst using AI",
     "filename": "chasing_the_horizon.mp3",
     "imageName": "chasing_the_horizon.webp",
+    "durationSec": 283,
     "duration": "4:43",
     "genre": "swashbuckling orchestral",
+    "bpm": 100,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "swashbuckling orchestral",
       "ocean noise",
@@ -368,14 +526,25 @@
     ],
     "mood": [
       "aventurous"
-    ]
+    ],
+    "usage": [
+      "gaming",
+      "reading",
+      "drawing"
+    ],
+    "story": null
   },
   {
     "title": "Checkmate Cadence",
+    "artist": "Hylst using AI",
     "filename": "checkmate_cadence.mp3",
     "imageName": "checkmate_cadence.webp",
+    "durationSec": 240,
     "duration": "4:00",
     "genre": "orchestral chamber",
+    "bpm": 72,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "orchestral chamber",
       "72 bpm",
@@ -388,14 +557,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "chess"
+    ],
+    "story": null
   },
   {
     "title": "Cinematic Dreams",
+    "artist": "Hylst using AI",
     "filename": "cinematic_dreams.mp3",
     "imageName": "cinematic_dreams.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "cinematic ambient",
+    "bpm": 92,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "soundtrack fusion",
       "92 bpm",
@@ -410,14 +588,25 @@
     ],
     "mood": [
       "aventurous"
-    ]
+    ],
+    "usage": [
+      "gaming",
+      "reading",
+      "drawing"
+    ],
+    "story": null
   },
   {
     "title": "Civilization Symphony",
+    "artist": "Hylst using AI",
     "filename": "civilization_symphony.mp3",
     "imageName": "civilization_symphony.webp",
+    "durationSec": 108,
     "duration": "1:48",
     "genre": "grandiose orchestral",
+    "bpm": 108,
+    "year": "2024",
+    "bitrate": 256,
     "keywords": [
       "grandiose orchestral",
       "108 bpm",
@@ -429,14 +618,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "7 wonders"
+    ],
+    "story": null
   },
   {
     "title": "Dark Suspenseful Drama",
+    "artist": "Hylst using AI",
     "filename": "dark_suspenseful_drama.mp3",
     "imageName": "dark_suspenseful_drama.webp",
+    "durationSec": 292,
     "duration": "4:52",
     "genre": "dramatic classical ambient",
+    "bpm": 95,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "dramatic classical ambient",
       "95 bpm",
@@ -447,14 +645,25 @@
     ],
     "mood": [
       "drama"
-    ]
+    ],
+    "usage": [
+      "film",
+      "rpg",
+      "drama ambient"
+    ],
+    "story": null
   },
   {
     "title": "Darkness Claims Its Throne",
+    "artist": "Hylst using AI",
     "filename": "darkness_claims_its_throne.mp3",
     "imageName": "darkness_claims_its_throne.webp",
+    "durationSec": 194,
     "duration": "3:14",
     "genre": "dark opera,symphonic metal,aria",
+    "bpm": 70,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "dark opera",
       "symphonic metal",
@@ -472,14 +681,25 @@
       "grand",
       "chaos",
       "rebel"
-    ]
+    ],
+    "usage": [
+      "show",
+      "imagine",
+      "ambient"
+    ],
+    "story": null
   },
   {
     "title": "Dépasser Les Frontières Et Au Delà",
+    "artist": "Hylst using AI",
     "filename": "depasser_les_frontieres_et_au_dela.mp3",
     "imageName": "depasser_les_frontieres_et_au_dela.webp",
+    "durationSec": 223,
     "duration": "3:43",
     "genre": "électronique sombre",
+    "bpm": 90,
+    "year": "2024",
+    "bitrate": 243,
     "keywords": [
       "électronique sombre",
       "song",
@@ -498,14 +718,24 @@
     "mood": [
       "fantasy",
       "epic"
-    ]
+    ],
+    "usage": [
+      "fantasy",
+      "epic"
+    ],
+    "story": null
   },
   {
     "title": "Dignified Existence",
+    "artist": "Hylst using AI",
     "filename": "dignified_existence.mp3",
     "imageName": "dignified_existence.webp",
+    "durationSec": 163,
     "duration": "2:43",
     "genre": "cinematic,classical,epic,",
+    "bpm": 85,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "regal classical",
       "film score",
@@ -522,14 +752,23 @@
     ],
     "mood": [
       "cinematic ambient"
-    ]
+    ],
+    "usage": [
+      "rpg"
+    ],
+    "story": null
   },
   {
     "title": "Dreams Of Prowess",
+    "artist": "Hylst using AI",
     "filename": "dreams_of_prowess.mp3",
     "imageName": "dreams_of_prowess.webp",
+    "durationSec": 160,
     "duration": "2:40",
     "genre": "classical,epic",
+    "bpm": 82,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "classical",
       "romantic",
@@ -540,14 +779,21 @@
       "dramatic arc",
       "82bpm"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Dreamy Aria",
+    "artist": "Hylst using AI",
     "filename": "dreamy_aria.mp3",
     "imageName": "dreamy_aria.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "new age,aria",
+    "bpm": null,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "ambient",
       "aria",
@@ -564,14 +810,25 @@
     "mood": [
       "esoteric",
       "calm"
-    ]
+    ],
+    "usage": [
+      "meditative",
+      "rpg",
+      "hf"
+    ],
+    "story": null
   },
   {
     "title": "Drifting In The Ethereal",
+    "artist": "Hylst using AI",
     "filename": "drifting_in_the_ethereal.mp3",
     "imageName": "drifting_in_the_ethereal.webp",
+    "durationSec": 188,
     "duration": "3:08",
     "genre": "dreampop",
+    "bpm": 90,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "dreampop",
       "ethereal guitars",
@@ -584,14 +841,21 @@
       "calming",
       "90bpm"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Drifting Through Dreams",
+    "artist": "Hylst using AI",
     "filename": "drifting_through_dreams.mp3",
     "imageName": "drifting_through_dreams.webp",
+    "durationSec": 161,
     "duration": "2:41",
     "genre": "dreampop",
+    "bpm": 90,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "dreampop",
       "ethereal guitars",
@@ -604,14 +868,21 @@
       "calming",
       "90bpm"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Echoes Of The Forgotten",
+    "artist": "Hylst using AI",
     "filename": "echoes_of_the_forgotten.mp3",
     "imageName": "echoes_of_the_forgotten.webp",
+    "durationSec": 187,
     "duration": "3:07",
     "genre": "dark ambient",
+    "bpm": 84,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "western gothic",
       "84 bpm",
@@ -623,14 +894,21 @@
       "minor scale",
       "moody"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Eclipse Of Fury",
+    "artist": "Hylst using AI",
     "filename": "eclipse_of_fury.mp3",
     "imageName": "eclipse_of_fury.webp",
+    "durationSec": 131,
     "duration": "2:11",
     "genre": "heavy metal",
+    "bpm": 120,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "heavy metal",
       "minor scale",
@@ -650,14 +928,21 @@
       "1980s",
       "instrumental"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Elegant Reverie",
+    "artist": "Hylst using AI",
     "filename": "elegant_reverie.mp3",
     "imageName": "elegant_reverie.webp",
+    "durationSec": 190,
     "duration": "3:10",
     "genre": "renaissance chamber,classical",
+    "bpm": 75,
+    "year": "2025",
+    "bitrate": 245,
     "keywords": [
       "renaissance chamber",
       "75 bpm",
@@ -670,14 +955,25 @@
     "mood": [
       "elegant",
       "grace"
-    ]
+    ],
+    "usage": [
+      "playing",
+      "dance",
+      "think"
+    ],
+    "story": null
   },
   {
     "title": "Elysian Harmony",
+    "artist": "Hylst using AI",
     "filename": "elysian_harmony.mp3",
     "imageName": "elysian_harmony.webp",
+    "durationSec": 162,
     "duration": "2:42",
     "genre": "classical,baroque,romantic",
+    "bpm": 120,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "classical",
       "baroque",
@@ -689,14 +985,21 @@
       "refined",
       "120bpm"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Elysian Meadows",
+    "artist": "Hylst using AI",
     "filename": "elysian_meadows.mp3",
     "imageName": "elysian_meadows.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "ambient folk,pastoral",
+    "bpm": 80,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "classical folk",
       "countryside",
@@ -716,14 +1019,25 @@
     ],
     "mood": [
       "aventurous"
-    ]
+    ],
+    "usage": [
+      "travel",
+      "rpg",
+      "relax"
+    ],
+    "story": null
   },
   {
     "title": "Empire's Fury",
+    "artist": "Hylst using AI",
     "filename": "empire_s_fury.mp3",
     "imageName": "empire_s_fury.webp",
+    "durationSec": 106,
     "duration": "1:46",
     "genre": "dramatic orchestral",
+    "bpm": 118,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "dramatic orchestral",
       "118 bpm",
@@ -738,14 +1052,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "board game"
+    ],
+    "story": null
   },
   {
     "title": "Enchanted Quartet",
+    "artist": "Hylst using AI",
     "filename": "enchanted_quartet.mp3",
     "imageName": "enchanted_quartet.webp",
+    "durationSec": 197,
     "duration": "3:17",
     "genre": "chamber music",
+    "bpm": null,
+    "year": "2024",
+    "bitrate": 256,
     "keywords": [
       "chamber music",
       "classical",
@@ -761,14 +1084,23 @@
       "classical",
       "elegant",
       "vintage"
-    ]
+    ],
+    "usage": [
+      "classy albient"
+    ],
+    "story": null
   },
   {
     "title": "Esoteric Procession",
+    "artist": "Hylst using AI",
     "filename": "esoteric_procession.mp3",
     "imageName": "esoteric_procession.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "mystical ambient",
+    "bpm": 80,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "mystical ambient",
       "melancholic",
@@ -780,14 +1112,24 @@
     ],
     "mood": [
       "dreamy"
-    ]
+    ],
+    "usage": [
+      "ambient",
+      "rpg"
+    ],
+    "story": null
   },
   {
     "title": "Eternal Horizon",
+    "artist": "Hylst using AI",
     "filename": "eternal_horizon.mp3",
     "imageName": "eternal_horizon.webp",
+    "durationSec": 227,
     "duration": "3:47",
     "genre": "space orchestral",
+    "bpm": 90,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "space orchestral",
       "90 bpm",
@@ -803,14 +1145,24 @@
     "mood": [
       "cinematic",
       "soundtrack"
-    ]
+    ],
+    "usage": [
+      "cinematic",
+      "soundtrack"
+    ],
+    "story": null
   },
   {
     "title": "Eternal Reverence",
+    "artist": "Hylst using AI",
     "filename": "eternal_reverence.mp3",
     "imageName": "eternal_reverence.webp",
+    "durationSec": 161,
     "duration": "2:41",
     "genre": "epic orchestral",
+    "bpm": 72,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "epic choral",
       "72 bpm",
@@ -823,14 +1175,21 @@
       "solemn",
       "grand"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Fantasy Fanfare",
+    "artist": "Hylst using AI",
     "filename": "fantasy_fanfare.mp3",
     "imageName": "fantasy_fanfare.webp",
+    "durationSec": 73,
     "duration": "1:13",
     "genre": "lively chamber music",
+    "bpm": 90,
+    "year": "2025",
+    "bitrate": 241,
     "keywords": [
       "lively chamber music",
       "90 bpm",
@@ -843,14 +1202,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "small world"
+    ],
+    "story": null
   },
   {
     "title": "Fantasy Frolic",
+    "artist": "Hylst using AI",
     "filename": "fantasy_frolic.mp3",
     "imageName": "fantasy_frolic.webp",
+    "durationSec": 62,
     "duration": "1:02",
     "genre": "playful orchestral",
+    "bpm": 90,
+    "year": "2025",
+    "bitrate": 239,
     "keywords": [
       "playful orchestral",
       "90 bpm",
@@ -863,14 +1231,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "small world"
+    ],
+    "story": null
   },
   {
     "title": "Félicité Retrouvée",
+    "artist": "Hylst using AI",
     "filename": "felicite_retrouvee.mp3",
     "imageName": "felicite_retrouvee.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "western classical",
+    "bpm": null,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "chamber music",
       "orchestral classical",
@@ -883,14 +1260,25 @@
     ],
     "mood": [
       "graceful"
-    ]
+    ],
+    "usage": [
+      "ambient",
+      "moody",
+      "classical"
+    ],
+    "story": null
   },
   {
     "title": "Fury Of The North",
+    "artist": "Hylst using AI",
     "filename": "fury_of_the_north.mp3",
     "imageName": "fury_of_the_north.webp",
+    "durationSec": 196,
     "duration": "3:16",
     "genre": "dynamic orchestral",
+    "bpm": 128,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "dynamic orchestral",
       "128 bpm",
@@ -904,14 +1292,24 @@
       "action",
       "cinema",
       "divine"
-    ]
+    ],
+    "usage": [
+      "rpg",
+      "imagination"
+    ],
+    "story": null
   },
   {
     "title": "Gentle Reverie",
+    "artist": "Hylst using AI",
     "filename": "gentle_reverie.mp3",
     "imageName": "gentle_reverie.webp",
+    "durationSec": 573,
     "duration": "9:33",
     "genre": "meditation",
+    "bpm": 70,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "calming ambient",
       "meditative",
@@ -923,14 +1321,23 @@
     ],
     "mood": [
       "zen"
-    ]
+    ],
+    "usage": [
+      "meditation"
+    ],
+    "story": null
   },
   {
     "title": "Harmony Of Nature",
+    "artist": "Hylst using AI",
     "filename": "harmony_of_nature.mp3",
     "imageName": "harmony_of_nature.webp",
+    "durationSec": 196,
     "duration": "3:16",
     "genre": "baroque classical",
+    "bpm": 78,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "baroque classical",
       "ambient orchestral",
@@ -945,14 +1352,25 @@
     ],
     "mood": [
       "grand"
-    ]
+    ],
+    "usage": [
+      "uplift",
+      "cinematic",
+      "ambient"
+    ],
+    "story": null
   },
   {
     "title": "Haunted Cello Chamber",
+    "artist": "Hylst using AI",
     "filename": "haunted_cello_chamber.mp3",
     "imageName": "haunted_cello_chamber.webp",
+    "durationSec": 161,
     "duration": "2:41",
     "genre": "gothic chamber",
+    "bpm": 58,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "gothic chamber",
       "58 bpm",
@@ -964,14 +1382,21 @@
       "arcane",
       "secrets"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Haunted Manor",
+    "artist": "Hylst using AI",
     "filename": "haunted_manor.mp3",
     "imageName": "haunted_manor.webp",
+    "durationSec": 91,
     "duration": "1:31",
     "genre": "haunting piano melody",
+    "bpm": null,
+    "year": "2024",
+    "bitrate": 320,
     "keywords": [
       "haunted manor",
       "bpm variable",
@@ -992,14 +1417,23 @@
     ],
     "mood": [
       "dark fantasy rpg ambient"
-    ]
+    ],
+    "usage": [
+      "dark fantasy rpg ambient"
+    ],
+    "story": null
   },
   {
     "title": "Heureux Dénouement",
+    "artist": "Hylst using AI",
     "filename": "heureux_denouement.mp3",
     "imageName": "heureux_denouement.webp",
+    "durationSec": 319,
     "duration": "5:19",
     "genre": "warmful melancolic brass piano melody",
+    "bpm": 70,
+    "year": "2024",
+    "bitrate": 192,
     "keywords": [
       "bpm100",
       "keygm",
@@ -1015,14 +1449,23 @@
     ],
     "mood": [
       "dark fantasy rpg ambient"
-    ]
+    ],
+    "usage": [
+      "dark fantasy rpg ambient"
+    ],
+    "story": null
   },
   {
     "title": "In The Silence Of Twilight",
+    "artist": "Hylst using AI",
     "filename": "in_the_silence_of_twilight.mp3",
     "imageName": "in_the_silence_of_twilight.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "sophisticated orchestral song",
+    "bpm": 93,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "sophisticated orchestral",
       "song",
@@ -1036,14 +1479,24 @@
     "mood": [
       "elegant",
       "serene"
-    ]
+    ],
+    "usage": [
+      "chill",
+      "sing"
+    ],
+    "story": null
   },
   {
     "title": "Journey Into A Wilderness",
+    "artist": "Hylst using AI",
     "filename": "journey_into_a_wilderness.mp3",
     "imageName": "journey_into_a_wilderness.webp",
+    "durationSec": 145,
     "duration": "2:25",
     "genre": "action cinematic",
+    "bpm": 100,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "action cinematic",
       "100 bpm",
@@ -1059,14 +1512,23 @@
     ],
     "mood": [
       "action"
-    ]
+    ],
+    "usage": [
+      "ambient"
+    ],
+    "story": null
   },
   {
     "title": "Knightly Prowess",
+    "artist": "Hylst using AI",
     "filename": "knightly_prowess.mp3",
     "imageName": "knightly_prowess.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "baroque classical",
+    "bpm": 82,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "classical",
       "romantic",
@@ -1077,14 +1539,21 @@
       "dramatic arc",
       "82bpm"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "L'atelier De L'artisan",
+    "artist": "Hylst using AI",
     "filename": "l_atelier_de_l_artisan.mp3",
     "imageName": "l_atelier_de_l_artisan.webp",
+    "durationSec": 361,
     "duration": "6:01",
     "genre": "dwarven forge ambient",
+    "bpm": null,
+    "year": "2024",
+    "bitrate": 245,
     "keywords": [
       "flute",
       "melody",
@@ -1097,14 +1566,23 @@
     ],
     "mood": [
       "dreamy"
-    ]
+    ],
+    "usage": [
+      "dreamy"
+    ],
+    "story": null
   },
   {
     "title": "L'éveil Des Lycanthropes",
+    "artist": "Hylst using AI",
     "filename": "l_eveil_des_lycanthropes.mp3",
     "imageName": "l_eveil_des_lycanthropes.webp",
+    "durationSec": 146,
     "duration": "2:26",
     "genre": "esoteric choir,haunting orchestral",
+    "bpm": null,
+    "year": "2024",
+    "bitrate": 256,
     "keywords": [
       "blood moon ritual",
       "bpm 95",
@@ -1125,36 +1603,23 @@
     ],
     "mood": [
       "dark fantasy rpg ambient"
-    ]
-  },
-  {
-    "title": "L’envol Du Dernier Phoenix",
-    "filename": "l’envol_du_dernier_phoenix.mp3",
-    "imageName": "l’envol_du_dernier_phoenix.webp",
-    "duration": "3:18",
-    "genre": "epic orchestral",
-    "keywords": [
-      "epic orchestral",
-      "110 bpm",
-      "powerful male & female vocals",
-      "cinematic brass",
-      "sweeping strings",
-      "thundering percussion",
-      "mystical choirs",
-      "dramatic build-up",
-      "heroic yet tragic tone"
     ],
-    "mood": [
-      "imaginative",
-      "epic"
-    ]
+    "usage": [
+      "dark fantasy rpg ambient"
+    ],
+    "story": null
   },
   {
     "title": "La Chanson Des Gobelins",
+    "artist": "Hylst using AI",
     "filename": "la_chanson_des_gobelins.mp3",
     "imageName": "la_chanson_des_gobelins.webp",
+    "durationSec": 139,
     "duration": "2:19",
     "genre": "gritty fantasy",
+    "bpm": 110,
+    "year": "2024",
+    "bitrate": 192,
     "keywords": [
       "gritty fantasy",
       "song",
@@ -1170,14 +1635,24 @@
     "mood": [
       "fantasy",
       "epic"
-    ]
+    ],
+    "usage": [
+      "fantasy",
+      "epic"
+    ],
+    "story": null
   },
   {
     "title": "La Halle De Guilde Dorée",
+    "artist": "Hylst using AI",
     "filename": "la_halle_de_guilde_doree.mp3",
     "imageName": "la_halle_de_guilde_doree.webp",
+    "durationSec": 144,
     "duration": "2:24",
     "genre": "elegant classical",
+    "bpm": 100,
+    "year": "2024",
+    "bitrate": 256,
     "keywords": [
       "elegant classical",
       "100 bpm",
@@ -1193,14 +1668,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "splendor"
+    ],
+    "story": null
   },
   {
     "title": "La Marche Des Corps Silencieux",
+    "artist": "Hylst using AI",
     "filename": "la_marche_des_corps_silencieux.mp3",
     "imageName": "la_marche_des_corps_silencieux.webp",
+    "durationSec": 155,
     "duration": "2:35",
     "genre": "ominous epic ambiant,zombies breath and lament",
+    "bpm": null,
+    "year": "2024",
+    "bitrate": 192,
     "keywords": [
       "dragging footsteps",
       "ominous drones",
@@ -1218,14 +1702,23 @@
     ],
     "mood": [
       "dark fantasy rpg ambient"
-    ]
+    ],
+    "usage": [
+      "dark fantasy rpg ambient"
+    ],
+    "story": null
   },
   {
     "title": "Le Cantique Des Profondeurs",
+    "artist": "Hylst using AI",
     "filename": "le_cantique_des_profondeurs.mp3",
     "imageName": "le_cantique_des_profondeurs.webp",
+    "durationSec": 161,
     "duration": "2:41",
     "genre": "haunting choral horror soundtrack",
+    "bpm": 65,
+    "year": "2024",
+    "bitrate": 256,
     "keywords": [
       "haunting choral horror soundtrack",
       "song",
@@ -1242,14 +1735,23 @@
     ],
     "mood": [
       "dark"
-    ]
+    ],
+    "usage": [
+      "ambient"
+    ],
+    "story": null
   },
   {
     "title": "Legends Rise Together",
+    "artist": "Hylst using AI",
     "filename": "legends_rise_together.mp3",
     "imageName": "legends_rise_together.webp",
+    "durationSec": 196,
     "duration": "3:16",
     "genre": "symphonic metal,epic",
+    "bpm": 100,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "superhero epic",
       "100 bpm",
@@ -1262,14 +1764,21 @@
       "grand",
       "empowering"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Majestic Underwater Reflections",
+    "artist": "Hylst using AI",
     "filename": "majestic_underwater_reflections.mp3",
     "imageName": "majestic_underwater_reflections.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "new age",
+    "bpm": 88,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "new age",
       "underwater",
@@ -1289,14 +1798,26 @@
     "mood": [
       "dreamy",
       "meditative"
-    ]
+    ],
+    "usage": [
+      "ambient",
+      "trip",
+      "deconnection",
+      "rpg"
+    ],
+    "story": null
   },
   {
     "title": "Market Day Revelry",
+    "artist": "Hylst using AI",
     "filename": "market_day_revelry.mp3",
     "imageName": "market_day_revelry.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "folk medieval",
+    "bpm": 110,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "folk medieval",
       "110 bpm",
@@ -1307,14 +1828,25 @@
     ],
     "mood": [
       "festive"
-    ]
+    ],
+    "usage": [
+      "rpg",
+      "ambient",
+      "folk"
+    ],
+    "story": null
   },
   {
     "title": "Mélancolie Mystique",
+    "artist": "Hylst using AI",
     "filename": "melancolie_mystique.mp3",
     "imageName": "melancolie_mystique.webp",
+    "durationSec": 234,
     "duration": "3:54",
     "genre": "mystical",
+    "bpm": 65,
+    "year": "2024",
+    "bitrate": 247,
     "keywords": [
       "65 bpm",
       "song",
@@ -1328,14 +1860,23 @@
     ],
     "mood": [
       "mystical"
-    ]
+    ],
+    "usage": [
+      "mystical"
+    ],
+    "story": null
   },
   {
     "title": "Merchant's Harmony",
+    "artist": "Hylst using AI",
     "filename": "merchant_s_harmony.mp3",
     "imageName": "merchant_s_harmony.webp",
+    "durationSec": 248,
     "duration": "4:08",
     "genre": "classical instrumental",
+    "bpm": 100,
+    "year": "2024",
+    "bitrate": 256,
     "keywords": [
       "classical instrumental",
       "100 bpm",
@@ -1349,14 +1890,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "splendor"
+    ],
+    "story": null
   },
   {
     "title": "Mind's Duel",
+    "artist": "Hylst using AI",
     "filename": "mind_s_duel.mp3",
     "imageName": "mind_s_duel.webp",
+    "durationSec": 133,
     "duration": "2:13",
     "genre": "minimalist classical",
+    "bpm": 68,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "minimalist classical",
       "68 bpm",
@@ -1369,14 +1919,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "chess"
+    ],
+    "story": null
   },
   {
     "title": "Miniature Majesty",
+    "artist": "Hylst using AI",
     "filename": "miniature_majesty.mp3",
     "imageName": "miniature_majesty.webp",
+    "durationSec": 69,
     "duration": "1:09",
     "genre": "cheerful folk",
+    "bpm": 88,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "cheerful folk",
       "88 bpm",
@@ -1389,14 +1948,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "small world"
+    ],
+    "story": null
   },
   {
     "title": "Miniature Medley",
+    "artist": "Hylst using AI",
     "filename": "miniature_medley.mp3",
     "imageName": "miniature_medley.webp",
+    "durationSec": 117,
     "duration": "1:57",
     "genre": "upbeat orchestral",
+    "bpm": 90,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "upbeat orchestral",
       "90 bpm",
@@ -1408,14 +1976,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "small world"
+    ],
+    "story": null
   },
   {
     "title": "New Age Dark Meditation",
+    "artist": "Hylst using AI",
     "filename": "new_age_dark_meditation.mp3",
     "imageName": "new_age_dark_meditation.webp",
+    "durationSec": 229,
     "duration": "3:49",
     "genre": "tibetan new age,ambient",
+    "bpm": 95,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "tibetan new age",
       "ambient acoustic",
@@ -1427,14 +2004,25 @@
     ],
     "mood": [
       "serene"
-    ]
+    ],
+    "usage": [
+      "sleep",
+      "trip",
+      "meditation"
+    ],
+    "story": null
   },
   {
     "title": "Noble Ascendancy",
+    "artist": "Hylst using AI",
     "filename": "noble_ascendancy.mp3",
     "imageName": "noble_ascendancy.webp",
+    "durationSec": 162,
     "duration": "2:42",
     "genre": "classical,cinematic,choir",
+    "bpm": 85,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "regal classical",
       "choir",
@@ -1454,14 +2042,23 @@
     ],
     "mood": [
       "cinematic ambient"
-    ]
+    ],
+    "usage": [
+      "rpg"
+    ],
+    "story": null
   },
   {
     "title": "Peaceful & Graceful Moments",
+    "artist": "Hylst using AI",
     "filename": "peaceful_&_graceful_moments.mp3",
     "imageName": "peaceful_&_graceful_moments.webp",
+    "durationSec": 196,
     "duration": "3:16",
     "genre": "modern classical,melancholic",
+    "bpm": 80,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "modern classical",
       "melancholic",
@@ -1475,14 +2072,24 @@
     "mood": [
       "elegant",
       "peaceful"
-    ]
+    ],
+    "usage": [
+      "lounge",
+      "chill"
+    ],
+    "story": null
   },
   {
     "title": "Peaceful Citadel",
+    "artist": "Hylst using AI",
     "filename": "peaceful_citadel.mp3",
     "imageName": "peaceful_citadel.webp",
+    "durationSec": 125,
     "duration": "2:05",
     "genre": "piano ambient",
+    "bpm": 98,
+    "year": "2024",
+    "bitrate": 256,
     "keywords": [
       "classical fusion",
       "98 bpm",
@@ -1495,14 +2102,25 @@
     "mood": [
       "sensible",
       "elegant"
-    ]
+    ],
+    "usage": [
+      "citadels",
+      "rpg",
+      "game"
+    ],
+    "story": null
   },
   {
     "title": "Quest For The Unknown",
+    "artist": "Hylst using AI",
     "filename": "quest_for_the_unknown.mp3",
     "imageName": "quest_for_the_unknown.webp",
+    "durationSec": 182,
     "duration": "3:02",
     "genre": "epic cinematic orchestral",
+    "bpm": 88,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "epic cinematic orchestral",
       "aventure",
@@ -1520,14 +2138,25 @@
     ],
     "mood": [
       "aventurous"
-    ]
+    ],
+    "usage": [
+      "gaming",
+      "reading",
+      "drawing"
+    ],
+    "story": null
   },
   {
     "title": "Realm Rhythms",
+    "artist": "Hylst using AI",
     "filename": "realm_rhythms.mp3",
     "imageName": "realm_rhythms.webp",
+    "durationSec": 62,
     "duration": "1:02",
     "genre": "lively chamber music",
+    "bpm": 90,
+    "year": "2025",
+    "bitrate": 245,
     "keywords": [
       "lively chamber music",
       "90 bpm",
@@ -1540,14 +2169,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "small world"
+    ],
+    "story": null
   },
   {
     "title": "Realm Rumble",
+    "artist": "Hylst using AI",
     "filename": "realm_rumble.mp3",
     "imageName": "realm_rumble.webp",
+    "durationSec": 76,
     "duration": "1:16",
     "genre": "playful orchestral",
+    "bpm": 90,
+    "year": "2025",
+    "bitrate": 241,
     "keywords": [
       "playful orchestral",
       "90 bpm",
@@ -1560,14 +2198,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "small world"
+    ],
+    "story": null
   },
   {
     "title": "Resilience In Battle",
+    "artist": "Hylst using AI",
     "filename": "resilience_in_battle.mp3",
     "imageName": "resilience_in_battle.webp",
+    "durationSec": 196,
     "duration": "3:16",
     "genre": "martial orchestral",
+    "bpm": 100,
+    "year": "2024",
+    "bitrate": 256,
     "keywords": [
       "martial orchestral",
       "aggressive",
@@ -1582,14 +2229,23 @@
     ],
     "mood": [
       "action"
-    ]
+    ],
+    "usage": [
+      "action"
+    ],
+    "story": null
   },
   {
     "title": "Resonant Moods",
+    "artist": "Hylst using AI",
     "filename": "resonant_moods.mp3",
     "imageName": "resonant_moods.webp",
+    "durationSec": 230,
     "duration": "3:50",
     "genre": "chamber music",
+    "bpm": null,
+    "year": "2024",
+    "bitrate": 240,
     "keywords": [
       "chamber music",
       "classical",
@@ -1604,14 +2260,23 @@
       "classical",
       "elegant",
       "vintage"
-    ]
+    ],
+    "usage": [
+      "classy albient"
+    ],
+    "story": null
   },
   {
     "title": "Rising Conflict",
+    "artist": "Hylst using AI",
     "filename": "rising_conflict.mp3",
     "imageName": "rising_conflict.webp",
+    "durationSec": 196,
     "duration": "3:16",
     "genre": "grim orchestral",
+    "bpm": 132,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "grim orchestral",
       "132 bpm",
@@ -1624,14 +2289,24 @@
     "mood": [
       "action",
       "cinema"
-    ]
+    ],
+    "usage": [
+      "rpg",
+      "imagination"
+    ],
+    "story": null
   },
   {
     "title": "Rising Together",
+    "artist": "Hylst using AI",
     "filename": "rising_together.mp3",
     "imageName": "rising_together.webp",
+    "durationSec": 162,
     "duration": "2:42",
     "genre": "epic orchestral",
+    "bpm": 90,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "superhero orchestral",
       "90 bpm",
@@ -1645,14 +2320,26 @@
     "mood": [
       "euphoric",
       "enthusiastic"
-    ]
+    ],
+    "usage": [
+      "rpg",
+      "uplifting",
+      "creation",
+      "courage"
+    ],
+    "story": null
   },
   {
     "title": "Romance Tragique",
+    "artist": "Hylst using AI",
     "filename": "romance_tragique.mp3",
     "imageName": "romance_tragique.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "western classical music,minor,orchestral,romanticism,melancolic",
+    "bpm": null,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "western classical music",
       "minor",
@@ -1664,14 +2351,24 @@
       "sad",
       "melancolic",
       "romantic"
-    ]
+    ],
+    "usage": [
+      "classical",
+      "emo"
+    ],
+    "story": null
   },
   {
     "title": "Shadows Of Dread",
+    "artist": "Hylst using AI",
     "filename": "shadows_of_dread.mp3",
     "imageName": "shadows_of_dread.webp",
+    "durationSec": 162,
     "duration": "2:42",
     "genre": "dark orchestral,ambient",
+    "bpm": 65,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "dark orchestral",
       "65 bpm",
@@ -1684,14 +2381,21 @@
       "foreboding",
       "disturbing"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Silent Conquest",
+    "artist": "Hylst using AI",
     "filename": "silent_conquest.mp3",
     "imageName": "silent_conquest.webp",
+    "durationSec": 357,
     "duration": "5:57",
     "genre": "ambient classical",
+    "bpm": 72,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "ambient classical",
       "72 bpm",
@@ -1704,14 +2408,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "chess"
+    ],
+    "story": null
   },
   {
     "title": "Sirenes Echoes",
+    "artist": "Hylst using AI",
     "filename": "sirenes_echoes.mp3",
     "imageName": "sirenes_echoes.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "orchestral fusion,calm piano,melancolic cello",
+    "bpm": 88,
+    "year": "2025",
+    "bitrate": 236,
     "keywords": [
       "orchestral fusion",
       "88bpm",
@@ -1733,14 +2446,27 @@
       "melancolic",
       "dreamy",
       "thoughtful"
-    ]
+    ],
+    "usage": [
+      "trip",
+      "inspirational",
+      "chill",
+      "relax",
+      "rpg"
+    ],
+    "story": null
   },
   {
     "title": "Splendor Serenade",
+    "artist": "Hylst using AI",
     "filename": "splendor_serenade.mp3",
     "imageName": "splendor_serenade.webp",
+    "durationSec": 163,
     "duration": "2:43",
     "genre": "graceful orchestral",
+    "bpm": 98,
+    "year": "2024",
+    "bitrate": 256,
     "keywords": [
       "graceful orchestral",
       "98 bpm",
@@ -1755,14 +2481,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "splendor"
+    ],
+    "story": null
   },
   {
     "title": "Strategy Sonata",
+    "artist": "Hylst using AI",
     "filename": "strategy_sonata.mp3",
     "imageName": "strategy_sonata.webp",
+    "durationSec": 365,
     "duration": "6:05",
     "genre": "elegant classical",
+    "bpm": 70,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "elegant classical",
       "70 bpm",
@@ -1775,14 +2510,23 @@
     "mood": [
       "play",
       "create"
-    ]
+    ],
+    "usage": [
+      "chess"
+    ],
+    "story": null
   },
   {
     "title": "Symphony Of Mayhem",
+    "artist": "Hylst using AI",
     "filename": "symphony_of_mayhem.mp3",
     "imageName": "symphony_of_mayhem.webp",
+    "durationSec": 130,
     "duration": "2:10",
     "genre": "hard rock",
+    "bpm": null,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "hard rock",
       "geek rock",
@@ -1790,14 +2534,23 @@
     ],
     "mood": [
       "hard rock"
-    ]
+    ],
+    "usage": [
+      "hard rock"
+    ],
+    "story": null
   },
   {
     "title": "The Hand Of The Heavens",
+    "artist": "Hylst using AI",
     "filename": "the_hand_of_the_heavens.mp3",
     "imageName": "the_hand_of_the_heavens.webp",
+    "durationSec": 131,
     "duration": "2:11",
     "genre": "fantasy orchestral",
+    "bpm": 88,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "fantasy orchestral",
       "88bpm",
@@ -1815,14 +2568,24 @@
     "mood": [
       "epic",
       "divine"
-    ]
+    ],
+    "usage": [
+      "ambient",
+      "rpg"
+    ],
+    "story": null
   },
   {
     "title": "The Monks' Uprising",
+    "artist": "Hylst using AI",
     "filename": "the_monks_uprising.mp3",
     "imageName": "the_monks_uprising.webp",
+    "durationSec": 161,
     "duration": "2:41",
     "genre": "choral,choir",
+    "bpm": 72,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "fantasy choral",
       "72 bpm",
@@ -1834,14 +2597,21 @@
       "reverent",
       "metal"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "The Umbral Descent",
+    "artist": "Hylst using AI",
     "filename": "the_umbral_descent.mp3",
     "imageName": "the_umbral_descent.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "dark orchestral",
+    "bpm": 98,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "symphonic dark",
       "98bpm",
@@ -1857,14 +2627,24 @@
       "graceful",
       "dark",
       "melancolic"
-    ]
+    ],
+    "usage": [
+      "ambient",
+      "rpg"
+    ],
+    "story": null
   },
   {
     "title": "Through Haunted Halls",
+    "artist": "Hylst using AI",
     "filename": "through_haunted_halls.mp3",
     "imageName": "through_haunted_halls.webp",
+    "durationSec": 196,
     "duration": "3:16",
     "genre": "dark opera",
+    "bpm": 70,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "dark opera",
       "70 bpm",
@@ -1879,14 +2659,24 @@
     "mood": [
       "dark",
       "melancolic"
-    ]
+    ],
+    "usage": [
+      "rpg",
+      "haunting"
+    ],
+    "story": null
   },
   {
     "title": "Time Portal Temple Discovery",
+    "artist": "Hylst using AI",
     "filename": "time_portal_temple_discovery.mp3",
     "imageName": "time_portal_temple_discovery.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "ambient",
+    "bpm": 82,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "ambient",
       "suspenseful",
@@ -1910,14 +2700,25 @@
     "mood": [
       "dreamy",
       "playful"
-    ]
+    ],
+    "usage": [
+      "ambient",
+      "rpg",
+      "game"
+    ],
+    "story": null
   },
   {
     "title": "Treacherous Echoes",
+    "artist": "Hylst using AI",
     "filename": "treacherous_echoes.mp3",
     "imageName": "treacherous_echoes.webp",
+    "durationSec": 196,
     "duration": "3:16",
     "genre": "dark cinematic orchestral",
+    "bpm": 75,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "dark cinematic",
       "75 bpm",
@@ -1930,14 +2731,24 @@
     "mood": [
       "mysterious",
       "ominous"
-    ]
+    ],
+    "usage": [
+      "rpg",
+      "ambient"
+    ],
+    "story": null
   },
   {
     "title": "Tribal Ritual",
+    "artist": "Hylst using AI",
     "filename": "tribal_ritual.mp3",
     "imageName": "tribal_ritual.webp",
+    "durationSec": 162,
     "duration": "2:42",
     "genre": "tribal,ambient",
+    "bpm": 74,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "tribal ambient",
       "74 bpm",
@@ -1948,14 +2759,21 @@
       "ritualistic",
       "haunting"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Unbound Legend Pulse",
+    "artist": "Hylst using AI",
     "filename": "unbound_legend_pulse.mp3",
     "imageName": "unbound_legend_pulse.webp",
+    "durationSec": 163,
     "duration": "2:43",
     "genre": "post rock",
+    "bpm": 95,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "cinematic rock",
       "95 bpm",
@@ -1968,14 +2786,21 @@
       "global power surge",
       "hero system"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "Underneath A Baroque Moonlight",
+    "artist": "Hylst using AI",
     "filename": "underneath_a_baroque_moonlight.mp3",
     "imageName": "underneath_a_baroque_moonlight.webp",
+    "durationSec": 163,
     "duration": "2:43",
     "genre": "classical,baroque",
+    "bpm": 85,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "baroque",
       "harpsichord",
@@ -1987,14 +2812,23 @@
     ],
     "mood": [
       "ambient"
-    ]
+    ],
+    "usage": [
+      "ambient"
+    ],
+    "story": null
   },
   {
     "title": "Veil Of Peril",
+    "artist": "Hylst using AI",
     "filename": "veil_of_peril.mp3",
     "imageName": "veil_of_peril.webp",
+    "durationSec": 282,
     "duration": "4:42",
     "genre": "adventure orchestral",
+    "bpm": 92,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "adventure orchestral",
       "thrilling",
@@ -2009,14 +2843,25 @@
     ],
     "mood": [
       "aventurous"
-    ]
+    ],
+    "usage": [
+      "gaming",
+      "reading",
+      "drawing"
+    ],
+    "story": null
   },
   {
     "title": "Vintage Chamber",
+    "artist": "Hylst using AI",
     "filename": "vintage_chamber.mp3",
     "imageName": "vintage_chamber.webp",
+    "durationSec": 127,
     "duration": "2:07",
     "genre": "chamber music",
+    "bpm": null,
+    "year": "2024",
+    "bitrate": 241,
     "keywords": [
       "chamber music",
       "classical",
@@ -2031,14 +2876,23 @@
       "classical",
       "elegant",
       "vintage"
-    ]
+    ],
+    "usage": [
+      "classy albient"
+    ],
+    "story": null
   },
   {
     "title": "Vintage Cinema",
+    "artist": "Hylst using AI",
     "filename": "vintage_cinema.mp3",
     "imageName": "vintage_cinema.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "vintage cinematic,light orchestral",
+    "bpm": 95,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "vintage cinematic",
       "light orchestral",
@@ -2052,14 +2906,24 @@
       "elegant",
       "grace",
       "art"
-    ]
+    ],
+    "usage": [
+      "film",
+      "cinema"
+    ],
+    "story": null
   },
   {
     "title": "Whispers Of Betrayal",
+    "artist": "Hylst using AI",
     "filename": "whispers_of_betrayal.mp3",
     "imageName": "whispers_of_betrayal.webp",
+    "durationSec": 261,
     "duration": "4:21",
     "genre": "ominous orchestral",
+    "bpm": 72,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "ominous orchestral",
       "72 bpm",
@@ -2073,14 +2937,24 @@
     "mood": [
       "mysterious",
       "ominous"
-    ]
+    ],
+    "usage": [
+      "rpg",
+      "ambient"
+    ],
+    "story": null
   },
   {
     "title": "Whispers Of Enchantment",
+    "artist": "Hylst using AI",
     "filename": "whispers_of_enchantment.mp3",
     "imageName": "whispers_of_enchantment.webp",
+    "durationSec": 196,
     "duration": "3:16",
     "genre": "fantasy folk,irish,brittany",
+    "bpm": 90,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "fantasy folk",
       "irish",
@@ -2101,14 +2975,25 @@
       "festive",
       "legend",
       "trip"
-    ]
+    ],
+    "usage": [
+      "rpg",
+      "writing",
+      "creattion"
+    ],
+    "story": null
   },
   {
     "title": "Whispers Of History",
+    "artist": "Hylst using AI",
     "filename": "whispers_of_history.mp3",
     "imageName": "whispers_of_history.webp",
+    "durationSec": 164,
     "duration": "2:44",
     "genre": "classical orchestral",
+    "bpm": 95,
+    "year": "2025",
+    "bitrate": 256,
     "keywords": [
       "classical orchestral",
       "95 bpm",
@@ -2121,14 +3006,25 @@
     "mood": [
       "serene",
       "grand"
-    ]
+    ],
+    "usage": [
+      "film",
+      "rpg",
+      "relax"
+    ],
+    "story": null
   },
   {
     "title": "Whispers Of Home",
+    "artist": "Hylst using AI",
     "filename": "whispers_of_home.mp3",
     "imageName": "whispers_of_home.webp",
+    "durationSec": 189,
     "duration": "3:09",
     "genre": "calming ambient",
+    "bpm": 70,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "calming ambient",
       "70 bpm",
@@ -2143,14 +3039,25 @@
     ],
     "mood": [
       "serene"
-    ]
+    ],
+    "usage": [
+      "relax",
+      "meditate",
+      "sleep"
+    ],
+    "story": null
   },
   {
     "title": "Whispers Of The Divine",
+    "artist": "Hylst using AI",
     "filename": "whispers_of_the_divine.mp3",
     "imageName": "whispers_of_the_divine.webp",
+    "durationSec": 190,
     "duration": "3:10",
     "genre": "choral,choir",
+    "bpm": 65,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "classical",
       "choral sacred",
@@ -2161,14 +3068,21 @@
       "solemn reverence",
       "65bpm"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "X-gene Awakening",
+    "artist": "Hylst using AI",
     "filename": "x-gene_awakening.mp3",
     "imageName": "x-gene_awakening.webp",
+    "durationSec": 161,
     "duration": "2:41",
     "genre": "x-gene_awakening",
+    "bpm": 90,
+    "year": "2025",
+    "bitrate": 192,
     "keywords": [
       "modern cinematic",
       "90 bpm",
@@ -2181,133 +3095,154 @@
       "tense",
       "uplifting"
     ],
-    "mood": []
+    "mood": [],
+    "usage": [],
+    "story": null
   },
   {
     "title": "2 Villagers Died This Night",
+    "artist": "Hylst",
     "filename": "2_villagers_died_this_night.mp3",
     "imageName": "2_villagers_died_this_night.webp",
-    "duration": "3:00",
+    "durationSec": 0,
+    "duration": "?:??",
     "genre": "dark ambient",
-    "keywords": [
-      "dark",
-      "tragedy",
-      "village",
-      "night",
-      "atmospheric"
-    ],
+    "bpm": 70,
+    "year": "2025",
+    "bitrate": 192,
+    "keywords": [],
     "mood": [
-      "dark",
-      "sombre"
-    ]
+      "cinematic"
+    ],
+    "usage": [
+      "dramatic"
+    ],
+    "story": "La nuit tombe sur le village. Deux âmes de plus rejoignent les ombres."
   },
   {
     "title": "Festin des Aventuriers",
+    "artist": "Hylst",
     "filename": "festin_des_aventuriers.mp3",
     "imageName": "festin_des_aventuriers.webp",
-    "duration": "2:30",
+    "durationSec": 0,
+    "duration": "?:??",
     "genre": "folk taverne",
-    "keywords": [
-      "taverne",
-      "festif",
-      "folk",
-      "medieval",
-      "rpg",
-      "celebration"
-    ],
+    "bpm": 118,
+    "year": "2025",
+    "bitrate": 192,
+    "keywords": [],
     "mood": [
+      "cinematic"
+    ],
+    "usage": [
       "festive",
-      "joyeux"
-    ]
+      "taverne"
+    ],
+    "story": null
   },
   {
     "title": "Gare aux Sorcières",
+    "artist": "Hylst",
     "filename": "gare_aux_sorcieres.mp3",
     "imageName": "gare_aux_sorcieres.webp",
-    "duration": "2:45",
+    "durationSec": 0,
+    "duration": "?:??",
     "genre": "mystical dark",
-    "keywords": [
-      "sorcières",
-      "mystique",
-      "dark",
-      "magie noire",
-      "rpg"
-    ],
+    "bpm": 85,
+    "year": "2025",
+    "bitrate": 192,
+    "keywords": [],
     "mood": [
+      "cinematic"
+    ],
+    "usage": [
       "mystical",
       "dark"
-    ]
+    ],
+    "story": null
   },
   {
     "title": "La Marche des Possédés",
+    "artist": "Hylst",
     "filename": "la_marche_des_possedes.mp3",
     "imageName": "la_marche_des_possedes.webp",
-    "duration": "3:10",
+    "durationSec": 0,
+    "duration": "?:??",
     "genre": "dark orchestral",
-    "keywords": [
-      "possession",
-      "marche",
-      "dark",
-      "orchestral",
-      "horreur"
-    ],
+    "bpm": 90,
+    "year": "2025",
+    "bitrate": 192,
+    "keywords": [],
     "mood": [
-      "dark",
-      "tense"
-    ]
+      "cinematic"
+    ],
+    "usage": [
+      "combat",
+      "dark"
+    ],
+    "story": null
   },
   {
     "title": "La Peste Noire",
+    "artist": "Hylst",
     "filename": "la_peste_noire.mp3",
     "imageName": "la_peste_noire.webp",
-    "duration": "3:20",
+    "durationSec": 0,
+    "duration": "?:??",
     "genre": "dark ambient medieval",
-    "keywords": [
-      "peste",
-      "medieval",
-      "sombre",
-      "horreur",
-      "maladie"
-    ],
+    "bpm": 65,
+    "year": "2025",
+    "bitrate": 192,
+    "keywords": [],
     "mood": [
-      "dark",
-      "tragic"
-    ]
+      "cinematic"
+    ],
+    "usage": [
+      "dramatic",
+      "dark"
+    ],
+    "story": null
   },
   {
     "title": "Whispers of the Ancient Forest",
+    "artist": "Hylst",
     "filename": "whispers_of_the_ancient_forest.mp3",
     "imageName": "whispers_of_the_ancient_forest.webp",
-    "duration": "3:30",
+    "durationSec": 0,
+    "duration": "?:??",
     "genre": "ambient nature",
-    "keywords": [
-      "forêt",
-      "nature",
-      "ambient",
-      "mystique",
-      "paisible"
-    ],
+    "bpm": 75,
+    "year": "2025",
+    "bitrate": 192,
+    "keywords": [],
     "mood": [
-      "calm",
-      "mystical"
-    ]
+      "cinematic"
+    ],
+    "usage": [
+      "ambient",
+      "exploration"
+    ],
+    "story": null
   },
   {
     "title": "Whispers of the Tide",
+    "artist": "Hylst",
     "filename": "whispers_of_the_tide.mp3",
     "imageName": "whispers_of_the_tide.webp",
-    "duration": "3:15",
+    "durationSec": 0,
+    "duration": "?:??",
     "genre": "ambient oceanic",
-    "keywords": [
-      "ocean",
-      "marée",
-      "ambient",
-      "calme",
-      "nature"
-    ],
+    "bpm": 72,
+    "year": "2025",
+    "bitrate": 192,
+    "keywords": [],
     "mood": [
-      "calm",
-      "serene"
-    ]
+      "cinematic"
+    ],
+    "usage": [
+      "ambient",
+      "calm"
+    ],
+    "story": null
   }
 ]
