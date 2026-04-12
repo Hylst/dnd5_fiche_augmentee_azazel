@@ -100,3 +100,10 @@
   }
 }
 
+/* Marquee animation for sidebar app title */
+@keyframes marquee-title {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(0); }
+  75%  { transform: translateX(calc(-100% + 160px)); }
+  100% { transform: translateX(calc(-100% + 160px)); }
+}

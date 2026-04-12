@@ -94,12 +94,23 @@ export default function App() {
         "fixed md:static inset-y-0 left-0 z-50 w-64 bg-parchemin-fonce border-r-2 border-or/30 transform transition-transform duration-300 ease-in-out flex flex-col",
         isSidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
       )}>
-        <div className="p-6 border-b-2 border-or/30 flex justify-between items-center">
-          <h1 className="font-title-main text-2xl text-pourpre-infernal">D&D 5e</h1>
-          <button className="md:hidden" onClick={() => setIsSidebarOpen(false)}>
+        <div className="p-4 border-b-2 border-or/30 flex justify-between items-center overflow-hidden">
+          <div className="overflow-hidden flex-1 mr-2">
+            <h1
+              className="font-title-main text-lg text-pourpre-infernal whitespace-nowrap"
+              style={{
+                animation: 'marquee-title 12s linear infinite',
+                display: 'inline-block',
+              }}
+            >
+              Fiches D&D&nbsp;5e Augmentées
+            </h1>
+          </div>
+          <button className="md:hidden shrink-0" onClick={() => setIsSidebarOpen(false)}>
             <Menu className="w-6 h-6 text-encre" />
           </button>
         </div>
+
         
         <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
           {navItems.map((item) => {

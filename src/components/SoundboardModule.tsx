@@ -38,7 +38,7 @@ type MusicTrack = {
   story: string | null;
 };
 
-type ViewMode = 'top12' | 'tension' | 'scene' | 'category';
+type ViewMode = 'top12' | 'tension' | 'scene' | 'category' | 'sfx_favorites';
 type Section = 'sfx' | 'music';
 type SortMode = 'alpha' | 'duration' | 'bpm' | 'genre' | 'mood' | 'favorites' | 'usage';
 type LoopMode = 'none' | 'one' | 'all';
@@ -52,6 +52,17 @@ const musicTracks = musicsData as MusicTrack[];
 const SFX_BASE_URL = 'https://hylst.fr/mp3/sfx/';
 const MUSIC_BASE_URL = 'https://hylst.fr/hml/';
 const FAVORITES_KEY = 'dnd5_music_favorites';
+const SFX_FAVORITES_KEY = 'dnd5_sfx_favorites';
+
+function loadSfxFavorites(): Set<string> {
+  try {
+    const raw = localStorage.getItem(SFX_FAVORITES_KEY);
+    return raw ? new Set(JSON.parse(raw)) : new Set();
+  } catch { return new Set(); }
+}
+function saveSfxFavorites(favs: Set<string>) {
+  localStorage.setItem(SFX_FAVORITES_KEY, JSON.stringify([...favs]));
+}
 
 // Unique values for filters
 const allMoods = Array.from(new Set(musicTracks.flatMap(t => t.mood.map(m => m.toLowerCase())).filter(Boolean))).sort();
@@ -92,26 +103,42 @@ function VolumeControl({ volume, onChange }: { volume: number; onChange: (v: num
   );
 }
 
-function SoundButton({ filename, reason, playingTrack, onPlay }: {
+function SoundButton({ filename, reason, playingTrack, onPlay, isFavorite, onToggleFavorite }: {
   filename: string; reason?: string; playingTrack: string | null; onPlay: (f: string) => void;
+  isFavorite?: boolean; onToggleFavorite?: (f: string) => void;
 }) {
   const isPlaying = playingTrack === filename;
   const displayName = soundsIndex.get(filename) || filename;
   return (
-    <button onClick={() => onPlay(filename)}
-      className={cn(
-        'flex flex-col items-start p-3 rounded-lg border transition-all text-left w-full h-full',
-        isPlaying
-          ? 'border-or-vif bg-or/20 text-pourpre-infernal shadow-[inset_0_0_10px_rgba(201,147,58,0.3)] animate-pulse'
-          : 'border-or/30 hover:border-or/70 hover:bg-black/5 text-encre bg-parchemin-clair'
-      )}>
-      <div className="flex items-center justify-between w-full mb-1">
-        <span className="font-title-main text-sm md:text-base leading-tight">{displayName}</span>
-        {isPlaying ? <Square fill="currentColor" className="w-4 h-4 text-or-vif shrink-0" />
-          : <Play className="w-4 h-4 text-cendre shrink-0" />}
-      </div>
-      {reason && <span className="text-xs text-cendre italic mt-auto leading-tight">{reason}</span>}
-    </button>
+    <div className={cn(
+      'relative flex flex-col rounded-lg border transition-all w-full h-full',
+      isPlaying
+        ? 'border-or-vif shadow-[inset_0_0_10px_rgba(201,147,58,0.3)]'
+        : 'border-or/30'
+    )}>
+      <button onClick={() => onPlay(filename)}
+        className={cn(
+          'flex flex-col items-start p-3 text-left w-full h-full flex-1 rounded-lg transition-all',
+          isPlaying
+            ? 'bg-or/20 text-pourpre-infernal animate-pulse'
+            : 'hover:border-or/70 hover:bg-black/5 text-encre bg-parchemin-clair'
+        )}>
+        <div className="flex items-center justify-between w-full mb-1">
+          <span className="font-title-main text-sm md:text-base leading-tight pr-5">{displayName}</span>
+          {isPlaying ? <Square fill="currentColor" className="w-4 h-4 text-or-vif shrink-0" />
+            : <Play className="w-4 h-4 text-cendre shrink-0" />}
+        </div>
+        {reason && <span className="text-xs text-cendre italic mt-auto leading-tight">{reason}</span>}
+      </button>
+      {onToggleFavorite && (
+        <button
+          onClick={e => { e.stopPropagation(); onToggleFavorite(filename); }}
+          title={isFavorite ? 'Retirer des favoris' : 'Ajouter aux favoris'}
+          className="absolute top-1.5 right-1.5 p-1 rounded-full bg-parchemin/80 hover:bg-or/20 transition-colors">
+          <Heart className={cn('w-3 h-3', isFavorite ? 'fill-red-500 text-red-500' : 'text-cendre')} />
+        </button>
+      )}
+    </div>
   );
 }
 
@@ -325,8 +352,19 @@ export function SoundboardModule() {
   const [showFilterPanel, setShowFilterPanel] = useState(false);
   const [detailTrack, setDetailTrack] = useState<MusicTrack | null>(null);
 
-  // Favorites (persisted via localStorage)
+  // Music favorites (persisted via localStorage)
   const [favorites, setFavorites] = useState<Set<string>>(() => loadFavorites());
+
+  // SFX favorites (persisted via localStorage)
+  const [sfxFavorites, setSfxFavorites] = useState<Set<string>>(() => loadSfxFavorites());
+  const toggleSfxFavorite = useCallback((filename: string) => {
+    setSfxFavorites(prev => {
+      const next = new Set(prev);
+      if (next.has(filename)) next.delete(filename);
+      else next.add(filename);
+      return next;
+    });
+  }, []);
 
   // Audio state
   const [playingTrack, setPlayingTrack] = useState<string | null>(null);
@@ -376,6 +414,9 @@ export function SoundboardModule() {
 
   // Persist favorites
   useEffect(() => { saveFavorites(favorites); }, [favorites]);
+  useEffect(() => { saveSfxFavorites(sfxFavorites); }, [sfxFavorites]);
+
+  const sfxFavCount = sfxFavorites.size;
 
   // Sorted + filtered music list (used for next/prev logic too)
   const filteredMusic = useMemo(() => {
@@ -535,21 +576,26 @@ export function SoundboardModule() {
       {section === 'sfx' && (
         <div className="space-y-4">
           <div className="flex flex-wrap gap-2 pt-2 border-b-2 border-or/30 pb-4">
-            {([
-              { id: 'top12', label: 'Top 12 Indispensable', icon: Star },
-              { id: 'scene', label: 'Par Situation', icon: MapIcon },
-              { id: 'tension', label: 'Par Tension', icon: Activity },
-              { id: 'category', label: 'Par Catégorie', icon: FolderTree },
-            ] as const).map(tab => {
+            {[
+              { id: 'top12' as ViewMode, label: 'Top 12', icon: Star },
+              { id: 'scene' as ViewMode, label: 'Par Situation', icon: MapIcon },
+              { id: 'tension' as ViewMode, label: 'Par Tension', icon: Activity },
+              { id: 'category' as ViewMode, label: 'Par Catégorie', icon: FolderTree },
+              { id: 'sfx_favorites' as ViewMode, label: `❤ Favoris${sfxFavCount > 0 ? ` (${sfxFavCount})` : ''}`, icon: Heart },
+            ].map(tab => {
               const Icon = tab.icon;
               const isActive = activeMode === tab.id;
               return (
                 <button key={tab.id} onClick={() => setActiveMode(tab.id)}
                   className={cn(
                     'flex items-center gap-2 px-4 py-2 rounded-t-lg font-section text-sm transition-colors border-2 border-b-0',
-                    isActive ? 'border-or/50 bg-or/10 text-pourpre-infernal' : 'border-transparent text-encre-claire hover:bg-black/5'
+                    isActive
+                      ? tab.id === 'sfx_favorites'
+                        ? 'border-red-400/50 bg-red-50 text-red-700'
+                        : 'border-or/50 bg-or/10 text-pourpre-infernal'
+                      : 'border-transparent text-encre-claire hover:bg-black/5'
                   )}>
-                  <Icon className={cn('w-4 h-4', isActive && 'text-or-vif')} />
+                  <Icon className={cn('w-4 h-4', isActive && tab.id === 'sfx_favorites' ? 'text-red-500' : isActive ? 'text-or-vif' : '')} />
                   {tab.label}
                 </button>
               );
@@ -563,7 +609,7 @@ export function SoundboardModule() {
             {activeMode === 'top12' && (
               <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
                 {associationsData.top_12_most_useful_rpg_sounds.map(item => (
-                  <SoundButton key={item.filename} filename={item.filename} reason={item.reason} playingTrack={playingTrack} onPlay={playSfx} />
+                  <SoundButton key={item.filename} filename={item.filename} reason={item.reason} playingTrack={playingTrack} onPlay={playSfx} isFavorite={sfxFavorites.has(item.filename)} onToggleFavorite={toggleSfxFavorite} />
                 ))}
               </div>
             )}
@@ -573,7 +619,7 @@ export function SoundboardModule() {
                   <div key={scene}>
                     <h3 className="font-title-main text-xl text-or-vif mb-3 border-b border-or/20 pb-1">{scene}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
-                      {files.map(f => <SoundButton key={f} filename={f as string} playingTrack={playingTrack} onPlay={playSfx} />)}
+                      {files.map(f => <SoundButton key={f} filename={f as string} playingTrack={playingTrack} onPlay={playSfx} isFavorite={sfxFavorites.has(f as string)} onToggleFavorite={toggleSfxFavorite} />)}
                     </div>
                   </div>
                 ))}
@@ -585,7 +631,7 @@ export function SoundboardModule() {
                   <div key={tension}>
                     <h3 className="font-title-main text-xl text-pourpre-infernal mb-3 border-b border-or/20 pb-1">{tension}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
-                      {files.map(f => <SoundButton key={f} filename={f as string} playingTrack={playingTrack} onPlay={playSfx} />)}
+                      {files.map(f => <SoundButton key={f} filename={f as string} playingTrack={playingTrack} onPlay={playSfx} isFavorite={sfxFavorites.has(f as string)} onToggleFavorite={toggleSfxFavorite} />)}
                     </div>
                   </div>
                 ))}
@@ -597,10 +643,27 @@ export function SoundboardModule() {
                   <div key={category}>
                     <h3 className="font-title-main text-xl text-encre mb-3 border-b border-or/20 pb-1">{category}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
-                      {files.map(f => <SoundButton key={f} filename={f as string} playingTrack={playingTrack} onPlay={playSfx} />)}
+                      {files.map(f => <SoundButton key={f} filename={f as string} playingTrack={playingTrack} onPlay={playSfx} isFavorite={sfxFavorites.has(f as string)} onToggleFavorite={toggleSfxFavorite} />)}
                     </div>
                   </div>
                 ))}
+              </div>
+            )}
+            {activeMode === 'sfx_favorites' && (
+              <div>
+                {sfxFavorites.size === 0 ? (
+                  <div className="flex flex-col items-center justify-center py-16 text-cendre">
+                    <Heart className="w-12 h-12 mb-3 opacity-20" />
+                    <p className="font-title-main text-lg">Aucun favori SFX</p>
+                    <p className="text-sm mt-1 opacity-70">Cliquez sur <Heart className="w-3 h-3 inline" /> sur un son pour l'ajouter ici.</p>
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
+                    {[...sfxFavorites].map(f => (
+                      <SoundButton key={f} filename={f} playingTrack={playingTrack} onPlay={playSfx} isFavorite={true} onToggleFavorite={toggleSfxFavorite} />
+                    ))}
+                  </div>
+                )}
               </div>
             )}
           </div>
