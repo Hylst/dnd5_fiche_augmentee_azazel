@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IM+Fell+English:ital@0;1&family=Kalam:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=MedievalSharp&family=UnifrakturMaguntia&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-parchemin: #F2E8D5;
+  --color-parchemin-fonce: #E8D5B0;
+  --color-encre: #2C1810;
+  --color-encre-claire: #5C3820;
+  --color-or: #C9933A;
+  --color-or-vif: #E8A832;
+  --color-rouge-sang: #8B1A1A;
+  --color-pourpre-infernal: #4A1A5C;
+  --color-vert-emeraude: #1A4A2A;
+  --color-bleu-arcane: #1A2A6C;
+  --color-noir-velours: #0D0A0E;
+  --color-cendre: #8C7B6B;
+
+  --color-fond-crypte: #0D0A0E;
+  --color-surface-crypte: #1A1218;
+  --color-texte-crypte: #E8C87A;
+  --color-accent-crypte: #7A3A8C;
+
+  --color-sort-classe: #C9933A;
+  --color-sort-racial: #8B1A1A;
+  --color-sort-heritage: #4A1A5C;
+  --color-sort-divin: #E8C87A;
+  --color-sort-objet: #1A4A2A;
+  --color-sort-benediction: #1A3A6C;
+
+  --font-title-main: "IM Fell English", serif;
+  --font-title-alt: "Cinzel Decorative", serif;
+  --font-section: "Cinzel", serif;
+  --font-body: "Crimson Text", serif;
+  --font-body-alt: "Libre Baskerville", serif;
+  --font-numbers: "MedievalSharp", cursive;
+  --font-numbers-alt: "UnifrakturMaguntia", cursive;
+  --font-handwriting: "Caveat", cursive;
+  --font-handwriting-alt: "Kalam", cursive;
+}
+
+@layer base {
+  body {
+    @apply bg-parchemin text-encre font-body min-h-screen selection:bg-or selection:text-white;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+
+  .dark body {
+    @apply bg-fond-crypte text-texte-crypte;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-section;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-parchemin-fonce/30 dark:bg-surface-crypte;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-or/50 rounded-full hover:bg-or;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  /* Hide UI elements not meant for printing */
+  .no-print, aside, button, nav, header {
+    display: none !important;
+  }
+
+  /* Expand main content to full width */
+  main, .max-w-7xl {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Ensure background colors and borders print correctly */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Prevent page breaks inside modules */
+  .border-2 {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    border-color: #C9933A !important;
+  }
+}
+

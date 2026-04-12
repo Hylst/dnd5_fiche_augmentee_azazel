@@ -1,0 +1,116 @@
+[
+  {
+    "id": "darkvision",
+    "name": "Vision dans le noir",
+    "source": "Racial (Tieffelin)",
+    "descriptionHtml": "Grâce à votre héritage infernal, vous avez une vision supérieure dans l'obscurité et la lumière faible. Vous pouvez voir à 18 mètres dans une lumière faible comme vous verriez avec une lumière vive, et dans l'obscurité comme vous verriez avec une lumière faible. Dans l'obscurité, vous ne discernez pas les couleurs, uniquement des nuances de gris."
+  },
+  {
+    "id": "hellish_resistance",
+    "name": "Résistance infernale",
+    "source": "Racial (Tieffelin)",
+    "descriptionHtml": "Vous avez la résistance aux dégâts de feu."
+  },
+  {
+    "id": "infernal_legacy",
+    "name": "Ascendance infernale",
+    "source": "Racial (Tieffelin)",
+    "descriptionHtml": "Vous connaissez le sort mineur <em>thaumaturgie</em>. Une fois le niveau 3 atteint, vous pouvez lancer le sort <em>représailles infernales</em> une fois avec ce trait et récupérer cette capacité lorsque vous terminez un repos long. Une fois le niveau 5 atteint, vous pouvez lancer le sort <em>ténèbres</em> une fois avec ce trait et récupérer cette capacité lorsque vous terminez un repos long. Le Charisme est votre caractéristique d'incantation pour ces sorts."
+  },
+  {
+    "id": "bardic_inspiration",
+    "name": "Inspiration bardique",
+    "source": "Classe (Barde)",
+    "descriptionHtml": "Vous pouvez inspirer les autres grâce à des mots ou de la musique. Pour ce faire, vous utilisez une action bonus à votre tour pour choisir une créature autre que vous-même dans un rayon de 18 mètres autour de vous et qui peut vous entendre. Cette créature gagne un dé d'Inspiration bardique, un d8.<br/>Une fois dans les 10 minutes qui suivent, la créature peut lancer le dé et ajouter le résultat obtenu à un jet de caractéristique, un jet d'attaque ou un jet de sauvegarde qu'elle vient de faire. La créature peut attendre de voir le résultat du d20 avant de décider d'utiliser le dé d'Inspiration bardique, mais doit se décider avant que le MD ne dise si le jet est réussi ou non. Une fois que le dé d'Inspiration bardique est lancé, il est perdu. Une créature ne peut avoir qu'un seul dé d'Inspiration bardique à la fois."
+  },
+  {
+    "id": "jack_of_all_trades",
+    "name": "Touche-à-tout",
+    "source": "Classe (Barde)",
+    "descriptionHtml": "Vous pouvez ajouter la moitié de votre bonus de maîtrise, arrondie à l'entier inférieur, à n'importe quel jet de caractéristique que vous faites et qui n'inclut pas déjà votre bonus de maîtrise."
+  },
+  {
+    "id": "song_of_rest",
+    "name": "Chant de repos",
+    "source": "Classe (Barde)",
+    "descriptionHtml": "Vous pouvez utiliser une musique ou une oraison apaisante pour aider à revitaliser vos alliés blessés au cours d'un repos court. Si vous ou des créatures amicales qui peuvent entendre votre représentation dépensez un ou plusieurs dés de Vie pour regagner des points de vie à la fin du repos court, chacune de ces créatures regagne 1d6 points de vie supplémentaires."
+  },
+  {
+    "id": "expertise",
+    "name": "Expertise",
+    "source": "Classe (Barde)",
+    "descriptionHtml": "Choisissez deux de vos maîtrises de compétences. Votre bonus de maîtrise est doublé pour tout jet de caractéristique que vous faites et qui utilise l'une des maîtrises choisies."
+  },
+  {
+    "id": "font_of_inspiration",
+    "name": "Source d'inspiration",
+    "source": "Classe (Barde)",
+    "descriptionHtml": "Vous récupérez toutes vos utilisations d'Inspiration bardique lorsque vous terminez un repos court ou long."
+  },
+  {
+    "id": "countercharm",
+    "name": "Contre-charme",
+    "source": "Classe (Barde)",
+    "descriptionHtml": "Vous gagnez la capacité d'utiliser des notes de musique ou des mots de pouvoir pour perturber les effets qui influencent l'esprit. Par une action, vous pouvez commencer une représentation qui dure jusqu'à la fin de votre prochain tour. Pendant ce temps, vous et toutes les créatures amicales à 9 mètres ou moins de vous avez un avantage aux jets de sauvegarde contre l'état charmé ou effrayé. Une créature doit être en mesure de vous entendre pour obtenir cet avantage. La représentation se termine prématurément si vous êtes incapable d'agir ou réduit au silence, ou si vous y mettez fin volontairement (ne nécessite aucune action)."
+  },
+  {
+    "id": "psychic_blades",
+    "name": "Lames psychiques",
+    "source": "Collège des Murmures",
+    "descriptionHtml": "Lorsque vous touchez une créature avec une attaque avec une arme, vous pouvez dépenser une utilisation de votre Inspiration bardique pour infliger 3d6 dégâts psychiques supplémentaires à cette cible. Vous ne pouvez le faire qu'une fois par round à votre tour."
+  },
+  {
+    "id": "words_of_terror",
+    "name": "Mots de terreur",
+    "source": "Collège des Murmures",
+    "descriptionHtml": "Si vous parlez seul à seul avec un humanoïde pendant au moins 1 minute, vous pouvez tenter de semer la paranoïa dans son esprit. À la fin de la conversation, la cible doit réussir un jet de sauvegarde de Sagesse (DD 15) ou être effrayée par vous ou une autre créature de votre choix. La cible est effrayée de cette façon pendant 1 heure, ou jusqu'à ce qu'elle soit attaquée ou blessée, ou jusqu'à ce qu'elle soit témoin d'une attaque ou d'une blessure sur l'un de ses alliés. Si la cible réussit son jet de sauvegarde, elle ne se rend pas compte que vous avez essayé de l'effrayer."
+  },
+  {
+    "id": "mantle_of_whispers",
+    "name": "Voile de murmures",
+    "source": "Collège des Murmures",
+    "descriptionHtml": "Lorsqu'un humanoïde meurt à 9 mètres ou moins de vous, vous pouvez utiliser votre réaction pour capturer son ombre. Vous conservez cette ombre jusqu'à ce que vous l'utilisiez ou que vous terminiez un repos long. Vous pouvez utiliser l'ombre par une action. Lorsque vous le faites, elle disparaît et se transforme en un déguisement qui apparaît sur vous. Vous prenez l'apparence de la personne morte, mais en bonne santé et en vie. Ce déguisement dure 1 heure ou jusqu'à ce que vous y mettiez fin par une action bonus. Pendant que vous êtes déguisé, vous avez accès à toutes les informations que l'humanoïde partagerait volontairement avec une simple connaissance. Vous gagnez également un bonus de +5 aux jets de Tromperie que vous faites pour vous faire passer pour cette personne."
+  },
+  {
+    "id": "popular_demand",
+    "name": "À la demande du public",
+    "source": "Historique (Artiste)",
+    "descriptionHtml": "Vous pouvez toujours trouver un endroit pour vous produire, généralement dans une auberge ou une taverne, mais peut-être aussi dans un cirque, un théâtre, ou même à la cour d'un noble. Dans de tels endroits, vous recevez le gîte et le couvert gratuitement, ainsi que pour vos compagnons d'aventure, chaque nuit où vous vous produisez."
+  },
+  {
+    "id": "dumathoin_blessing",
+    "name": "Bénédiction de Dumathoïn",
+    "source": "Bénédiction",
+    "descriptionHtml": "Vision en couleur comme en plein jour, même dans la pleine obscurité."
+  },
+  {
+    "id": "guardian_gaze",
+    "name": "Regard du Gardien (True Seeing)",
+    "source": "Capacité spéciale",
+    "descriptionHtml": "1x/jour, portée 36m. Permet de voir les créatures et objets invisibles, de voir à travers les illusions, de voir la forme véritable des créatures métamorphosées ou altérées, de voir dans le plan Éthéré, et de voir les portails et accès planaires."
+  },
+  {
+    "id": "master_manipulator",
+    "name": "Maître manipulateur",
+    "source": "Capacité supplémentaire",
+    "descriptionHtml": "Avantage narratif dans les interactions sociales complexes lorsque Azazel peut préparer le terrain."
+  },
+  {
+    "id": "behavioral_reading",
+    "name": "Lecture comportementale",
+    "source": "Capacité supplémentaire",
+    "descriptionHtml": "Capacité à détecter mensonges, hésitations et failles psychologiques (interprétation RP de son haut score social)."
+  },
+  {
+    "id": "disturbing_presence",
+    "name": "Présence troublante",
+    "source": "Capacité supplémentaire",
+    "descriptionHtml": "Son aura infernale combinée à son charisme crée un mélange de fascination et de malaise chez ses interlocuteurs."
+  },
+  {
+    "id": "extreme_social_adaptability",
+    "name": "Adaptabilité sociale extrême",
+    "source": "Capacité supplémentaire",
+    "descriptionHtml": "Grâce à Voile de murmures et ses compétences, Azazel peut infiltrer presque n’importe quel environnement humanoïde."
+  }
+]

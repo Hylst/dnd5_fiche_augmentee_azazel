@@ -1,0 +1,316 @@
+Azazel Varn (Zel)
+NOM DU PERSONNAGE
+Barde (collège murmures) - 6 Artiste 	Geoffroy
+CLASSE & NIVEAU 	HISTORIQUE NOM DU JOUEUR
+Tieffelin (h) 	Chaotique neutre 20 644
+RACE 	ALIGNEMENT
+POINTS
+D'EXPÉRIENCE
+FORCE
++1
+13
+DEXTÉRITÉ
++2
+14
+CONSTITUTION
++1
+13
+INTELLIGENCE
++2
+14
+SAGESSE
++1
+12
+CHARISME
++4
+18
+1 INSPIRATION
++3 BONUS DE MAÎTRISE
++1 Force
++6 Dextérité
++1 Constitution
++2 Intelligence
++1 Sagesse
++7 Charisme
+JETS DE SAUVEGARDE
++6 Acrobaties (Dex)
++3 Arcanes (Int)
++2 Athlétisme (For)
++6 Discrétion (Dex)
++2 Dressage (Sag)
++4 Escamotage (Dex)
++3 Histoire (Int)
++5 Intimidation (Cha)
++2 Intuition (Sag)
++3 Investigation (Int)
++2 Médecine (Sag)
++3 Nature (Int)
++3 Perception (Sag)
++10 Persuasion (Cha)
++3 Religion (Int)
++7 Représentation (Cha)
++2 Survie (Sag)
++7 Tromperie (Cha)
+COMPÉTENCES
+12 SAGESSE (PERCEPTION) PASSIVE
+Armes armes courantes, arbalète de poing,
+épée longue, épée courte, rapière
+Armures armures légères,
+Outils Luth en os de dragon, runes infernales
+et coeur Onyx, kit de déguisement, tambour,
+lyre, flûte de pan, outils de voleur, vêtements
+fins & communs, costumes (x3), plume
+d'écriture, lampe, cire à cacheter, savon,
+trousse de soins, jeu de cartes
+Langues commun, infernal
+MAÎTRISES ET LANGUES
+15
+CA
++4
+INITIATIVE
+9 m
+VITESSE
+Maximum de points de
+vie 	39
+POINTS DE VIE ACTUELS
+POINTS DE VIE TEMPORAIRES
+Total 6d8
+DÉS DE VIE
+Succès
+Échecs
+JDS CONTRE LA MORT
+NOM ATT DÉGÂTS/TYPE
+Rapière +5 1d8+2 perforant
+Dague +5 1d4+2 perforant
+Javelot foudre +4 1D6+1 perf. magique
+Rapière. CC : +5 (BM+BD) 1d8+2(BD)
+perforant, finesse
+Dague (x3). CC :+5 1d4+2 perforant ;
+finesse, légère, lancer (portée 6/18))
+Javelot foudre. CC ou Lancer : +4
+(BM+BF) - 1D6+1 perforant magique
+, Portée : 9/36 m
+Capacité : 4d6 dom.foudre 1x/j ligne 36m
+Lames psychiques : +3d6 deg psy sup
+par Dé d'inspiration consommé 1x par
+coup)
+Représailles infernales : Réaction suite
+à blessure infligeant 3d10 deg feu (1/rep
+ATTAQUES ET INCANTATIONS
+0
+0
+0
+200
+0
+coffre, sac à dos, sacoche à
+composantes, sac, étui à
+cartes ou parchemins (2),
+gourde,
+encre/bouteille, papier (5),
+huile/flasque (2), acide
+/fiole,
+antidote/fiole, poison/fiole
+(2),
+parfum/fiole, eau bénite/
+flasque (2), corde en soie de
+15 m, rations/1j (3),
+ÉQUIPEMENT
+Charme irrésistible mêlé de cruauté
+calculée. Aime jouer des rôles et les
+déguisements. Humour sarcastique.
+Observe toujours avant d'agir.
+S'adoucit au contact de ses nouveaux
+compagnons et surtout de sa soeur.
+TRAITS DE PERSONNALITÉ
+Liberté absolue. Refuse d'être le pion
+de quiconque, même d'un dieu
+démoniaque.
+IDÉAUX
+Kallista, 1ère confiance sincère, force
+& vulnérabilité + Grazz't, père, loin
+des yeux.. + Membre actif Collège
+Murmures & agent officieux
+Zhentarim à Neverwin
+LIENS
+Le mensonge est sa langue
+maternelle. Manipulateur. Léger
+narcissisme. Paranoïa légère.
+DÉFAUTS
+À la demande du
+public gite/couvert/repr
+Expertise (Persuasion,Perception)*+BM
+X2
+Inspiration bardique : +1d8
+assistance 18m action bonus 10min -
+4/repos court
+Source d'inspiration : récup ttes
+utilisat. d'inspi bardique (4/rep court ou
+long)
+Touche-à-tout : +BM/2 aux tests de
+carac ne bénéficiant pas de maîtrise *
+Vision dans le noir : 18m + couleur
+Résistance infernale : dégats feu/2
+Chant reposant : +1d6PV/Dé de Vie
+dépensé pdt repos court
+Bénédiction de Dumathoïn : Vision en
+couleur = plein jour mm pleine oscurité
+Mots de terreur
+Parlez 1m seul à un humanoïde JDS Sag
+DD 15 ou cible terrorisée par vous (ou
+autre) pdt 1h (8h si seuls)
+Contre-charme : donne alliés <9m
+avantage JDS contre charme / terreur
+Voile de murmures : Réaction à mort
+humanoïde <9 m : capture ombre,
+permet de prendre son apparence
+exacte (1h), +5 en Tromperie et accès
+aux infos de surface
+Anneau des ombres : 1x/j relance
+possible jets de manipulation
+Regard du Gardien True Seeing : 1×/j
+portée 36m > Voir créatures & objets
+invisibles. + sans illusions + formes
+vraies des métamorphosées ou altérés.
++ dans l'Éther + portails et accès
+planaires.
+Ascendance infernale :
+Ténèbres n2 1a 18m Conc,
+Thaumaturgie 9m 1m p.voix x3 - fx
+flamme + léger tremblement sol + son
+CAPACITÉS ET TRAITS
+PC
+PA
+PE
+PO
+PP
+
+-- 1 of 3 --
+
+Azazel Varn (Zel)
+NOM DU PERSONNAGE
+27 	1,72 m (M) 70 kg
+ÂGE 	TAILLE 	POIDS
+noisette / rouge bleu nuit 	noirs
+YEUX 	PEAU 	CHEVEUX
+Azazel est un tieffelin à la peau d’un bleu
+profond, presque surnaturel, contrastant
+avec ses yeux rouge incandescent qui
+semblent briller d’une malice permanente.
+Deux cornes sombres et élégamment
+recourbées encadrent son visage fin aux
+traits séduisants et inquiétants à la fois.
+Ses cheveux noirs, bouclés et indisciplinés,
+tombent en mèches épaisses autour de son
+front, accentuant son air à la fois charmeur
+et imprévisible. Son sourire, souvent trop
+large pour être honnête, dévoile une
+confiance presque provocante.
+Il porte un manteau de noble facture, violet
+profond brodé de motifs dorés complexes,
+évoquant à la fois richesse, théâtralité et
+manipulation. Ses mouvements sont fluides,
+presque dansants, et chaque geste semble
+calculé pour capter l’attention.
+Sa queue fine et mobile trahit parfois ses
+émotions réelles, contrastant avec le masque
+social qu’il affiche en permanence.
+APPARENCE DU PERSONNAGE
+Artiste (Acteur)
+Azazel Varn est né dans les bas-fonds de
+Neverwinter, fils d’Ilyena, prêtresse du culte
+de Graz’zt, et d’une manifestation du Prince
+des Profondeurs lui-même.
+Très tôt marqué par sa nature démoniaque, il
+apprend à survivre non par la force, mais par
+le charme, le mensonge et la manipulation.
+Recueilli par un barde nommé Eldrien, il
+découvre les arts du Collège des Murmures…
+avant de découvrir que son mentor était en
+réalité un agent de Graz’zt.
+Le rituel de sa mère, destiné à le soustraire à
+l’influence démoniaque, a fragmenté son
+essence et celle de sa sœur Kallista. Depuis,
+Azazel vit avec une identité instable, tiraillée
+entre héritage infernal et volonté de liberté.
+Aujourd’hui, il évolue entre intrigues
+politiques, manipulations et luttes occultes,
+cherchant à rompre définitivement son lien
+avec Graz’zt — ou à le retourner à son
+avantage.
+HISTOIRE DU PERSONNAGE
+Collège des Murmures
+Organisation principale d’Azazel. Il y a perfectionné ses talents de manipulation,
+d’espionnage et de contrôle psychologique.
+Zhentarim (agent officieux)
+Réseau criminel et politique. Azazel agit comme intermédiaire et manipulateur
+indépendant, sans jamais s’y attacher totalement.
+Kallista
+Sa sœur jumelle. Lien émotionnel central. Elle représente à la fois son ancrage humain et
+sa plus grande faiblesse.
+Halia Thornton
+Contact stratégique. Relation basée sur l’échange d’informations et l’intérêt mutuel.
+Dumathoïn
+Entité divine ayant accordé une bénédiction inattendue, suggérant qu’Azazel n’est pas
+entièrement condamné à son héritage infernal.
+ALLIÉS ET ORGANISATIONS
+Maître manipulateur
+Avantage narratif dans les interactions sociales complexes lorsque Azazel peut préparer le
+terrain.
+Lecture comportementale
+Capacité à détecter mensonges, hésitations et failles psychologiques (interprétation RP
+de son haut score social).
+Présence troublante
+Son aura infernale combinée à son charisme crée un mélange de fascination et de
+malaise chez ses interlocuteurs.
+Adaptabilité sociale extrême
+Grâce à Voile de murmures et ses compétences, Azazel peut infiltrer presque n’importe
+quel environnement humanoïde.
+CAPACITÉS SUPPLÉMENTAIRES
+Javelot de foudre : 1D6+1 deg magiques + 1x/j éclair 4d6 dég foudre sur ligne 36
+mètres (VS Dex 13 DOM/2).
+Anneau des ombres : 1x/j relance jet Persuasion/Représentation
+TRÉSOR
+
+-- 2 of 3 --
+
+Barde (Cha)
+CLASSE D'INCANTATION
+(CARACTÉRISTIQUE D'INCANTATION)
+15 	+7
+SORTS À PRÉPARER
+CHAQUE JOUR
+DD DE SAUVEGARDE
+DES SORTS
+BONUS D'ATTAQUE
+AVEC UN SORT
+0 	SORTS MINEURS
+moquerie cruelle : 18m 1D4psy+desav
+coup de tonnerre : 1.5m 2d6 JDS Co/2
+illusion mineure : 9m 1m son/obj cub1.
+thaumaturgie : 9m 1m p.voix x3 - fx fl
+NIVEAU
+DU
+SORT EMPLACEMENTS EMPLACEMENTS UTILISÉS
+1 4
+détection de la magie
+identification
+image silencieuse : 18m 10mn ar4.5m m
+murmures dissonants : 3d6psy JS Sag/2
+2 3
+fracassement 3d8+1d/n 18m JDSCo/2
+nuée de dagues 18m 1min 1.5m 4d4+2
+force fantasmagorique (illu esprit 1d6ps
+ténèbres 1a 18m
+Représailles infernales 3d10 Feu
+3 3
+image majeure : 36m 10mn ar6m conc
+petite hutte de léomund 8h 3mr <=9P
+4
+5
+6
+7
+8
+9
+
+-- 3 of 3 --
+

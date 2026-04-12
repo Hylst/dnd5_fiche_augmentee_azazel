@@ -1,0 +1,19 @@
+[
+  { "id": "rapiere", "name": "Rapière", "description": "Arme de mêlée.", "weight": 1, "category": "weapon", "weaponStats": { "damageDice": "1d8", "damageType": "Perforant", "stat": "DEX", "range": "1,5m", "notes": "Finesse" } },
+  { "id": "dague", "name": "Dague", "description": "Arme de mêlée ou de lancer.", "weight": 0.5, "category": "weapon", "weaponStats": { "damageDice": "1d4", "damageType": "Perforant", "stat": "DEX", "range": "6m/18m", "notes": "Finesse, Légère, Lancer" } },
+  { "id": "javelot_foudre", "name": "Javelot de Foudre", "description": "Lancer : ligne de foudre 36m (4d6 ⚡, JDS DEX DD 13). 1 usage foudre unique.", "weight": 1, "category": "weapon", "weaponStats": { "damageDice": "1d6", "damageType": "Perforant", "stat": "FOR", "isMagic": true, "range": "9m/36m", "notes": "Lancer" } },
+  { "id": "cuir_cloute_1", "name": "Armure de cuir clouté (Qualité)", "description": "Légèrement renforcée. CA 13.", "weight": 6.5, "category": "armor", "armorStats": { "baseAc": 13, "type": "light" } },
+  { "id": "luth_os_dragon", "name": "Luth en os de dragon", "description": "Runes infernales et coeur Onyx. Focalisant magique principal.", "weight": 1, "category": "tool" },
+  { "id": "kit_deguisement", "name": "Kit de déguisement", "description": "Outils pour se déguiser.", "weight": 1.5, "category": "tool" },
+  { "id": "instruments", "name": "Instruments de musique", "description": "Tambour, lyre, flûte de pan.", "weight": 2, "category": "tool" },
+  { "id": "outils_voleur", "name": "Outils de voleur", "description": "Pour crocheter et désamorcer.", "weight": 0.5, "category": "tool" },
+  { "id": "vetements", "name": "Vêtements", "description": "Fins & communs, costumes (x3).", "weight": 3, "category": "misc" },
+  { "id": "materiel_ecriture", "name": "Matériel d'écriture", "description": "Plume d'écriture, lampe, cire à cacheter, encre/bouteille, papier (5).", "weight": 1, "category": "misc" },
+  { "id": "trousse_soins", "name": "Trousse de soins", "description": "Pour stabiliser un mourant.", "weight": 1.5, "category": "misc" },
+  { "id": "jeu_cartes", "name": "Jeu de cartes", "description": "Pour se divertir ou parier.", "weight": 0.1, "category": "misc" },
+  { "id": "sac_aventurier", "name": "Sac d'aventurier", "description": "Coffre, sac à dos, sacoche à composantes, sac, étui à cartes ou parchemins (2), gourde.", "weight": 5, "category": "misc" },
+  { "id": "fioles", "name": "Fioles et flasques", "description": "Huile/flasque (2), acide/fiole, antidote/fiole, poison/fiole (2), parfum/fiole, eau bénite/flasque (2).", "weight": 2, "category": "consumable" },
+  { "id": "corde", "name": "Corde en soie", "description": "15 m.", "weight": 2.5, "category": "misc" },
+  { "id": "rations", "name": "Rations", "description": "Rations pour 1 jour.", "weight": 1, "category": "consumable" },
+  { "id": "anneau_ombres", "name": "Anneau des ombres", "description": "1x/j relance possible jets de manipulation (Persuasion/Représentation).", "weight": 0, "category": "magic_item" }
+]

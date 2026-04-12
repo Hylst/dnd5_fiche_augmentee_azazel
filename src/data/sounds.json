@@ -1,0 +1,1871 @@
+[
+    {
+        "filename": "aah-old-men-moan.mp3",
+        "frenchName": "Aah vieux hommes gémissement",
+        "sizeBytes": 13586,
+        "duration": "00:00:00",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "aggressive-dark-intro.mp3",
+        "frenchName": "Agressif sombre intro",
+        "sizeBytes": 343856,
+        "duration": "00:00:10",
+        "category": "Non classé"
+    },
+    {
+        "filename": "aggressive-huge-hit-future.mp3",
+        "frenchName": "Agressif énorme coup futuriste",
+        "sizeBytes": 277011,
+        "duration": "00:00:08",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "aggressive-trailer-hit-and-punch.mp3",
+        "frenchName": "Agressif cinématique coup and frappe",
+        "sizeBytes": 420866,
+        "duration": "00:00:12",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "ancient-lyre.mp3",
+        "frenchName": "Antique lyre",
+        "sizeBytes": 110914,
+        "duration": "00:00:03",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "appear-magic.mp3",
+        "frenchName": "Apparition magie",
+        "sizeBytes": 68003,
+        "duration": "00:00:01",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "baby_crying.mp3",
+        "frenchName": "Bébé pleurs",
+        "sizeBytes": 147010,
+        "duration": "00:00:04",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "band-hand-clap.mp3",
+        "frenchName": "Groupe main applaudissement",
+        "sizeBytes": 282626,
+        "duration": "00:00:08",
+        "category": "Non classé"
+    },
+    {
+        "filename": "battle-screaming-solo.mp3",
+        "frenchName": "Bataille hurlement seul",
+        "sizeBytes": 122882,
+        "duration": "00:00:03",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "bayoneted-moans.mp3",
+        "frenchName": "Bayoneted gémissements",
+        "sizeBytes": 159746,
+        "duration": "00:00:15",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "beast_growl.mp3",
+        "frenchName": "Bête grogne",
+        "sizeBytes": 29426,
+        "duration": "00:00:01",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "beer-bottles-clink.mp3",
+        "frenchName": "Bière bouteilles trinquer",
+        "sizeBytes": 8786,
+        "duration": "00:00:00",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "beer-pouring-into-glass.mp3",
+        "frenchName": "Bière verser into verre",
+        "sizeBytes": 848194,
+        "duration": "00:00:26",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "beer-pouring.mp3",
+        "frenchName": "Bière verser",
+        "sizeBytes": 69067,
+        "duration": "00:00:06",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "being-strangled.mp3",
+        "frenchName": "Being étranglé",
+        "sizeBytes": 40466,
+        "duration": "00:00:03",
+        "category": "Non classé"
+    },
+    {
+        "filename": "bone-crunching.mp3",
+        "frenchName": "Os craquement",
+        "sizeBytes": 262402,
+        "duration": "00:00:13",
+        "category": "Non classé"
+    },
+    {
+        "filename": "bow_release.mp3",
+        "frenchName": "Arc décoche",
+        "sizeBytes": 9588,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "braam-2.mp3",
+        "frenchName": "Braam 2",
+        "sizeBytes": 117350,
+        "duration": "00:00:03",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "braam.mp3",
+        "frenchName": "Braam",
+        "sizeBytes": 125506,
+        "duration": "00:00:03",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "breaking-bottle.mp3",
+        "frenchName": "Briser bottle",
+        "sizeBytes": 44597,
+        "duration": "00:00:01",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "breaking-ice-crunching.mp3",
+        "frenchName": "Briser glace craquement",
+        "sizeBytes": 309826,
+        "duration": "00:00:09",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "breath-stinger.mp3",
+        "frenchName": "Souffle aiguillon",
+        "sizeBytes": 191842,
+        "duration": "00:00:09",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "bubbling-water.mp3",
+        "frenchName": "Bulles eau",
+        "sizeBytes": 113171,
+        "duration": "00:00:03",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "burning-air.mp3",
+        "frenchName": "En feu air",
+        "sizeBytes": 271995,
+        "duration": "00:00:08",
+        "category": "Non classé"
+    },
+    {
+        "filename": "campfire.mp3",
+        "frenchName": "Feu de camp",
+        "sizeBytes": 238402,
+        "duration": "00:00:11",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "cat-meow.mp3",
+        "frenchName": "Chat miaou",
+        "sizeBytes": 21922,
+        "duration": "00:00:01",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "cemetery_wind.mp3",
+        "frenchName": "Cimetière vent",
+        "sizeBytes": 404290,
+        "duration": "00:00:12",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "chain-noises-scary.mp3",
+        "frenchName": "Chaîne bruits effrayant",
+        "sizeBytes": 659025,
+        "duration": "00:00:20",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "chipmunks-laughs.mp3",
+        "frenchName": "Écureuils rires",
+        "sizeBytes": 62978,
+        "duration": "00:00:01",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "clear-object-hit.mp3",
+        "frenchName": "Clair objet coup",
+        "sizeBytes": 37250,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "clearing-throat.mp3",
+        "frenchName": "Clearing throat",
+        "sizeBytes": 33794,
+        "duration": "00:00:00",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "click.mp3",
+        "frenchName": "Click",
+        "sizeBytes": 19519,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "clock-ticking-musical.mp3",
+        "frenchName": "Horloge tic-tac musical",
+        "sizeBytes": 259906,
+        "duration": "00:00:08",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "clock-ticking-slow.mp3",
+        "frenchName": "Horloge tic-tac lent",
+        "sizeBytes": 259456,
+        "duration": "00:00:08",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "close-door.mp3",
+        "frenchName": "Close porte",
+        "sizeBytes": 25371,
+        "duration": "00:00:00",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "closing-metal-door.mp3",
+        "frenchName": "Closing métal porte",
+        "sizeBytes": 53227,
+        "duration": "00:00:04",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "clown-whistling.mp3",
+        "frenchName": "Clown sifflement",
+        "sizeBytes": 134904,
+        "duration": "00:00:04",
+        "category": "Non classé"
+    },
+    {
+        "filename": "coins.mp3",
+        "frenchName": "Pièces",
+        "sizeBytes": 42117,
+        "duration": "00:00:01",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "collision-wood.mp3",
+        "frenchName": "Choc bois",
+        "sizeBytes": 38745,
+        "duration": "00:00:01",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "complex-movements-whoosh-2.mp3",
+        "frenchName": "Complex movements swoosh 2",
+        "sizeBytes": 27650,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "complex-movements-whoosh.mp3",
+        "frenchName": "Complex movements swoosh",
+        "sizeBytes": 27650,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "contemplative-temple-gongs-2.mp3",
+        "frenchName": "Contemplative temple gongs 2",
+        "sizeBytes": 419330,
+        "duration": "00:00:12",
+        "category": "Non classé"
+    },
+    {
+        "filename": "cooking-oil-sizzle.mp3",
+        "frenchName": "Cuisine huile grésillement",
+        "sizeBytes": 831298,
+        "duration": "00:00:25",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "coucou-dove.mp3",
+        "frenchName": "Coucou colombe",
+        "sizeBytes": 259456,
+        "duration": "00:00:08",
+        "category": "Non classé"
+    },
+    {
+        "filename": "cough-illness-wheezing-lung-and-throat-diseases.mp3",
+        "frenchName": "Toux maladie wheezing lung and throat diseases",
+        "sizeBytes": 324098,
+        "duration": "00:00:09",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "coughing-ill.mp3",
+        "frenchName": "Coughing ill",
+        "sizeBytes": 261442,
+        "duration": "00:00:13",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "craftef-metal-weapon.mp3",
+        "frenchName": "Artisanal métal arme",
+        "sizeBytes": 22603,
+        "duration": "00:00:02",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "crawling-worm-movement.mp3",
+        "frenchName": "Rampant vers mouvement",
+        "sizeBytes": 324418,
+        "duration": "00:00:10",
+        "category": "Non classé"
+    },
+    {
+        "filename": "creaking-noise.mp3",
+        "frenchName": "Grincement bruit",
+        "sizeBytes": 1432221,
+        "duration": "00:00:44",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "creepy-laugh.mp3",
+        "frenchName": "Effrayant rire",
+        "sizeBytes": 43010,
+        "duration": "00:00:01",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "crossbow-firing.mp3",
+        "frenchName": "Arbalète tir",
+        "sizeBytes": 21266,
+        "duration": "00:00:01",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "crowded_place-tavern.mp3",
+        "frenchName": "Foule lieu taverne",
+        "sizeBytes": 633922,
+        "duration": "00:00:31",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "crows-birds.mp3",
+        "frenchName": "Corbeaux oiseaux",
+        "sizeBytes": 217346,
+        "duration": "00:00:06",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "crunching-footsteps.mp3",
+        "frenchName": "Craquement bruits de pas",
+        "sizeBytes": 608870,
+        "duration": "00:00:19",
+        "category": "Non classé"
+    },
+    {
+        "filename": "crunching-snow.mp3",
+        "frenchName": "Craquement neige",
+        "sizeBytes": 591202,
+        "duration": "00:00:29",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "crunchy-bite-2.mp3",
+        "frenchName": "Croquant morsure 2",
+        "sizeBytes": 84721,
+        "duration": "00:00:02",
+        "category": "Non classé"
+    },
+    {
+        "filename": "crunchy-bite.mp3",
+        "frenchName": "Croquant morsure",
+        "sizeBytes": 37074,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "crying-man.mp3",
+        "frenchName": "Pleurs homme",
+        "sizeBytes": 1396905,
+        "duration": "00:01:09",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "dagger_drawn.mp3",
+        "frenchName": "Dague dégainer",
+        "sizeBytes": 25399,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "dark-magic-short.mp3",
+        "frenchName": "Sombre magie court",
+        "sizeBytes": 257602,
+        "duration": "00:00:08",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "dart-throw.mp3",
+        "frenchName": "Fléchette lancer",
+        "sizeBytes": 10691,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "deep-breath-sigh.mp3",
+        "frenchName": "Profond souffle soupir",
+        "sizeBytes": 170821,
+        "duration": "00:00:05",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "deep-breath.mp3",
+        "frenchName": "Profond souffle",
+        "sizeBytes": 119042,
+        "duration": "00:00:03",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "deep-growl.mp3",
+        "frenchName": "Profond grogne",
+        "sizeBytes": 101602,
+        "duration": "00:00:05",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "demonic-spirit-voice-sinister-laughter.mp3",
+        "frenchName": "Démoniaque esprit voix sinister laughter",
+        "sizeBytes": 175836,
+        "duration": "00:00:05",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "dice_roll.mp3",
+        "frenchName": "Dés lancer",
+        "sizeBytes": 35083,
+        "duration": "00:00:00",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "disappear.mp3",
+        "frenchName": "Disparition",
+        "sizeBytes": 17744,
+        "duration": "00:00:01",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "dog-bark-2.mp3",
+        "frenchName": "Chien aboiement 2",
+        "sizeBytes": 29954,
+        "duration": "00:00:00",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "dog-bark.mp3",
+        "frenchName": "Chien aboiement",
+        "sizeBytes": 18683,
+        "duration": "00:00:00",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "dog-barking.mp3",
+        "frenchName": "Chien aboiement",
+        "sizeBytes": 181250,
+        "duration": "00:00:05",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "door-crackling.mp3",
+        "frenchName": "Porte craquement",
+        "sizeBytes": 318806,
+        "duration": "00:00:09",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "door-creaking-opening-and-close.mp3",
+        "frenchName": "Porte grincement ouverture and close",
+        "sizeBytes": 259456,
+        "duration": "00:00:08",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "dramatic.mp3",
+        "frenchName": "Dramatic",
+        "sizeBytes": 98786,
+        "duration": "00:00:09",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "drinking.mp3",
+        "frenchName": "Boire",
+        "sizeBytes": 44066,
+        "duration": "00:00:03",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "drop-coin.mp3",
+        "frenchName": "Tomber pièce",
+        "sizeBytes": 38745,
+        "duration": "00:00:01",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "earth_magic.mp3",
+        "frenchName": "Terre magie",
+        "sizeBytes": 257602,
+        "duration": "00:00:08",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "eerie_ghostly.mp3",
+        "frenchName": "Étrange fantômatique",
+        "sizeBytes": 688254,
+        "duration": "00:00:21",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "event.mp3",
+        "frenchName": "Événement",
+        "sizeBytes": 62987,
+        "duration": "00:00:01",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "evil-laugh-1.mp3",
+        "frenchName": "Maléfique rire 1",
+        "sizeBytes": 35666,
+        "duration": "00:00:02",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "evil-laugh-2.mp3",
+        "frenchName": "Maléfique rire 2",
+        "sizeBytes": 90572,
+        "duration": "00:00:02",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "evil-laugh-with-reverb.mp3",
+        "frenchName": "Maléfique rire with reverb",
+        "sizeBytes": 106306,
+        "duration": "00:00:03",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "explosion-echo.mp3",
+        "frenchName": "Explosion écho",
+        "sizeBytes": 168194,
+        "duration": "00:00:05",
+        "category": "Non classé"
+    },
+    {
+        "filename": "explosion-glass.mp3",
+        "frenchName": "Explosion verre",
+        "sizeBytes": 113142,
+        "duration": "00:00:03",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "explosion-loud.mp3",
+        "frenchName": "Explosion fort",
+        "sizeBytes": 100610,
+        "duration": "00:00:02",
+        "category": "Non classé"
+    },
+    {
+        "filename": "explosion-short.mp3",
+        "frenchName": "Explosion court",
+        "sizeBytes": 88322,
+        "duration": "00:00:02",
+        "category": "Non classé"
+    },
+    {
+        "filename": "explosion-with-debris.mp3",
+        "frenchName": "Explosion with débris",
+        "sizeBytes": 100610,
+        "duration": "00:00:02",
+        "category": "Non classé"
+    },
+    {
+        "filename": "failure.mp3",
+        "frenchName": "Échec",
+        "sizeBytes": 187861,
+        "duration": "00:00:05",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "fairy-magic-particle.mp3",
+        "frenchName": "Fée magie particule",
+        "sizeBytes": 51313,
+        "duration": "00:00:01",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "fairy-sparkle.mp3",
+        "frenchName": "Fée scintillement",
+        "sizeBytes": 63823,
+        "duration": "00:00:01",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "fart.mp3",
+        "frenchName": "Pet",
+        "sizeBytes": 33730,
+        "duration": "00:00:00",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "female-vampire-bite.mp3",
+        "frenchName": "Femme vampire morsure",
+        "sizeBytes": 157474,
+        "duration": "00:00:04",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "fire-magic.mp3",
+        "frenchName": "Feu magie",
+        "sizeBytes": 257602,
+        "duration": "00:00:08",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "fireplace-burning.mp3",
+        "frenchName": "Cheminée en feu",
+        "sizeBytes": 848962,
+        "duration": "00:00:42",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "fist-fight-hit.mp3",
+        "frenchName": "Poing combat coup",
+        "sizeBytes": 17012,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "ghost-breath.mp3",
+        "frenchName": "Fantôme souffle",
+        "sizeBytes": 345556,
+        "duration": "00:00:10",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "ghost-breathing.mp3",
+        "frenchName": "Fantôme respiration",
+        "sizeBytes": 590452,
+        "duration": "00:00:18",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "ghostly-sounds.mp3",
+        "frenchName": "Fantômatique sons",
+        "sizeBytes": 226855,
+        "duration": "00:00:07",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "ghoul.mp3",
+        "frenchName": "Goule",
+        "sizeBytes": 111026,
+        "duration": "00:00:10",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "giant-breath.mp3",
+        "frenchName": "Géant souffle",
+        "sizeBytes": 158978,
+        "duration": "00:00:04",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "giant-spider-walking.mp3",
+        "frenchName": "Géant araignée marchant",
+        "sizeBytes": 138562,
+        "duration": "00:00:04",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "girl-laugh-2.mp3",
+        "frenchName": "Fille rire 2",
+        "sizeBytes": 18386,
+        "duration": "00:00:01",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "goblin-growl.mp3",
+        "frenchName": "Gobelin grogne",
+        "sizeBytes": 15266,
+        "duration": "00:00:00",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "grabbing-thing.mp3",
+        "frenchName": "Attraper chose",
+        "sizeBytes": 22027,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "grass-turn.mp3",
+        "frenchName": "Herbe tourner",
+        "sizeBytes": 36034,
+        "duration": "00:00:01",
+        "category": "Non classé"
+    },
+    {
+        "filename": "guttural-snarl.mp3",
+        "frenchName": "Guttural grognement",
+        "sizeBytes": 125186,
+        "duration": "00:00:03",
+        "category": "Non classé"
+    },
+    {
+        "filename": "hammer-stone-break.mp3",
+        "frenchName": "Marteau pierre casser",
+        "sizeBytes": 43010,
+        "duration": "00:00:01",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "hand-clap1.mp3",
+        "frenchName": "Main clap1",
+        "sizeBytes": 242690,
+        "duration": "00:00:07",
+        "category": "Non classé"
+    },
+    {
+        "filename": "happy-winning.mp3",
+        "frenchName": "Heureux victoire",
+        "sizeBytes": 513575,
+        "duration": "00:00:16",
+        "category": "Non classé"
+    },
+    {
+        "filename": "heavy-creaking.mp3",
+        "frenchName": "Lourd grincement",
+        "sizeBytes": 57602,
+        "duration": "00:00:01",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "heavy-door-unlocking.mp3",
+        "frenchName": "Lourd porte déverrouiller",
+        "sizeBytes": 67906,
+        "duration": "00:00:02",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "heavy-object-sliding-stone.mp3",
+        "frenchName": "Lourd objet glissant pierre",
+        "sizeBytes": 671174,
+        "duration": "00:01:06",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "hit-injured-man-scream-pain.mp3",
+        "frenchName": "Coup blessé homme cri douleur",
+        "sizeBytes": 96412,
+        "duration": "00:00:02",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "hit-noise-2.mp3",
+        "frenchName": "Coup bruit 2",
+        "sizeBytes": 21506,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "hit-noise.mp3",
+        "frenchName": "Coup bruit",
+        "sizeBytes": 21506,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "hooo-male-reaction-admirative.mp3",
+        "frenchName": "Oohh mâle réaction admirative",
+        "sizeBytes": 68354,
+        "duration": "00:00:01",
+        "category": "Non classé"
+    },
+    {
+        "filename": "horn-grave-scary.mp3",
+        "frenchName": "Cor grave effrayant",
+        "sizeBytes": 962722,
+        "duration": "00:00:48",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "horns-in-town-announce.mp3",
+        "frenchName": "Horns in town annonce",
+        "sizeBytes": 274402,
+        "duration": "00:00:13",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "horse-carriage.mp3",
+        "frenchName": "Cheval charrette",
+        "sizeBytes": 72962,
+        "duration": "00:00:02",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "horse-galloping.mp3",
+        "frenchName": "Cheval galop",
+        "sizeBytes": 259456,
+        "duration": "00:00:08",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "horse-neigh.mp3",
+        "frenchName": "Cheval hennissement",
+        "sizeBytes": 58808,
+        "duration": "00:00:01",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "horse-trot-with-medium-paced-hoof-impacts-short.mp3",
+        "frenchName": "Cheval trot with medium paced hoof impacts court",
+        "sizeBytes": 65602,
+        "duration": "00:00:02",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "huge-crowd-cheer.mp3",
+        "frenchName": "Énorme foule célébration",
+        "sizeBytes": 509954,
+        "duration": "00:00:15",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "huh_disrespect.mp3",
+        "frenchName": "Huh disrespect",
+        "sizeBytes": 23384,
+        "duration": "00:00:00",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "hurted-man-scream.mp3",
+        "frenchName": "Blessé homme cri",
+        "sizeBytes": 117322,
+        "duration": "00:00:03",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "in-nomine-patris.mp3",
+        "frenchName": "In Nomine Patris",
+        "sizeBytes": 334661,
+        "duration": "00:00:10",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "inception-horn-victory.mp3",
+        "frenchName": "Inception cor victory",
+        "sizeBytes": 37106,
+        "duration": "00:00:03",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "injury-scream-woman.mp3",
+        "frenchName": "Blessure cri femme",
+        "sizeBytes": 30722,
+        "duration": "00:00:00",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "inventory-change-1.mp3",
+        "frenchName": "Inventaire changement 1",
+        "sizeBytes": 39581,
+        "duration": "00:00:01",
+        "category": "Non classé"
+    },
+    {
+        "filename": "item-select-1.mp3",
+        "frenchName": "Objet sélection 1",
+        "sizeBytes": 4501,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "item-select-metal.mp3",
+        "frenchName": "Objet sélection métal",
+        "sizeBytes": 2829,
+        "duration": "00:00:00",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "keys-ring-catch.mp3",
+        "frenchName": "Clés anneau attraper",
+        "sizeBytes": 32086,
+        "duration": "00:00:01",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "kids-laugh-school.mp3",
+        "frenchName": "Enfants rire école",
+        "sizeBytes": 21986,
+        "duration": "00:00:01",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "kiss.mp3",
+        "frenchName": "Bisou",
+        "sizeBytes": 38402,
+        "duration": "00:00:01",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "knight-voice-attack-grunt.mp3",
+        "frenchName": "Chevalier voix attaque grognement",
+        "sizeBytes": 50690,
+        "duration": "00:00:01",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "knock-on-wood-short.mp3",
+        "frenchName": "Frapper on bois court",
+        "sizeBytes": 42089,
+        "duration": "00:00:01",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "knocking-on-barrel.mp3",
+        "frenchName": "Knocking on tonneau",
+        "sizeBytes": 23699,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "knocking-on-rock-short.mp3",
+        "frenchName": "Knocking on rocher court",
+        "sizeBytes": 22863,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "laugh.mp3",
+        "frenchName": "Rire",
+        "sizeBytes": 17186,
+        "duration": "00:00:01",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "laughter-rire.mp3",
+        "frenchName": "Laughter rire",
+        "sizeBytes": 140756,
+        "duration": "00:00:04",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "laugh_crazy.mp3",
+        "frenchName": "Rire fou",
+        "sizeBytes": 593824,
+        "duration": "00:00:18",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "long-kiss.mp3",
+        "frenchName": "Long bisou",
+        "sizeBytes": 63746,
+        "duration": "00:00:01",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "long-man-scream-painful.mp3",
+        "frenchName": "Long homme cri douloureux",
+        "sizeBytes": 163138,
+        "duration": "00:00:05",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "long-wet-fart.mp3",
+        "frenchName": "Long mouillé pet",
+        "sizeBytes": 42386,
+        "duration": "00:00:03",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "loud-breath.mp3",
+        "frenchName": "Fort souffle",
+        "sizeBytes": 660802,
+        "duration": "00:00:20",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "mad-scream-short.mp3",
+        "frenchName": "Fou cri court",
+        "sizeBytes": 78338,
+        "duration": "00:00:02",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "magic-fantasy-sound.mp3",
+        "frenchName": "Magie fantasy son",
+        "sizeBytes": 78338,
+        "duration": "00:00:02",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "magical-reveal-start.mp3",
+        "frenchName": "Magique révélation début",
+        "sizeBytes": 102850,
+        "duration": "00:00:03",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "male-groan-of-pain.mp3",
+        "frenchName": "Mâle gémissement of douleur",
+        "sizeBytes": 259456,
+        "duration": "00:00:08",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "males-laugh.mp3",
+        "frenchName": "Mâles rire",
+        "sizeBytes": 86786,
+        "duration": "00:00:02",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "man-scream-mad-main-long.mp3",
+        "frenchName": "Homme cri fou main long",
+        "sizeBytes": 165890,
+        "duration": "00:00:04",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "man_death_scream.mp3",
+        "frenchName": "Homme mort cri",
+        "sizeBytes": 46790,
+        "duration": "00:00:01",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "man_hurted.mp3",
+        "frenchName": "Homme blessé",
+        "sizeBytes": 25867,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "material-stone.mp3",
+        "frenchName": "Matériau pierre",
+        "sizeBytes": 38338,
+        "duration": "00:00:01",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "material-underwater-fish.mp3",
+        "frenchName": "Matériau sous-marin poisson",
+        "sizeBytes": 86722,
+        "duration": "00:00:02",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "medieval-bell-resonate.mp3",
+        "frenchName": "Médiéval cloche résonner",
+        "sizeBytes": 238402,
+        "duration": "00:00:11",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "medieval-fanfare-announce.mp3",
+        "frenchName": "Médiéval fanfare annonce",
+        "sizeBytes": 69547,
+        "duration": "00:00:06",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "metal-whoosh-hit.mp3",
+        "frenchName": "Métal swoosh coup",
+        "sizeBytes": 26882,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "mischievous-laugh.mp3",
+        "frenchName": "Malicieux rire",
+        "sizeBytes": 72962,
+        "duration": "00:00:02",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "monster-biting.mp3",
+        "frenchName": "Monstre mordant",
+        "sizeBytes": 200106,
+        "duration": "00:00:06",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "monster-growl-roar-scary.mp3",
+        "frenchName": "Monstre grogne rugissement effrayant",
+        "sizeBytes": 156994,
+        "duration": "00:00:04",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "morning-song-birds.mp3",
+        "frenchName": "Matin chant oiseaux",
+        "sizeBytes": 1494080,
+        "duration": "00:01:14",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "move-bar.mp3",
+        "frenchName": "Bouger bar",
+        "sizeBytes": 21122,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "move-cloud-spread.mp3",
+        "frenchName": "Bouger nuage propagation",
+        "sizeBytes": 39554,
+        "duration": "00:00:01",
+        "category": "Non classé"
+    },
+    {
+        "filename": "movement-swipe-whoosh-weapon-2.mp3",
+        "frenchName": "Mouvement balayage swoosh arme 2",
+        "sizeBytes": 20355,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "movement-swipe-whoosh-weapon.mp3",
+        "frenchName": "Mouvement balayage swoosh arme",
+        "sizeBytes": 26207,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "movement-swipe-whoosh.mp3",
+        "frenchName": "Mouvement balayage swoosh",
+        "sizeBytes": 33730,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "muffled-angry-screaming.mp3",
+        "frenchName": "Étouffé en colère hurlement",
+        "sizeBytes": 65495,
+        "duration": "00:00:01",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "muffled-giggle.mp3",
+        "frenchName": "Étouffé gloussement",
+        "sizeBytes": 16642,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "munching-food.mp3",
+        "frenchName": "Mastication nourriture",
+        "sizeBytes": 450818,
+        "duration": "00:00:13",
+        "category": "Non classé"
+    },
+    {
+        "filename": "music-box-game-over.mp3",
+        "frenchName": "Musique boîte jeu fini",
+        "sizeBytes": 666520,
+        "duration": "00:00:20",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "noises.mp3",
+        "frenchName": "Bruits",
+        "sizeBytes": 272482,
+        "duration": "00:00:13",
+        "category": "Non classé"
+    },
+    {
+        "filename": "object-fall.mp3",
+        "frenchName": "Objet chute",
+        "sizeBytes": 66571,
+        "duration": "00:00:01",
+        "category": "Non classé"
+    },
+    {
+        "filename": "oh.mp3",
+        "frenchName": "Oh",
+        "sizeBytes": 23699,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "once-short-clap.mp3",
+        "frenchName": "Une fois court applaudissement",
+        "sizeBytes": 23699,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "opening-door-2.mp3",
+        "frenchName": "Ouverture porte 2",
+        "sizeBytes": 52546,
+        "duration": "00:00:01",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "opening-door.mp3",
+        "frenchName": "Ouverture porte",
+        "sizeBytes": 54530,
+        "duration": "00:00:01",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "out-of-breath-male.mp3",
+        "frenchName": "Dehors of souffle mâle",
+        "sizeBytes": 228499,
+        "duration": "00:00:06",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "owl-hooting.mp3",
+        "frenchName": "Hibou hululement",
+        "sizeBytes": 114842,
+        "duration": "00:00:03",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "page-turn-2.mp3",
+        "frenchName": "Page tourner 2",
+        "sizeBytes": 35430,
+        "duration": "00:00:01",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "page-turn-3.mp3",
+        "frenchName": "Page tourner 3",
+        "sizeBytes": 24130,
+        "duration": "00:00:00",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "page-turn.mp3",
+        "frenchName": "Page tourner",
+        "sizeBytes": 42089,
+        "duration": "00:00:01",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "paper-rip-fast.mp3",
+        "frenchName": "Papier déchirer rapide",
+        "sizeBytes": 22863,
+        "duration": "00:00:00",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "paper-rip.mp3",
+        "frenchName": "Papier déchirer",
+        "sizeBytes": 119022,
+        "duration": "00:00:03",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "paper_ripping.mp3",
+        "frenchName": "Papier déchirement",
+        "sizeBytes": 33730,
+        "duration": "00:00:00",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "person-eating-crunching.mp3",
+        "frenchName": "Personne mangeant craquement",
+        "sizeBytes": 641471,
+        "duration": "00:00:20",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "playful-drum-for-comedy.mp3",
+        "frenchName": "Joueur tambour for comédie",
+        "sizeBytes": 70658,
+        "duration": "00:00:02",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "pop.mp3",
+        "frenchName": "Plop",
+        "sizeBytes": 24578,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "popup.mp3",
+        "frenchName": "Fenêtre",
+        "sizeBytes": 17848,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "possessed-laugh.mp3",
+        "frenchName": "Possédé rire",
+        "sizeBytes": 55586,
+        "duration": "00:00:04",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "power-punch.mp3",
+        "frenchName": "Puissance frappe",
+        "sizeBytes": 25371,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "powerful-spell.mp3",
+        "frenchName": "Puissant sort",
+        "sizeBytes": 169149,
+        "duration": "00:00:05",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "punch-1.mp3",
+        "frenchName": "Frappe 1",
+        "sizeBytes": 22027,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "punch-2.mp3",
+        "frenchName": "Frappe 2",
+        "sizeBytes": 30722,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "punch-4.mp3",
+        "frenchName": "Frappe 4",
+        "sizeBytes": 22274,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "punch-barrel-cracking.mp3",
+        "frenchName": "Frappe tonneau cracking",
+        "sizeBytes": 43761,
+        "duration": "00:00:01",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "punch-crack.mp3",
+        "frenchName": "Frappe crack",
+        "sizeBytes": 32258,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "punch.mp3",
+        "frenchName": "Frappe",
+        "sizeBytes": 39581,
+        "duration": "00:00:01",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "purring-cat.mp3",
+        "frenchName": "Ronronnement chat",
+        "sizeBytes": 220168,
+        "duration": "00:00:06",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "pwit-button.mp3",
+        "frenchName": "Bouton Pwit",
+        "sizeBytes": 13058,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "relieved.mp3",
+        "frenchName": "Soulagé",
+        "sizeBytes": 24626,
+        "duration": "00:00:01",
+        "category": "Non classé"
+    },
+    {
+        "filename": "ressort-trap.mp3",
+        "frenchName": "Ressort piège",
+        "sizeBytes": 10221,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "rooster-crowing.mp3",
+        "frenchName": "Coq chantant",
+        "sizeBytes": 75526,
+        "duration": "00:00:02",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "scratching.mp3",
+        "frenchName": "Grattage",
+        "sizeBytes": 54082,
+        "duration": "00:00:02",
+        "category": "Non classé"
+    },
+    {
+        "filename": "shield-block-shortsword.mp3",
+        "frenchName": "Bouclier bloque épée courte",
+        "sizeBytes": 51458,
+        "duration": "00:00:01",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "shopkeeper-bell.mp3",
+        "frenchName": "Marchand cloche",
+        "sizeBytes": 72182,
+        "duration": "00:00:02",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "short-ethereal-sound.mp3",
+        "frenchName": "Court éthéré son",
+        "sizeBytes": 119830,
+        "duration": "00:00:03",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "short-stone-throw-splash-water.mp3",
+        "frenchName": "Court pierre lancer éclaboussure eau",
+        "sizeBytes": 53314,
+        "duration": "00:00:01",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "shout-cry-man-2.mp3",
+        "frenchName": "Cri cry homme 2",
+        "sizeBytes": 15986,
+        "duration": "00:00:00",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "shout-cry-man.mp3",
+        "frenchName": "Cri cry homme",
+        "sizeBytes": 12626,
+        "duration": "00:00:00",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "sigh-tired.mp3",
+        "frenchName": "Soupir fatigué",
+        "sizeBytes": 26114,
+        "duration": "00:00:00",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "single-church-bell.mp3",
+        "frenchName": "Unique église cloche",
+        "sizeBytes": 122882,
+        "duration": "00:00:03",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "slap.mp3",
+        "frenchName": "Claque",
+        "sizeBytes": 17533,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "sound-farty.mp3",
+        "frenchName": "Son péteur",
+        "sizeBytes": 13106,
+        "duration": "00:00:00",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "spell-cast.mp3",
+        "frenchName": "Sort lancement",
+        "sizeBytes": 42979,
+        "duration": "00:00:03",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "spell_cast.mp3",
+        "frenchName": "Sort lancement",
+        "sizeBytes": 259456,
+        "duration": "00:00:08",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "spin-whoosh.mp3",
+        "frenchName": "Tourbillon swoosh",
+        "sizeBytes": 239170,
+        "duration": "00:00:07",
+        "category": "Non classé"
+    },
+    {
+        "filename": "squeak-metal.mp3",
+        "frenchName": "Grincement métal",
+        "sizeBytes": 109826,
+        "duration": "00:00:03",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "squeaky-toy.mp3",
+        "frenchName": "Squeaky jouet",
+        "sizeBytes": 11906,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "stomach-gurgle.mp3",
+        "frenchName": "Estomac gargouillement",
+        "sizeBytes": 356002,
+        "duration": "00:00:17",
+        "category": "Non classé"
+    },
+    {
+        "filename": "strange-deaf-scary-laugh.mp3",
+        "frenchName": "Étrange sourd effrayant rire",
+        "sizeBytes": 296770,
+        "duration": "00:00:09",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "strange_mystery.mp3",
+        "frenchName": "Étrange mystère",
+        "sizeBytes": 919428,
+        "duration": "00:01:31",
+        "category": "Magie & Surnaturel"
+    },
+    {
+        "filename": "success-short-fanfare.mp3",
+        "frenchName": "Succès court fanfare",
+        "sizeBytes": 172802,
+        "duration": "00:00:05",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "success.mp3",
+        "frenchName": "Succès",
+        "sizeBytes": 46267,
+        "duration": "00:00:03",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "sweet-young-woman-laugh.mp3",
+        "frenchName": "Douce jeune femme rire",
+        "sizeBytes": 40417,
+        "duration": "00:00:01",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "swing-whoosh-metal-hit.mp3",
+        "frenchName": "Balancement swoosh métal coup",
+        "sizeBytes": 51458,
+        "duration": "00:00:01",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "sword-attack-beast-injured.mp3",
+        "frenchName": "Épée attaque bête blessé",
+        "sizeBytes": 84721,
+        "duration": "00:00:02",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "sword-attack-electric.mp3",
+        "frenchName": "Épée attaque electric",
+        "sizeBytes": 59643,
+        "duration": "00:00:01",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "sword-attack-on-wood.mp3",
+        "frenchName": "Épée attaque on bois",
+        "sizeBytes": 52956,
+        "duration": "00:00:01",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "sword-fight.mp3",
+        "frenchName": "Épée combat",
+        "sizeBytes": 200078,
+        "duration": "00:00:06",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "sword-hit.mp3",
+        "frenchName": "Épée coup",
+        "sizeBytes": 47941,
+        "duration": "00:00:01",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "sword-sheathe.mp3",
+        "frenchName": "Épée rengainer",
+        "sizeBytes": 32258,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "sword-slash-flesh.mp3",
+        "frenchName": "Épée entaille chair",
+        "sizeBytes": 11161,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "sword-unsheathe.mp3",
+        "frenchName": "Épée dégainer",
+        "sizeBytes": 62210,
+        "duration": "00:00:01",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "sword_slash.mp3",
+        "frenchName": "Épée entaille",
+        "sizeBytes": 25093,
+        "duration": "00:00:00",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "tainy-ambient.mp3",
+        "frenchName": "Tainy ambiance",
+        "sizeBytes": 1036034,
+        "duration": "00:00:32",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "throwing-clothes-on-the-floor.mp3",
+        "frenchName": "Jetant vêtements on the sol",
+        "sizeBytes": 50306,
+        "duration": "00:00:04",
+        "category": "Non classé"
+    },
+    {
+        "filename": "thunderstorm-and-rain.mp3",
+        "frenchName": "Orage and pluie",
+        "sizeBytes": 321346,
+        "duration": "00:00:10",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "toc_sourd.mp3",
+        "frenchName": "Toc sourd",
+        "sizeBytes": 13668,
+        "duration": "00:00:00",
+        "category": "Non classé"
+    },
+    {
+        "filename": "tremor_horn.mp3",
+        "frenchName": "Tremblement cor",
+        "sizeBytes": 376322,
+        "duration": "00:00:11",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "underwater-explosion.mp3",
+        "frenchName": "Sous-marin explosion",
+        "sizeBytes": 177410,
+        "duration": "00:00:05",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "vomit.mp3",
+        "frenchName": "Vomit",
+        "sizeBytes": 125954,
+        "duration": "00:00:03",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "vomiting.mp3",
+        "frenchName": "Vomiting",
+        "sizeBytes": 42925,
+        "duration": "00:00:01",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "walking-forest-leaf.mp3",
+        "frenchName": "Marchant forest leaf",
+        "sizeBytes": 430402,
+        "duration": "00:00:21",
+        "category": "Non classé"
+    },
+    {
+        "filename": "walking-house.mp3",
+        "frenchName": "Marchant house",
+        "sizeBytes": 88747,
+        "duration": "00:00:08",
+        "category": "Non classé"
+    },
+    {
+        "filename": "walking-street.mp3",
+        "frenchName": "Marchant street",
+        "sizeBytes": 99682,
+        "duration": "00:00:04",
+        "category": "Non classé"
+    },
+    {
+        "filename": "war-horn-blast.mp3",
+        "frenchName": "Guerre cor souffle",
+        "sizeBytes": 227842,
+        "duration": "00:00:11",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "war-horn-ou-cri-profond-lointain.mp3",
+        "frenchName": "Guerre cor ou cri profond lointain",
+        "sizeBytes": 264194,
+        "duration": "00:00:08",
+        "category": "Musique & Interface"
+    },
+    {
+        "filename": "water-pouring.mp3",
+        "frenchName": "Eau verser",
+        "sizeBytes": 81410,
+        "duration": "00:00:02",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "water-splash.mp3",
+        "frenchName": "Eau éclaboussure",
+        "sizeBytes": 16226,
+        "duration": "00:00:01",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "whistle-slide-down.mp3",
+        "frenchName": "Whistle glisser bas",
+        "sizeBytes": 49154,
+        "duration": "00:00:01",
+        "category": "Non classé"
+    },
+    {
+        "filename": "whoosh-axe-throw.mp3",
+        "frenchName": "Swoosh hache lancer",
+        "sizeBytes": 85003,
+        "duration": "00:00:02",
+        "category": "Combat & Armes"
+    },
+    {
+        "filename": "whoosh-crawl.mp3",
+        "frenchName": "Swoosh ramper",
+        "sizeBytes": 257602,
+        "duration": "00:00:08",
+        "category": "Non classé"
+    },
+    {
+        "filename": "wind-out.mp3",
+        "frenchName": "Vent dehors",
+        "sizeBytes": 106483,
+        "duration": "00:00:03",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "windy-day.mp3",
+        "frenchName": "Venteux jour",
+        "sizeBytes": 961090,
+        "duration": "00:00:30",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "windy_explosion_gravats.mp3",
+        "frenchName": "Venteux explosion gravats",
+        "sizeBytes": 246082,
+        "duration": "00:00:12",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "wind_ambient.mp3",
+        "frenchName": "Vent ambiance",
+        "sizeBytes": 5669177,
+        "duration": "00:02:56",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "witch-laugh.mp3",
+        "frenchName": "Sorcière rire",
+        "sizeBytes": 43010,
+        "duration": "00:00:01",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "wolf-howl.mp3",
+        "frenchName": "Loup hurlement",
+        "sizeBytes": 251933,
+        "duration": "00:00:07",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "woman-crying.mp3",
+        "frenchName": "Femme pleurs",
+        "sizeBytes": 456194,
+        "duration": "00:00:14",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "woman-laugh.mp3",
+        "frenchName": "Femme rire",
+        "sizeBytes": 56834,
+        "duration": "00:00:01",
+        "category": "Voix & Émotions"
+    },
+    {
+        "filename": "woman-screaming-twice.mp3",
+        "frenchName": "Femme hurlement twice",
+        "sizeBytes": 259456,
+        "duration": "00:00:08",
+        "category": "Ambiance & Environnement"
+    },
+    {
+        "filename": "wood-scratching-tremble.mp3",
+        "frenchName": "Bois grattage trembler",
+        "sizeBytes": 106306,
+        "duration": "00:00:03",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "wow.mp3",
+        "frenchName": "Wow",
+        "sizeBytes": 45314,
+        "duration": "00:00:01",
+        "category": "Non classé"
+    },
+    {
+        "filename": "write-crumple-throw.mp3",
+        "frenchName": "Écrire froisser lancer",
+        "sizeBytes": 36866,
+        "duration": "00:00:03",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "writing-pen-signature-paper.mp3",
+        "frenchName": "Écriture stylo signature papier",
+        "sizeBytes": 119858,
+        "duration": "00:00:03",
+        "category": "Objets & Interactions"
+    },
+    {
+        "filename": "zombie-moan.mp3",
+        "frenchName": "Zombie gémissement",
+        "sizeBytes": 48626,
+        "duration": "00:00:04",
+        "category": "Créatures & Animaux"
+    },
+    {
+        "filename": "zombie.mp3",
+        "frenchName": "Zombie",
+        "sizeBytes": 259456,
+        "duration": "00:00:08",
+        "category": "Créatures & Animaux"
+    }
+]
