@@ -1,68 +1,93 @@
-# D&D 5e Interactive Character Sheet
+# Fiches D&D 5e Augmentées
 
-Une feuille de personnage interactive, moderne et "Offline First" pour Dungeons & Dragons 5e, construite avec React, TypeScript et Tailwind CSS par **Geoffroy Streit (Hylst)**.
+> Feuille de personnage interactive, moderne et **Offline-First** pour Dungeons & Dragons 5e.  
+> Construite avec React 19, TypeScript et Tailwind CSS par **Geoffroy Streit (Hylst)**.
 
-L'application ne fait aucun appel à des intelligences artificielles ou API externes. Tout se trouve dans votre navigateur, avec système d'import / export de vos données de JDR.
+Aucun appel à des IA ou API externes. Tout fonctionne dans votre navigateur, avec import/export de vos données de JDR.
 
-## Fonctionnalités
+---
 
-- **Gestion Complète du Personnage** : Statistiques, compétences, équipement, sorts, et capacités.
-- **Lanceur de Dés Intégré** : Cliquez sur n'importe quelle statistique, compétence ou attaque pour lancer les dés automatiquement. Un panneau flottant garde l'historique de vos lancers.
-- **Grimoire Interactif** : Gestion des emplacements de sorts, filtrage, et animations de lancement.
-- **Catalogue d'Objets** : Base de données intégrée pour ajouter facilement de l'équipement standard.
-- **Montée de Niveau Assistée** : Modale interactive pour guider le joueur lors du passage au niveau supérieur.
-- **Persistance Locale** : Les modifications sont sauvegardées automatiquement dans le navigateur (IndexedDB).
-- **Export Markdown/JSON** : Sauvegardez et partagez votre fiche de personnage avec votre maître de jeu.
+## ✨ Fonctionnalités
 
-## Comment tester l'application en local ?
+### Fiche de Personnage
+- **Gestion Complète** : Statistiques, compétences, équipement, sorts, capacités, biographie.
+- **Lanceur de Dés Intégré** : Cliquez sur n'importe quelle statistique pour lancer les dés automatiquement. Panneau flottant avec historique.
+- **Grimoire Interactif** : Gestion des emplacements de sorts, filtrage par niveau/école, animations de lancement.
+- **Catalogue d'Objets** : Base de données intégrée 50+ objets D&D 5e pour l'inventaire.
+- **Montée de Niveau Assistée** : Modale interactive (PV, Caractéristiques, Sorts/Capacités).
+- **Persistance Locale** : Sauvegarde automatique dans le navigateur (IndexedDB via Zustand).
+- **Export Markdown/JSON** : Partagez votre fiche avec votre MJ.
 
-Pour tester le projet en local sur votre machine de développement :
+### 🎵 Ambiance & Sons
+- **Soundboard SFX** : 267 effets sonores en 4 vues (Top 20, Par Situation, Par Tension, Par Catégorie) avec système de **favoris persistants**.
+- **Bibliothèque Musicale** : 109 compositions Heroic Fantasy originales (Geoffroy / Hylst) avec :
+  - Lecteur "Now Playing" fixe (seekbar, loop, prev/next, volume)
+  - 7 modes de tri (Alpha, Favoris, Durée, BPM, Genre, Ambiance, Usage)
+  - Panneau de filtres + modal de détails avec métadonnées complètes
+  - Système de **favoris musiques** persistants
 
-1. Assurez-vous d'avoir [Node.js](https://nodejs.org/) installé.
-2. Clonez le dépôt et ouvrez un terminal dans le dossier du projet.
-3. Installez les dépendances :
-   ```bash
-   npm install
-   ```
-4. Lancez le serveur de développement :
-   ```bash
-   npm run dev
-   ```
-5. Ouvrez l'URL fournie (généralement `http://localhost:3000` ou `http://localhost:5173`) dans votre navigateur.
+---
 
-## Déploiement : Compatibilité Docker / Nginx via Coolify
+## 🚀 Démarrage rapide
 
-Cette application est une **Single Page Application (SPA) 100% frontend**, ce qui signifie qu'elle produit uniquement des fichiers HTML, CSS et JS statiques lors de son "build". 
+```bash
+# Installer les dépendances
+npm install
 
-Elle est **parfaitement compatible** pour un déploiement dans un conteneur statique Nginx géré par Coolify sur un VPS.
+# Lancer en développement (http://localhost:3000)
+npm run dev
 
-### Étapes pour Coolify :
-1. Dans Coolify, créez un nouveau projet et ajoutez un **"Static Site"** (généralement un preset Nixpacks ou Dockerfile).
-2. Pointez Coolify vers votre dépôt Git.
-3. Configurez les commandes de build :
-   - Build Command : `npm run build`
-   - Install Command : `npm install`
-   - Publish Directory / Output Directory : `dist`
-4. Laissez Coolify orchestrer la création du conteneur. Il embarquera un serveur Nginx minimaliste qui servira le dossier `dist` très rapidement.
-   - *Note relative au routage : Bien qu'il s'agisse d'une SPA, les vues sont toutes chargées depuis `index.html`. Un serveur Nginx statique basique configuré par Coolify effectuera les bons routages.*
+# Build de production
+npm run build
+```
 
-### Alternative (Docker natif)
-Si vous souhaitez packager l'image vous-même via un Dockerfile à exposer sur Coolify :
+---
+
+## 🐳 Déploiement (Docker / Nginx / Coolify)
+
+Application SPA 100% statique — compatible avec tout hébergeur statique (Nginx, Vercel, Netlify, GitHub Pages, Coolify).
+
+**Via Coolify :**
+1. Créer un "Static Site" pointant sur ce dépôt.
+2. Build Command : `npm run build` — Output Directory : `dist`
+
+**Via Dockerfile :**
 ```dockerfile
-# Étape de build
-FROM node:20-alpine as build
+FROM node:20-alpine AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
 RUN npm run build
 
-# Étape de production
 FROM nginx:alpine
-# Copie des fichiers générés
 COPY --from=build /app/dist /usr/share/nginx/html
-# Configuration (optionnelle, selon vos besoins de routage SPA)
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
+
+---
+
+## 🗂️ Structure du Projet
+
+```
+src/
+├── components/          # Modules de l'application
+│   ├── SoundboardModule.tsx   # Soundboard SFX + Bibliothèque Musicale
+│   ├── SpellbookModule.tsx    # Grimoire interactif
+│   ├── CombatModule.tsx       # Combat & attaques
+│   └── ...
+├── data/                # Données statiques JSON
+│   ├── musics.json            # Métadonnées des 109 pistes musicales
+│   ├── sfx_associations.json  # Organisation catégorielle des SFX
+│   └── sounds.json            # Index des 267 effets sonores
+├── store/               # Zustand (état global)
+├── App.tsx              # Routing & sidebar
+└── index.css            # Design system & animations
+```
+
+---
+
+## 📄 Licence
+
+Projet personnel — © Geoffroy Streit (Hylst). Usage libre pour sessions de JDR. Les musiques sont des compositions originales de l'auteur.

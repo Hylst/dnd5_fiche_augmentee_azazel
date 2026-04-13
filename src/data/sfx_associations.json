@@ -836,7 +836,7 @@
             "short-stone-throw-splash-water.mp3"
         ]
     },
-    "top_12_most_useful_rpg_sounds": [
+    "top_20_most_useful_rpg_sounds": [
         {
             "rank": 1,
             "filename": "dice_roll.mp3",
@@ -855,27 +855,27 @@
         {
             "rank": 4,
             "filename": "hit-injured-man-scream-pain.mp3",
-            "reason": "Pour marquer l'encaissement de gros dégâts d'un joueur ou d'un PNJ."
+            "reason": "Pour marquer l'encaissement de gros dégâts (joueur ou PNJ)."
         },
         {
             "rank": 5,
             "filename": "bow_release.mp3",
-            "reason": "Indique une attaque à distance."
+            "reason": "Indique une attaque à distance à l'arc."
         },
         {
             "rank": 6,
             "filename": "close-door.mp3",
-            "reason": "Ouverture de la porte du boss ou entrée dans un donjon mystérieux."
+            "reason": "Entrée dans un donjon mystérieux ou franchissement d'un seuil."
         },
         {
             "rank": 7,
             "filename": "crowded_place-tavern.mp3",
-            "reason": "Crée immédiatement l'ambiance lors du retour en ville."
+            "reason": "Crée immédiatement l'ambiance de taverne lors du retour en ville."
         },
         {
             "rank": 8,
             "filename": "campfire.mp3",
-            "reason": "Parfait pour rythmer les repos courts et les rp de nuit de garde."
+            "reason": "Parfait pour les repos courts et les rp de nuit de garde."
         },
         {
             "rank": 9,
@@ -895,7 +895,47 @@
         {
             "rank": 12,
             "filename": "dramatic.mp3",
-            "reason": "Echec Critique (Nat 1), instaure un sentiment de perte ou de danger extrême."
+            "reason": "Echec Critique (Nat 1) : instaure un sentiment de perte ou de danger extrême."
+        },
+        {
+            "rank": 13,
+            "filename": "thunderstorm-and-rain.mp3",
+            "reason": "Ambiance météo dramatique, révélations ou scènes d'horreur."
+        },
+        {
+            "rank": 14,
+            "filename": "wolf-howl.mp3",
+            "reason": "Forêt la nuit, meute de loups-garous ou présence inquiétante au loin."
+        },
+        {
+            "rank": 15,
+            "filename": "dagger_drawn.mp3",
+            "reason": "Trahison, embuscade ou dégainage rapide en situation tendue."
+        },
+        {
+            "rank": 16,
+            "filename": "spell_cast.mp3",
+            "reason": "Lancement d'un sort puissant — distingue une magie offensive d'un simple sort."
+        },
+        {
+            "rank": 17,
+            "filename": "disappear.mp3",
+            "reason": "Téléportation, disparition subite d'un PNJ ou fin d'illusion."
+        },
+        {
+            "rank": 18,
+            "filename": "huge-crowd-cheer.mp3",
+            "reason": "Victoire publique, arène, tournoi ou scène de célébrité des héros."
+        },
+        {
+            "rank": 19,
+            "filename": "creaking-noise.mp3",
+            "reason": "Porte qui grince, plancher vieux donjon — instaure immédiatement l'angoisse."
+        },
+        {
+            "rank": 20,
+            "filename": "crossbow-firing.mp3",
+            "reason": "Tire d'arbalète : assassins, gardes de faction ou escarmouche à distance."
         }
     ]
 }

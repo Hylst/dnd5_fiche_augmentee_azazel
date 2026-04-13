@@ -111,33 +111,43 @@ function SoundButton({ filename, reason, playingTrack, onPlay, isFavorite, onTog
   const displayName = soundsIndex.get(filename) || filename;
   return (
     <div className={cn(
-      'relative flex flex-col rounded-lg border transition-all w-full h-full',
+      'relative flex flex-col rounded-lg border transition-all w-full h-full overflow-hidden',
       isPlaying
         ? 'border-or-vif shadow-[inset_0_0_10px_rgba(201,147,58,0.3)]'
         : 'border-or/30'
     )}>
-      <button onClick={() => onPlay(filename)}
-        className={cn(
-          'flex flex-col items-start p-3 text-left w-full h-full flex-1 rounded-lg transition-all',
-          isPlaying
-            ? 'bg-or/20 text-pourpre-infernal animate-pulse'
-            : 'hover:border-or/70 hover:bg-black/5 text-encre bg-parchemin-clair'
-        )}>
-        <div className="flex items-center justify-between w-full mb-1">
-          <span className="font-title-main text-sm md:text-base leading-tight pr-5">{displayName}</span>
-          {isPlaying ? <Square fill="currentColor" className="w-4 h-4 text-or-vif shrink-0" />
-            : <Play className="w-4 h-4 text-cendre shrink-0" />}
-        </div>
-        {reason && <span className="text-xs text-cendre italic mt-auto leading-tight">{reason}</span>}
-      </button>
+      {/* Favori : coin sup gauche, hors de la zone du bouton play */}
       {onToggleFavorite && (
         <button
           onClick={e => { e.stopPropagation(); onToggleFavorite(filename); }}
           title={isFavorite ? 'Retirer des favoris' : 'Ajouter aux favoris'}
-          className="absolute top-1.5 right-1.5 p-1 rounded-full bg-parchemin/80 hover:bg-or/20 transition-colors">
-          <Heart className={cn('w-3 h-3', isFavorite ? 'fill-red-500 text-red-500' : 'text-cendre')} />
+          className={cn(
+            'absolute top-1.5 left-1.5 z-10 p-1 rounded-full transition-colors',
+            isFavorite ? 'bg-red-100/90' : 'bg-parchemin/70 hover:bg-or/20'
+          )}>
+          <Heart className={cn('w-3 h-3', isFavorite ? 'fill-red-500 text-red-500' : 'text-cendre/60')} />
         </button>
       )}
+      {/* Bouton principal : texte à gauche (décalé si favori), icône play en bas à droite */}
+      <button onClick={() => onPlay(filename)}
+        className={cn(
+          'flex flex-col p-3 text-left w-full h-full flex-1 rounded-lg transition-all min-h-[64px]',
+          isPlaying
+            ? 'bg-or/20 text-pourpre-infernal animate-pulse'
+            : 'hover:bg-black/5 text-encre bg-parchemin-clair'
+        )}>
+        <span className={cn(
+          'font-title-main text-sm md:text-base leading-tight',
+          onToggleFavorite ? 'pl-5' : ''  /* espace pour le cœur */
+        )}>{displayName}</span>
+        {reason && <span className="text-xs text-cendre italic mt-1 leading-tight line-clamp-2">{reason}</span>}
+        {/* Icône play en bas à droite */}
+        <div className="mt-auto pt-1 self-end">
+          {isPlaying
+            ? <Square fill="currentColor" className="w-3.5 h-3.5 text-or-vif" />
+            : <Play className="w-3.5 h-3.5 text-cendre/50" />}
+        </div>
+      </button>
     </div>
   );
 }
@@ -577,7 +587,7 @@ export function SoundboardModule() {
         <div className="space-y-4">
           <div className="flex flex-wrap gap-2 pt-2 border-b-2 border-or/30 pb-4">
             {[
-              { id: 'top12' as ViewMode, label: 'Top 12', icon: Star },
+              { id: 'top12' as ViewMode, label: 'Top 20', icon: Star },
               { id: 'scene' as ViewMode, label: 'Par Situation', icon: MapIcon },
               { id: 'tension' as ViewMode, label: 'Par Tension', icon: Activity },
               { id: 'category' as ViewMode, label: 'Par Catégorie', icon: FolderTree },
@@ -607,8 +617,8 @@ export function SoundboardModule() {
           </div>
           <div className="min-h-[400px]">
             {activeMode === 'top12' && (
-              <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
-                {associationsData.top_12_most_useful_rpg_sounds.map(item => (
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                {associationsData.top_20_most_useful_rpg_sounds.map(item => (
                   <SoundButton key={item.filename} filename={item.filename} reason={item.reason} playingTrack={playingTrack} onPlay={playSfx} isFavorite={sfxFavorites.has(item.filename)} onToggleFavorite={toggleSfxFavorite} />
                 ))}
               </div>
