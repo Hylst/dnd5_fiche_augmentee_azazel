@@ -68,15 +68,15 @@ export function InfoModal({ isOpen, onClose }: InfoModalProps) {
             <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-300">
               <h3 className="font-title-main text-3xl text-pourpre-infernal mb-4">À propos de l'application</h3>
               <p className="font-body text-lg leading-relaxed text-left">
-                <strong>D&D 5e Interactive Character Sheet</strong> est une feuille de personnage numérique moderne, conçue spécifiquement pour offrir la meilleure expérience possible lors de vos parties de Donjons & Dragons 5e édition.
+                <strong>Fiches D&D 5e Augmentées</strong> est une application numérique moderne, de la feuille de personnage interactive jusqu'aux ambiances sonores, conçue spécifiquement pour offrir la meilleure expérience de jeu à votre table de Donjons & Dragons 5e.
               </p>
               <p className="font-body leading-relaxed text-left">
-                Pensée avec une philosophie <em>"Offline First"</em> (zéro cloud obligatoire) et <em>Privacy by Design</em>, toutes vos données (personnage, inventaire, grimoire) sont stockées localement dans votre propre navigateur web sécurisé. Aucun compte à créer, aucun abonnement, aucune donnée qui fuite.
+                Pensée avec une philosophie <em>"Offline First"</em> et <em>Privacy by Design</em>, toutes vos données de personnage sont stockées localement. Aucun compte, abonnement ni IA externe n'est utilisé. Seuls les médias audios sont streamés à la volée depuis nos serveurs sécurisés.
               </p>
               <div className="bg-parchemin-fonce p-4 rounded-lg border border-or/20 mt-6 shadow-inner">
                 <h4 className="font-section text-xl text-or-vif mb-2">La Philosophie</h4>
                 <p className="text-sm text-encre-claire">
-                  L'objectif est d'avoir l'outil idéal pour un joueur autour d'une vraie table : un outil qui fluidifie les calculs et la gestion, sans pour autant remplacer le rôle du maître de jeu ni nécessiter une connexion internet permanente.
+                  L'objectif est de fluidifier les calculs et la gestion fastidieuse, tout en apportant une dimension immersive unique grâce à une régie audio professionnelle, sans jamais remplacer le lien social et l'imagination qui sont le cœur du JDR.
                 </p>
               </div>
             </div>
@@ -90,29 +90,36 @@ export function InfoModal({ isOpen, onClose }: InfoModalProps) {
                 <li className="flex gap-4 p-3 bg-parchemin-fonce rounded border border-or/10">
                   <span className="text-or-vif font-bold">1</span>
                   <div>
-                    <strong className="text-pourpre-infernal text-lg">Lanceur de Dés Intégré</strong>
-                    <p className="text-sm mt-1">Ne perdez plus de temps : cliquez sur vos caractéristiques, compétences ou jets de sauvegarde pour lancer instantanément le bon dé avec les bons bonus. Un panneau flottant permet aussi des lancers libres.</p>
+                    <strong className="text-pourpre-infernal text-lg">Lanceur de Dés & Historique</strong>
+                    <p className="text-sm mt-1">Ne perdez plus de temps : cliquez sur vos caractéristiques, compétences ou sauvegardes pour lancer instantanément les dés. Un panneau flottant permet des lancers libres avec animations et garde tout votre historique.</p>
                   </div>
                 </li>
                 <li className="flex gap-4 p-3 bg-parchemin-fonce rounded border border-or/10">
                   <span className="text-or-vif font-bold">2</span>
                   <div>
-                    <strong className="text-pourpre-infernal text-lg">Grimoire Magique</strong>
-                    <p className="text-sm mt-1">Gestion interactive de tous vos sorts. Filtrez par niveau, classe ou école. Suivez facilement l'utilisation de vos emplacements de sorts.</p>
+                    <strong className="text-pourpre-infernal text-lg">Bibliothèque Audio Ultime</strong>
+                    <p className="text-sm mt-1">Lecteur musical persistant avec 109 pistes originales, et une Soundboard de 267 effets sonores classés (dont un "Top 20" d'accès rapide). Sauvegardez vos favoris pour agir en temps réel.</p>
                   </div>
                 </li>
                 <li className="flex gap-4 p-3 bg-parchemin-fonce rounded border border-or/10">
                   <span className="text-or-vif font-bold">3</span>
                   <div>
-                    <strong className="text-pourpre-infernal text-lg">Montée de Niveau Guidée</strong>
-                    <p className="text-sm mt-1">Une interface pas-à-pas (HP, Caractéristiques, Nouveaux Sorts) lorsque vous gagnez en puissance pour n'oublier aucune règle importante.</p>
+                    <strong className="text-pourpre-infernal text-lg">Grimoire Magique Interactif</strong>
+                    <p className="text-sm mt-1">Gestion claire de vos sorts et emplacements. Filtrez par niveau ou école, suivez vos dépenses, calculez vos DD et bonus d'attaque automatiquement.</p>
                   </div>
                 </li>
                 <li className="flex gap-4 p-3 bg-parchemin-fonce rounded border border-or/10">
                   <span className="text-or-vif font-bold">4</span>
                   <div>
-                    <strong className="text-pourpre-infernal text-lg">Sauvegarde & Export</strong>
-                    <p className="text-sm mt-1">Persistance automatique locale. Et module pour exporter la fiche intégrale en JSON (backup) ou au format texte lisible (pour partage DM).</p>
+                    <strong className="text-pourpre-infernal text-lg">Montée de Niveau Guidée</strong>
+                    <p className="text-sm mt-1">Une interface pas-à-pas (HP, Caractéristiques, Nouveaux Sorts) lors des fameux "Level Up" pour vous assurer de n'oublier aucune règle importante.</p>
+                  </div>
+                </li>
+                <li className="flex gap-4 p-3 bg-parchemin-fonce rounded border border-or/10">
+                  <span className="text-or-vif font-bold">5</span>
+                  <div>
+                    <strong className="text-pourpre-infernal text-lg">Persistance Locale & Export</strong>
+                    <p className="text-sm mt-1">Toutes vos modifications sont sauvegardées instantanément dans le navigateur. Exportez votre fiche en Markdown (pour lecture) ou JSON (pour sauvegarde/transfert).</p>
                   </div>
                 </li>
               </ul>
@@ -128,16 +135,30 @@ export function InfoModal({ isOpen, onClose }: InfoModalProps) {
               
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="p-4 border border-or/20 rounded bg-parchemin-fonce">
-                  <h4 className="font-section text-or-vif mb-2 border-b border-or/10 pb-2">📦 Catalogue d'Objets</h4>
+                  <h4 className="font-section text-or-vif mb-2 border-b border-or/10 pb-2">🎵 109 Musiques Originales</h4>
                   <p className="text-sm font-body">
-                    Une base de données de dizaines d'équipements classiques (armes, armures, sacs, outils). La recherche permet de les ajouter à votre inventaire en un clic, calculant automatiquement les poids.
+                    Une bibliothèque musicale Heroic Fantasy (streamée), riche de métadonnées techniques et narratives. Modes de tri variés, filtres croisés et lecteur persistant.
                   </p>
                 </div>
                 
                 <div className="p-4 border border-or/20 rounded bg-parchemin-fonce">
-                  <h4 className="font-section text-or-vif mb-2 border-b border-or/10 pb-2">🔮 Liste de Sortilèges</h4>
+                  <h4 className="font-section text-or-vif mb-2 border-b border-or/10 pb-2">🔊 267 Effets Sonores (SFX)</h4>
                   <p className="text-sm font-body">
-                    De nombreux sorts sont pré-enregistrés, ce qui permet à l'application de formater leur affichage proprement (DD, Jet d'Attaque) quand vous les ajoutez à votre grimoire.
+                    Catalogue massif d'effets sonores RPG. Classés en "Top 20" indispensables, scènes et tensions. Idéal pour ponctuer l'action à la seconde.
+                  </p>
+                </div>
+
+                <div className="p-4 border border-or/20 rounded bg-parchemin-fonce">
+                  <h4 className="font-section text-or-vif mb-2 border-b border-or/10 pb-2">📦 Index d'Inventaire</h4>
+                  <p className="text-sm font-body">
+                    Base de données d'équipements classiques pré-paramétrée (armes, armures, matériel). À ajouter en un clic, impactant dynamiquement votre charge.
+                  </p>
+                </div>
+                
+                <div className="p-4 border border-or/20 rounded bg-parchemin-fonce">
+                  <h4 className="font-section text-or-vif mb-2 border-b border-or/10 pb-2">🔮 Index Magique</h4>
+                  <p className="text-sm font-body">
+                    Les règles des sorts principaux sont enregistrées, remplissant ainsi automatiquement le Grimoire pour vous donner tous les détails en combat.
                   </p>
                 </div>
               </div>
@@ -149,15 +170,15 @@ export function InfoModal({ isOpen, onClose }: InfoModalProps) {
               <h3 className="font-title-main text-3xl text-pourpre-infernal mb-4">Mode d'emploi rapide</h3>
               
               <div className="space-y-3 font-body text-sm bg-parchemin-fonce p-4 rounded-lg border border-or/20">
-                <p><strong>• Navigation :</strong> Utilisez le menu latéral (à gauche ou en bas sur mobile) pour naviguer entre la Vue Générale, Inventaire, Combat, etc.</p>
+                <p><strong>• Navigation :</strong> Utilisez le menu latéral (à gauche ou en bas sur mobile) pour naviguer entre la Vue Générale, Inventaire, Combat, Ambiance, etc.</p>
                 <div className="h-px bg-or/20 w-full" />
-                <p><strong>• Lancer un Dé :</strong> Presque tout ce qui affiche un badge rouge est cliquable ! Lancez vos initiatives, vos attaques, ou compétences directement en cliquant dessus.</p>
+                <p><strong>• Immersion Audio :</strong> Dans l'onglet <strong>Ambiance & Sons</strong>, naviguez dans les musiques ou les effets. Cochez les coeurs (❤) pour tout rassembler dans le dossier "Favoris", et lancez une boucle musicale de fond !</p>
                 <div className="h-px bg-or/20 w-full" />
-                <p><strong>• Santé et Dégâts :</strong> Dans le bloc "Combat", cliquez sur le <strong>"+"</strong> ou le <strong>"-"</strong> à côté de vos Points de Vie pour gérer vos blessures. Vous pouvez y ajouter des points de vie temporaires.</p>
+                <p><strong>• Lancer un Dé :</strong> Presque tout ce qui porte un dé ou un fond sombre est cliquable ! Lancez caractéristiques, compétences ou dégâts en un clic.</p>
                 <div className="h-px bg-or/20 w-full" />
-                <p><strong>• Repos :</strong> La vue générale propose des boutons pour effectuer des Repos Courts (dépensez vos dés de vie) ou Longs (restaure HP, capacités, et emplacements de sorts).</p>
+                <p><strong>• Santé et Repos :</strong> Mettez à jour vos HP sous le portrait. Cliquez sur les options "Repos Court / Long" pour automatiser la récupération de vos capacités et emplacements magiques.</p>
                 <div className="h-px bg-or/20 w-full" />
-                <p><strong>• Récupérer :</strong> Les munitions d'armes à distance et les quantités d'objets peuvent être modifiées manuellement avec l'icône stylo.</p>
+                <p><strong>• Équipement & Consommables :</strong> Gérer vos munitions ou quantités via l'icône stylo ; surveillez l'icône d'encombrement qui vire au rouge si vous portez trop lourd !</p>
               </div>
             </div>
           )}
@@ -168,18 +189,18 @@ export function InfoModal({ isOpen, onClose }: InfoModalProps) {
               
               <div className="grid gap-4">
                 <div className="p-3 border-l-4 border-or-vif bg-or/5 rounded-r">
-                  <strong className="text-pourpre-infernal block mb-1">Double Cliquez sur l'Avatar</strong>
-                  <p className="text-sm">Cliquez sur votre image de personnage pour l'afficher en grand écran, et écouter l'ambiance sonore attachée à votre profil.</p>
+                  <strong className="text-pourpre-infernal block mb-1">Double Utilisation Audio</strong>
+                  <p className="text-sm">Le moteur audio permet une lecture asynchrone : lancez une Musique longue en fond (qui s'affichera dans la barre "Now Playing"), tout en ponctuant l'action d'éclairs et bruits d'épées depuis le Soundboard SFX par-dessus.</p>
                 </div>
                 
                 <div className="p-3 border-l-4 border-pourpre-infernal bg-pourpre-infernal/5 rounded-r">
-                  <strong className="text-pourpre-infernal block mb-1">Gestion de la surcharge</strong>
-                  <p className="text-sm">Votre force définit le nombre d'emplacements d'inventaire "sans pénalité". Si la jauge d'encombrement passe au rouge, des malus de déplacement s'appliquent selon les règles officielles !</p>
+                  <strong className="text-pourpre-infernal block mb-1">Gestion de la Surcharge</strong>
+                  <p className="text-sm">Votre force définit le seuil d'inventaire sans pénalité. Surveillez attentivement la jauge : si elle devient rouge vif, vous subissez les règles officielles de pénalité de déplacement.</p>
                 </div>
                 
                 <div className="p-3 border-l-4 border-or-vif bg-or/5 rounded-r">
-                  <strong className="text-pourpre-infernal block mb-1">Sauvegardes croisées</strong>
-                  <p className="text-sm">Puisque l'application est "Offline", vous pouvez jouer sur PC avant la partie, utiliser l'onglet <em>"Gestion des Données"</em> pour exporter le JSON, et l'importer sur votre Tablette juste avant de jouer !</p>
+                  <strong className="text-pourpre-infernal block mb-1">Passage PC / Tablette Intégral</strong>
+                  <p className="text-sm">Puisque l'application est "Offline First", vous pouvez créer / équiper votre personnage sur PC. Ensuite, utilisez "Gestion des Données" pour exporter le fichier de sauvegarde JSON et l'importer directement sur l'appareil que vous utiliserez à table !</p>
                 </div>
               </div>
             </div>
@@ -198,8 +219,14 @@ export function InfoModal({ isOpen, onClose }: InfoModalProps) {
 
               <div className="bg-parchemin-fonce p-6 rounded-xl border border-or/30 shadow-inner max-w-md w-full">
                 <p className="font-body text-encre-claire mb-6 italic">
-                  Développé avec passion pour l'amour du jeu de rôle, afin d'offrir une alternative qualitative, sécurisée et fluide aux Fiches PDF austères traditionnelles.
+                  Développé et conçu avec passion pour offrir une alternative moderne, luxueuse et sécurisée aux fiches papier et PDF. 
                 </p>
+                
+                <div className="bg-or/10 border border-or/20 rounded p-3 mb-6">
+                  <p className="text-sm font-body font-medium text-encre text-center">
+                    À l'exception des effets sonores (SFX), l'ensemble de la <strong className="text-pourpre-infernal">bibliothèque musicale des 109 pistes</strong> intégrée dans l'application est une composition originale de Geoffroy, réalisée pour amplifier vos émotions en JDR.
+                  </p>
+                </div>
                 
                 <div className="flex items-center justify-center gap-3">
                   <a 
