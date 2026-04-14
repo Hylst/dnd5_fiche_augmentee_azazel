@@ -95,7 +95,7 @@ export function IdentityHeader() {
           onClick={handlePortraitClick}
         >
           <div className="absolute inset-0 bg-pourpre-infernal/20 group-hover:bg-pourpre-infernal/40 transition-colors z-10" />
-          <img src="/azazel.webp" alt={identity.name} className="w-full h-full object-cover relative z-0 group-hover:scale-110 transition-transform duration-500" />
+          <img src="./azazel.webp" alt={identity.name} className="w-full h-full object-cover relative z-0 group-hover:scale-110 transition-transform duration-500" />
         </div>
         
         <div className="flex-1 space-y-4 w-full">
@@ -217,7 +217,7 @@ export function IdentityHeader() {
           onClick={() => setIsPortraitExpanded(false)}
         >
           <div className="relative max-w-2xl w-full aspect-square md:aspect-auto md:h-[80vh] rounded-2xl overflow-hidden border-4 border-or shadow-[0_0_50px_rgba(201,147,58,0.5)] animate-in fade-in zoom-in duration-300">
-            <img src="/azazel.webp" alt={identity.name} className="w-full h-full object-cover" />
+            <img src="./azazel.webp" alt={identity.name} className="w-full h-full object-cover" />
             <button 
               className="absolute top-4 right-4 bg-noir-velours/50 text-parchemin p-2 rounded-full hover:bg-rouge-sang transition-colors"
               onClick={(e) => { e.stopPropagation(); setIsPortraitExpanded(false); }}
