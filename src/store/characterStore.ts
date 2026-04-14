@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { fetchCharacter, fetchSpellsByIds, fetchFeatsByIds, fetchTraitsByIds, fetchItemsByIds } from '../services/dbService';
+import { fetchSpellsByIds, fetchFeatsByIds, fetchTraitsByIds, fetchItemsByIds } from '../services/dbService';
+import { characterRepository } from '../services/characterRepository';
 
 export type Stat = 'FOR' | 'DEX' | 'CON' | 'INT' | 'SAG' | 'CHA';
 export type SkillType = 'EXP' | 'MAI' | 'TAT' | 'NONE';
@@ -101,7 +102,7 @@ export interface RollResult {
   isCriticalFail?: boolean;
 }
 
-export type NotificationType = 'info' | 'critical' | 'critical-fail';
+export type NotificationType = 'info' | 'success' | 'critical' | 'critical-fail';
 
 export interface Notification {
   id: string;
@@ -157,6 +158,11 @@ export interface CharacterState {
     hitDiceCurrent: number;
     hitDiceType: string;
     inspiration: boolean;
+    conditions: string[];
+    exhaustion: number;
+    turnCount: number;
+    targets: { id: string; name: string; ac: string }[];
+    buffs: { id: string; name: string; turnsRemaining: number }[];
   };
   skills: Skill[];
   savingThrows: Stat[]; // Proficient saving throws
@@ -209,9 +215,20 @@ export interface CharacterState {
   updateNotes: (notes: string) => void;
   rollDice: (notation: string, reason: string) => void;
   clearRolls: () => void;
+  addCondition: (condition: string) => void;
+  removeCondition: (condition: string) => void;
+  setExhaustion: (level: number) => void;
+  
+  // Combat Tracker
+  nextTurn: () => void;
+  resetCombatTracker: () => void;
+  addTarget: (name: string, ac: string) => void;
+  removeTarget: (id: string) => void;
+  addBuff: (name: string, duration: number) => void;
+  removeBuff: (id: string) => void;
 }
 
-const defaultState: Omit<CharacterState, 'addNotification' | 'removeNotification' | 'loadCharacter' | 'loadCharacterFromJson' | 'getSerializableState' | 'addXp' | 'levelUp' | 'updateHp' | 'updateHpMax' | 'updateTempHp' | 'toggleInspiration' | 'updateStat' | 'useResource' | 'shortRest' | 'longRest' | 'castSpell' | 'toggleSpellFavorite' | 'toggleSpellPrepared' | 'addSpell' | 'removeSpell' | 'toggleSpellSlot' | 'addFeat' | 'removeFeat' | 'addTrait' | 'removeTrait' | 'addItem' | 'removeItem' | 'updateItemQuantity' | 'toggleItemEquipped' | 'updateCurrency' | 'updateNotes' | 'rollDice' | 'clearRolls'> = {
+const defaultState: Omit<CharacterState, 'addNotification' | 'removeNotification' | 'loadCharacter' | 'loadCharacterFromJson' | 'getSerializableState' | 'addXp' | 'levelUp' | 'updateHp' | 'updateHpMax' | 'updateTempHp' | 'toggleInspiration' | 'updateStat' | 'useResource' | 'shortRest' | 'longRest' | 'castSpell' | 'toggleSpellFavorite' | 'toggleSpellPrepared' | 'addSpell' | 'removeSpell' | 'toggleSpellSlot' | 'addFeat' | 'removeFeat' | 'addTrait' | 'removeTrait' | 'addItem' | 'removeItem' | 'updateItemQuantity' | 'toggleItemEquipped' | 'updateCurrency' | 'updateNotes' | 'rollDice' | 'clearRolls' | 'addCondition' | 'removeCondition' | 'setExhaustion' | 'nextTurn' | 'resetCombatTracker' | 'addTarget' | 'removeTarget' | 'addBuff' | 'removeBuff'> = {
   isLoading: true,
   notifications: [],
   identity: {
@@ -267,6 +284,11 @@ const defaultState: Omit<CharacterState, 'addNotification' | 'removeNotification
     hitDiceCurrent: 1,
     hitDiceType: 'd8',
     inspiration: false,
+    conditions: [],
+    exhaustion: 0,
+    turnCount: 1,
+    targets: [],
+    buffs: []
   },
   savingThrows: [],
   skills: [],
@@ -294,8 +316,8 @@ export const useCharacterStore = create<CharacterState>()(
       loadCharacter: async (id: string) => {
         set({ isLoading: true });
         try {
-          const charData = await fetchCharacter(id);
-          const spells = await fetchSpellsByIds(charData.knownSpellsIds);
+          const charData = await characterRepository.getCharacter(id);
+          const spells = await fetchSpellsByIds(charData.knownSpellsIds || []);
           
           // Set favorite/prepared status based on character data
           const hydratedSpells = spells.map(s => ({
@@ -311,11 +333,15 @@ export const useCharacterStore = create<CharacterState>()(
           set({
             identity: charData.identity,
             stats: charData.stats as Record<Stat, number>,
-            combat: charData.combat,
+            combat: {
+              ...charData.combat,
+              conditions: charData.combat?.conditions || [],
+              exhaustion: charData.combat?.exhaustion || 0
+            },
             savingThrows: charData.savingThrows as Stat[],
-            skills: charData.skills as any[],
-            resources: charData.resources as any[],
-            spellSlots: charData.spellSlots,
+            skills: (charData.skills || []) as Skill[],
+            resources: (charData.resources || []) as Resource[],
+            spellSlots: charData.spellSlots || [],
             currency: charData.currency,
             spells: hydratedSpells,
             feats,
@@ -347,11 +373,15 @@ export const useCharacterStore = create<CharacterState>()(
           set({
             identity: charData.identity,
             stats: charData.stats as Record<Stat, number>,
-            combat: charData.combat,
+            combat: {
+              ...charData.combat,
+              conditions: charData.combat?.conditions || [],
+              exhaustion: charData.combat?.exhaustion || 0
+            },
             savingThrows: charData.savingThrows as Stat[],
-            skills: charData.skills as any[],
-            resources: charData.resources as any[],
-            spellSlots: charData.spellSlots,
+            skills: (charData.skills || []) as Skill[],
+            resources: (charData.resources || []) as Resource[],
+            spellSlots: charData.spellSlots || [],
             currency: charData.currency,
             spells: hydratedSpells,
             feats,
@@ -553,12 +583,35 @@ export const useCharacterStore = create<CharacterState>()(
         const modifierSign = match[3];
         const modifier = match[4] ? parseInt(match[4], 10) : 0;
 
-        const rolls = [];
+        // ── Conditions automation ─────────────────────────────────────────────
+        // Conditions that impose DISADVANTAGE on attack rolls & ability checks
+        const DISADVANTAGE_CONDITIONS = ['Empoisonné', 'Effrayé', 'À terre', 'Entravé', 'Étourdi', 'Paralysé'];
+        // Exhaustion level 1+ also imposes disadvantage on ability checks
+        const activeConditions = state.combat.conditions || [];
+        const exhaustion = state.combat.exhaustion || 0;
+
+        const isD20Roll = diceFaces === 20 && numDice === 1;
+        const hasDisadvantage = isD20Roll && (
+          activeConditions.some(c => DISADVANTAGE_CONDITIONS.includes(c)) ||
+          exhaustion >= 1
+        );
+
+        const rolls: number[] = [];
         let total = 0;
-        for (let i = 0; i < numDice; i++) {
-          const r = Math.floor(Math.random() * diceFaces) + 1;
-          rolls.push(r);
-          total += r;
+
+        if (hasDisadvantage) {
+          // Roll 2d20, keep the lowest
+          const roll1 = Math.floor(Math.random() * 20) + 1;
+          const roll2 = Math.floor(Math.random() * 20) + 1;
+          const kept = Math.min(roll1, roll2);
+          rolls.push(roll1, roll2);
+          total = kept;
+        } else {
+          for (let i = 0; i < numDice; i++) {
+            const r = Math.floor(Math.random() * diceFaces) + 1;
+            rolls.push(r);
+            total += r;
+          }
         }
 
         if (modifierSign === '+') total += modifier;
@@ -568,22 +621,40 @@ export const useCharacterStore = create<CharacterState>()(
         let isCriticalFail = false;
         
         if (diceFaces === 20) {
-          if (rolls.includes(20)) isCriticalSuccess = true;
-          if (rolls.includes(1)) isCriticalFail = true;
+          // For disadvantage, crit is only on the kept die
+          const keptRoll = hasDisadvantage ? Math.min(rolls[0], rolls[1]) : rolls[0];
+          if (keptRoll === 20) isCriticalSuccess = true;
+          if (keptRoll === 1) isCriticalFail = true;
         }
+
+        const disadvantageLabel = hasDisadvantage
+          ? ` [DÉSAVANTAGE${activeConditions.filter(c => DISADVANTAGE_CONDITIONS.includes(c)).map(c => ` — ${c}`).join('')}${exhaustion >= 1 ? ' — Fatigue' : ''}]`
+          : '';
 
         const newRoll: RollResult = {
           id: Math.random().toString(36).substring(2, 9),
           timestamp: Date.now(),
-          notation,
+          notation: hasDisadvantage ? `2d20kl1${modifierSign ? modifierSign + modifier : ''}` : notation,
           result: total,
           rolls,
-          reason,
+          reason: reason + disadvantageLabel,
           isCriticalSuccess,
           isCriticalFail
         };
 
         const newNotifications = [...state.notifications];
+        if (hasDisadvantage) {
+          const conditionNames = activeConditions.filter(c => DISADVANTAGE_CONDITIONS.includes(c));
+          const exhaustionWarn = exhaustion >= 1 ? 'Fatigue' : '';
+          const causes = [...conditionNames, exhaustionWarn].filter(Boolean).join(', ');
+          newNotifications.push({
+            id: Math.random().toString(36).substring(2, 9),
+            message: `⚠️ Désavantage auto appliqué (${causes}) — Dés: [${rolls.join(', ')}] → gardé ${Math.min(rolls[0], rolls[1])}`,
+            type: 'info',
+            timestamp: Date.now()
+          });
+        }
+
         if (isCriticalSuccess) {
           newNotifications.push({
             id: Math.random().toString(36).substring(2, 9),
@@ -606,7 +677,80 @@ export const useCharacterStore = create<CharacterState>()(
         };
       }),
 
+
       clearRolls: () => set({ diceRolls: [] }),
+
+      addCondition: (condition) => set((state) => {
+        if (state.combat.conditions?.includes(condition)) return state;
+        return { combat: { ...state.combat, conditions: [...(state.combat.conditions || []), condition] } };
+      }),
+
+      removeCondition: (condition) => set((state) => ({
+        combat: { ...state.combat, conditions: (state.combat.conditions || []).filter(c => c !== condition) }
+      })),
+
+      setExhaustion: (level) => set((state) => ({
+        combat: { ...state.combat, exhaustion: Math.min(6, Math.max(0, level)) }
+      })),
+
+      // ── Combat Tracker ─────────────────────────────────────────────────────────────
+      nextTurn: () => set((state) => {
+        const newTurnCount = (state.combat.turnCount || 1) + 1;
+        const currentBuffs = state.combat.buffs || [];
+        
+        const newBuffs = currentBuffs
+          .map(b => ({ ...b, turnsRemaining: b.turnsRemaining - 1 }))
+          .filter(b => b.turnsRemaining > 0);
+        
+        const expiredBuffs = currentBuffs.filter(b => b.turnsRemaining - 1 <= 0);
+        const newNotifications = [...state.notifications];
+        
+        expiredBuffs.forEach(b => {
+          newNotifications.push({
+            id: Math.random().toString(36).substring(2, 9),
+            message: `Fin de l'effet tactique : ${b.name}`,
+            type: 'info',
+            timestamp: Date.now()
+          });
+        });
+
+        return {
+          combat: { ...state.combat, turnCount: newTurnCount, buffs: newBuffs },
+          notifications: newNotifications
+        };
+      }),
+
+      resetCombatTracker: () => set((state) => ({
+        combat: { ...state.combat, turnCount: 1, targets: [], buffs: [] }
+      })),
+
+      addTarget: (name, ac) => set((state) => ({
+        combat: {
+          ...state.combat,
+          targets: [...(state.combat.targets || []), { id: Math.random().toString(36).substring(2, 9), name, ac }]
+        }
+      })),
+
+      removeTarget: (id) => set((state) => ({
+        combat: {
+          ...state.combat,
+          targets: (state.combat.targets || []).filter(t => t.id !== id)
+        }
+      })),
+
+      addBuff: (name, duration) => set((state) => ({
+        combat: {
+          ...state.combat,
+          buffs: [...(state.combat.buffs || []), { id: Math.random().toString(36).substring(2, 9), name, turnsRemaining: duration }]
+        }
+      })),
+
+      removeBuff: (id) => set((state) => ({
+        combat: {
+          ...state.combat,
+          buffs: (state.combat.buffs || []).filter(b => b.id !== id)
+        }
+      })),
     }),
     {
       name: 'dnd-character-storage',

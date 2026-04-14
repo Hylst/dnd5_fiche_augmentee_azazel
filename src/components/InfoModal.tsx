@@ -66,7 +66,10 @@ export function InfoModal({ isOpen, onClose }: InfoModalProps) {
         <div className="flex-1 p-6 md:p-8 overflow-y-auto min-h-[50vh] text-encre bg-parchemin">
           {activeTab === 'about' && (
             <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-300">
-              <h3 className="font-title-main text-3xl text-pourpre-infernal mb-4">À propos de l'application</h3>
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="font-title-main text-3xl text-pourpre-infernal">À propos de l'application</h3>
+                <span className="bg-pourpre-infernal text-parchemin px-3 py-1 rounded-full text-sm font-bold shadow-sm">v1.4.0</span>
+              </div>
               <p className="font-body text-lg leading-relaxed text-left">
                 <strong>Fiches D&D 5e Augmentées</strong> est une application numérique moderne, de la feuille de personnage interactive jusqu'aux ambiances sonores, conçue spécifiquement pour offrir la meilleure expérience de jeu à votre table de Donjons & Dragons 5e.
               </p>
@@ -90,36 +93,50 @@ export function InfoModal({ isOpen, onClose }: InfoModalProps) {
                 <li className="flex gap-4 p-3 bg-parchemin-fonce rounded border border-or/10">
                   <span className="text-or-vif font-bold">1</span>
                   <div>
-                    <strong className="text-pourpre-infernal text-lg">Lanceur de Dés & Historique</strong>
-                    <p className="text-sm mt-1">Ne perdez plus de temps : cliquez sur vos caractéristiques, compétences ou sauvegardes pour lancer instantanément les dés. Un panneau flottant permet des lancers libres avec animations et garde tout votre historique.</p>
+                    <strong className="text-pourpre-infernal text-lg">Lanceur de Dés Intelligent & Historique</strong>
+                    <p className="text-sm mt-1">Cliquez sur vos statistiques pour lancer automatiquement les dés. Le système détecte vos conditions (Empoisonné, Fatigue...) et applique automatiquement le désavantage (2d20 garde le pire) !</p>
                   </div>
                 </li>
                 <li className="flex gap-4 p-3 bg-parchemin-fonce rounded border border-or/10">
                   <span className="text-or-vif font-bold">2</span>
                   <div>
-                    <strong className="text-pourpre-infernal text-lg">Bibliothèque Audio Ultime</strong>
-                    <p className="text-sm mt-1">Lecteur musical persistant avec 109 pistes originales, et une Soundboard de 267 effets sonores classés (dont un "Top 20" d'accès rapide). Sauvegardez vos favoris pour agir en temps réel.</p>
+                    <strong className="text-pourpre-infernal text-lg">Moteur Audio Dual & Bibliothèque</strong>
+                    <p className="text-sm mt-1">Lisez simultanément vos pistes d'ambiance et vos bruitages avec des volumes indépendants ! Lecteur musical avec 109 pistes originales, et une Soundboard de 267 effets sonores classés.</p>
                   </div>
                 </li>
                 <li className="flex gap-4 p-3 bg-parchemin-fonce rounded border border-or/10">
                   <span className="text-or-vif font-bold">3</span>
+                  <div>
+                    <strong className="text-pourpre-infernal text-lg">Tracker Tactique de Combat</strong>
+                    <p className="text-sm mt-1">Suivez l'AC estimée de vos cibles et gérez la durée de vos buffs tactiques grâce au compteur de tours intégré, réduisant la charge mentale en plein combat.</p>
+                  </div>
+                </li>
+                <li className="flex gap-4 p-3 bg-parchemin-fonce rounded border border-or/10">
+                  <span className="text-or-vif font-bold">4</span>
                   <div>
                     <strong className="text-pourpre-infernal text-lg">Grimoire Magique Interactif</strong>
                     <p className="text-sm mt-1">Gestion claire de vos sorts et emplacements. Filtrez par niveau ou école, suivez vos dépenses, calculez vos DD et bonus d'attaque automatiquement.</p>
                   </div>
                 </li>
                 <li className="flex gap-4 p-3 bg-parchemin-fonce rounded border border-or/10">
-                  <span className="text-or-vif font-bold">4</span>
+                  <span className="text-or-vif font-bold">5</span>
                   <div>
                     <strong className="text-pourpre-infernal text-lg">Montée de Niveau Guidée</strong>
                     <p className="text-sm mt-1">Une interface pas-à-pas (HP, Caractéristiques, Nouveaux Sorts) lors des fameux "Level Up" pour vous assurer de n'oublier aucune règle importante.</p>
                   </div>
                 </li>
                 <li className="flex gap-4 p-3 bg-parchemin-fonce rounded border border-or/10">
-                  <span className="text-or-vif font-bold">5</span>
+                  <span className="text-or-vif font-bold">6</span>
                   <div>
                     <strong className="text-pourpre-infernal text-lg">Persistance Locale & Export</strong>
-                    <p className="text-sm mt-1">Toutes vos modifications sont sauvegardées instantanément dans le navigateur. Exportez votre fiche en Markdown (pour lecture) ou JSON (pour sauvegarde/transfert).</p>
+                    <p className="text-sm mt-1">Toutes vos modifications sont sauvegardées via le Repository Pattern dans votre navigateur (PWA). Exportez pour archiver de façon sécurisée (Markdown ou JSON).</p>
+                  </div>
+                </li>
+                <li className="flex gap-4 p-3 bg-parchemin-fonce rounded border border-or/10">
+                  <span className="text-or-vif font-bold">7</span>
+                  <div>
+                    <strong className="text-pourpre-infernal text-lg">Statuts & Conditions</strong>
+                    <p className="text-sm mt-1">Gérez interactivement l'état de votre personnage (Charmé, Invisible, etc.) et suivez précisément votre niveau d'épuisement (0-6) et ses conséquences.</p>
                   </div>
                 </li>
               </ul>

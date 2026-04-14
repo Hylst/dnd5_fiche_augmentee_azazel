@@ -1,6 +1,6 @@
-# Fiches D&D 5e Augmentées
+# Fiches D&D 5e Augmentées (Azazel)
 
-> Feuille de personnage interactive, moderne et **Offline-First** pour Dungeons & Dragons 5e.  
+> Feuille de personnage interactive, moderne, **Offline-First** et **Accessibilité-Ready** pour Dungeons & Dragons 5e.  
 > Construite avec React 19, TypeScript et Tailwind CSS par **Geoffroy Streit (Hylst)**.
 
 Aucun appel à des IA ou API externes. Tout fonctionne dans votre navigateur, avec import/export de vos données de JDR.
@@ -11,17 +11,22 @@ Aucun appel à des IA ou API externes. Tout fonctionne dans votre navigateur, av
 
 ### Fiche de Personnage
 - **Gestion Complète** : Statistiques, compétences, équipement, sorts, capacités, biographie.
-- **Lanceur de Dés Intégré** : Cliquez sur n'importe quelle statistique pour lancer les dés automatiquement. Panneau flottant avec historique.
+- **Module de Statuts** : Gestion interactive des **Conditions** (Aveuglé, Charmé, etc.) et de l'**Épuisement** (6 niveaux) avec calcul automatique des malus.
+- **Lanceur de Dés Intégré & Intelligent** : Cliquez sur n'importe quelle statistique pour lancer les dés automatiquement. Le système détecte l'épuisement et les conditions pour **appliquer automatiquement les désavantages**.
+- **Tracker Tactique de Combat** : Suivi des cibles (AC estimée), compte-tours pour les buffs tactiques avec notification à expiration, intégré au module de combat.
 - **Grimoire Interactif** : Gestion des emplacements de sorts, filtrage par niveau/école, animations de lancement.
 - **Catalogue d'Objets** : Base de données intégrée 50+ objets D&D 5e pour l'inventaire.
 - **Montée de Niveau Assistée** : Modale interactive (PV, Caractéristiques, Sorts/Capacités).
 - **Persistance Locale** : Sauvegarde automatique dans le navigateur (IndexedDB via Zustand).
 - **Export Markdown/JSON** : Partagez votre fiche avec votre MJ.
+- **Accessibilité** : Entièrement navigable au clavier, support ARIA complet pour lecteurs d'écran.
 
 ### 🎵 Ambiance & Sons
-- **Soundboard SFX** : 267 effets sonores en 4 vues (Top 20, Par Situation, Par Tension, Par Catégorie) avec système de **favoris persistants**.
+- **Moteur Audio Dual** : Lecture **simultanée** d'une musique d'ambiance et d'un effet sonore ponctuel.
+- **Déclencheurs Événementiels** : Activation de thèmes sonores spécifiques (ex: clic sur l'avatar) via un système de CustomEvents.
+- **Soundboard SFX** : 267 effets sonores en 4 vues (Top 20, Par Situation, Par Tension, Par Catégorie) avec système de **favoris persistants** et contrôles de volume indépendants.
 - **Bibliothèque Musicale** : 109 compositions Heroic Fantasy originales (Geoffroy / Hylst) avec :
-  - Lecteur "Now Playing" fixe (seekbar, loop, prev/next, volume)
+  - Lecteur "Now Playing" fixe (seekbar, loop, prev/next, volume musique dédié)
   - 7 modes de tri (Alpha, Favoris, Durée, BPM, Genre, Ambiance, Usage)
   - Panneau de filtres + modal de détails avec métadonnées complètes
   - Système de **favoris musiques** persistants

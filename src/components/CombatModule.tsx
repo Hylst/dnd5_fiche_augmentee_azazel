@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Shield, Heart, Zap, Activity } from 'lucide-react';
+import { Shield, Heart, Zap, Activity, Plus, X } from 'lucide-react';
 import { useCharacterStore, calculateModifier, calculateProficiencyBonus } from '../store/characterStore';
 import { cn } from '../lib/utils';
 
@@ -131,6 +131,115 @@ export function CombatModule() {
             </div>
           </div>
         </div>
+        
+        {/* Combat Tracker Section */}
+        <div className="space-y-4 p-4 border-2 border-or/30 rounded-lg bg-noir-velours/20 mt-6 relative overflow-hidden">
+          <div className="flex justify-between items-center border-b border-or/20 pb-2">
+            <h3 className="font-title text-or text-lg tracking-wider flex items-center gap-2">
+              <Shield className="w-5 h-5" /> Tracker Tactique
+            </h3>
+            <div className="flex items-center gap-3">
+              <div className="bg-encre-claire/10 px-3 py-1 rounded border border-or/20 flex items-center gap-2">
+                <span className="font-section text-xs uppercase text-cendre">Tour</span>
+                <span className="font-numbers text-xl text-or-vif">{combat.turnCount || 1}</span>
+              </div>
+              <button 
+                onClick={useCharacterStore.getState().nextTurn}
+                className="px-3 py-1 bg-or/10 hover:bg-or/20 text-or border border-or/30 rounded font-section text-xs transition-colors"
+              >
+                Tour Suivant
+              </button>
+              <button 
+                onClick={useCharacterStore.getState().resetCombatTracker}
+                className="px-2 py-1 bg-cendre/10 hover:bg-cendre/20 text-cendre border border-cendre/30 rounded font-section text-xs transition-colors"
+                title="Réinitialiser le combat"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Cibles */}
+            <div className="space-y-2">
+              <h4 className="font-section text-xs uppercase text-cendre border-b border-cendre/20 pb-1 flex justify-between">
+                Cibles (AC Estimée)
+              </h4>
+              <div className="space-y-2 max-h-32 overflow-y-auto pr-1">
+                {(combat.targets || []).map(t => (
+                  <div key={t.id} className="flex justify-between items-center bg-encre/10 p-1.5 rounded border border-rouge-sang/20">
+                    <span className="text-sm text-encre-claire truncate w-24">{t.name}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="font-numbers text-rouge-sang bg-rouge-sang/10 px-2 py-0.5 rounded text-sm border border-rouge-sang/30" title="Classe d'Armure">
+                        CA {t.ac}
+                      </span>
+                      <button onClick={() => useCharacterStore.getState().removeTarget(t.id)} className="text-cendre hover:text-rouge-sang">
+                        <X className="w-3 h-3" />
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <form 
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const form = e.target as HTMLFormElement;
+                  const name = (form.elements.namedItem('tgtName') as HTMLInputElement).value;
+                  const ac = (form.elements.namedItem('tgtAc') as HTMLInputElement).value;
+                  if (name) {
+                    useCharacterStore.getState().addTarget(name, ac || '?');
+                    form.reset();
+                  }
+                }}
+                className="flex gap-2 pt-1"
+              >
+                <input name="tgtName" placeholder="Nom cible..." className="flex-1 bg-parchemin border border-or/30 rounded px-2 py-1 text-xs text-encre" required maxLength={20} />
+                <input name="tgtAc" placeholder="CA" className="w-12 bg-parchemin border border-or/30 rounded px-2 py-1 text-xs text-encre text-center font-numbers" maxLength={4} />
+                <button type="submit" className="bg-or/20 text-or px-2 rounded hover:bg-or/30"><Plus className="w-4 h-4" /></button>
+              </form>
+            </div>
+
+            {/* Buffs & Effets */}
+            <div className="space-y-2">
+              <h4 className="font-section text-xs uppercase text-cendre border-b border-cendre/20 pb-1 flex justify-between">
+                Effets & Buffs (Tours restants)
+              </h4>
+              <div className="space-y-2 max-h-32 overflow-y-auto pr-1">
+                {(combat.buffs || []).map(b => (
+                  <div key={b.id} className="flex justify-between items-center bg-encre/10 p-1.5 rounded border border-vert-emeraude/20">
+                    <span className="text-sm text-encre-claire truncate max-w-[120px]">{b.name}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="font-numbers text-vert-emeraude bg-vert-emeraude/10 px-2 py-0.5 rounded text-sm border border-vert-emeraude/30">
+                        {b.turnsRemaining} T
+                      </span>
+                      <button onClick={() => useCharacterStore.getState().removeBuff(b.id)} className="text-cendre hover:text-rouge-sang">
+                        <X className="w-3 h-3" />
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <form 
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const form = e.target as HTMLFormElement;
+                  const name = (form.elements.namedItem('buffName') as HTMLInputElement).value;
+                  const duration = parseInt((form.elements.namedItem('buffDuration') as HTMLInputElement).value || '1', 10);
+                  if (name) {
+                    useCharacterStore.getState().addBuff(name, duration);
+                    form.reset();
+                  }
+                }}
+                className="flex gap-2 pt-1"
+              >
+                <input name="buffName" placeholder="Effet (ex: Bénédiction)" className="flex-1 bg-parchemin border border-or/30 rounded px-2 py-1 text-xs text-encre" required maxLength={25} />
+                <input name="buffDuration" type="number" min="1" placeholder="Tours" defaultValue="1" className="w-14 bg-parchemin border border-or/30 rounded px-2 py-1 text-xs text-encre text-center font-numbers" required />
+                <button type="submit" className="bg-or/20 text-or px-2 rounded hover:bg-or/30"><Plus className="w-4 h-4" /></button>
+              </form>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );

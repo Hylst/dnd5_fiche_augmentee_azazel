@@ -1,7 +1,8 @@
 import React from 'react';
 import { useCharacterStore } from '../store/characterStore';
 import { generateCharacterHTML, downloadFile } from '../lib/exportUtils';
-import { FileText, FileCode, FileJson, Printer, X, Download } from 'lucide-react';
+import { FileText, FileCode, FileJson, Printer, X, Download, Upload } from 'lucide-react';
+import { characterRepository } from '../services/characterRepository';
 
 interface ExportModalProps {
   isOpen: boolean;
@@ -23,6 +24,34 @@ export function ExportModal({ isOpen, onClose }: ExportModalProps) {
     const html = generateCharacterHTML(state);
     downloadFile(html, `${state.identity.name.replace(/\s+/g, '_')}_fiche.html`, 'text/html');
     onClose();
+  };
+
+  const fileInputRef = React.useRef<HTMLInputElement>(null);
+
+  const handleImportJSON = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = async (event) => {
+      try {
+        const text = event.target?.result as string;
+        const parsedData = await characterRepository.importCharacter(text);
+        
+        await state.loadCharacterFromJson(parsedData);
+        // addNotification requires 'info' | 'success' | 'warning' | 'error' ? 
+        // type: 'info' | 'success' | 'warning' | 'critical' | 'critical-fail'
+        state.addNotification("Personnage importé avec succès !", "success");
+        onClose();
+      } catch (error) {
+        state.addNotification((error as Error).message, "critical-fail");
+      }
+    };
+    reader.readAsText(file);
+    // Reset the input
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
   };
 
   const handleExportDOC = () => {
@@ -50,10 +79,30 @@ export function ExportModal({ isOpen, onClose }: ExportModalProps) {
 
         <h2 className="font-title-main text-3xl text-pourpre-infernal mb-6 flex items-center gap-3">
           <Download className="w-6 h-6 text-or" />
-          Exporter le Personnage
+          Données du Personnage
         </h2>
 
         <div className="space-y-3">
+          <input 
+            type="file" 
+            accept=".json" 
+            ref={fileInputRef} 
+            onChange={handleImportJSON} 
+            className="hidden" 
+            id="import-json"
+          />
+          <label 
+            htmlFor="import-json"
+            className="w-full flex items-center gap-4 p-4 bg-parchemin border border-vert-emeraude/30 rounded-lg hover:bg-vert-emeraude/10 hover:border-vert-emeraude transition-all cursor-pointer group"
+          >
+            <div className="bg-vert-emeraude/10 p-2 rounded-full group-hover:bg-vert-emeraude/20 transition-colors">
+              <Upload className="w-6 h-6 text-vert-emeraude" />
+            </div>
+            <div className="text-left">
+              <div className="font-title-alt text-lg text-encre">Importer (.json)</div>
+              <div className="font-body text-xs text-cendre">Restaurer un personnage sauvegardé précédemment.</div>
+            </div>
+          </label>
           <button 
             onClick={handlePrint}
             className="w-full flex items-center gap-4 p-4 bg-parchemin border border-or/30 rounded-lg hover:bg-or/10 hover:border-or transition-all group"

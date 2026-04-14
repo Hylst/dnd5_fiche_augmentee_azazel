@@ -28,19 +28,22 @@ L'application fonctionne en **Client-Side complet, Offline-First**, et ne fait *
 
 - **Persistance des données** : Points de Vie, sorts, objets, favoris audio — tout est sauvegardé dans le navigateur (LocalStorage / IndexedDB via Zustand Persist).
 - **Import/Export** : Exportez votre fiche en JSON (transfert) ou en Markdown structuré (lecture partagée).
+- **Audio Dual Engine** : L'application utilise deux instances audio séparées (`musicAudioRef` et `sfxAudioRef`) pour permettre la lecture simultanée de musiques et d'effets sonores, avec des contrôles de volume distincts.
 - **Audio en streaming** : Les effets sonores (267 SFX) et les musiques (109 pistes Heroic Fantasy) sont streamés depuis `hylst.fr` sans téléchargement local.
 
 ---
 
 ## Modules Principaux
 
-- **Vue Générale** : Stats, PV, repos, inspirations, XP, portrait.
-- **Combat** : Attaques, CA, initiatives, conditions.
+- **Vue Générale** : Stats, PV, repos, inspirations, XP, portrait interactif (déclencheur audio).
+- **Combat & Tracker Tactique** : Attaques, CA, initiatives, suivi des cibles, compte-tours pour les buffs tactiques.
+- **Lanceur de Dés Intelligent** : Lance les dés depuis n'importe quelle statistique. Détecte les conditions et l'épuisement pour appliquer automatiquement les désavantages (2d20, garde le pire).
+- **Statuts & Conditions** : Module dédié pour gérer les conditions D&D (Aveuglé, Charmé, etc.) et les 6 niveaux d'épuisement.
 - **Grimoire** : Gestion des emplacements et lancement de sorts, filtres.
 - **Capacités** : Dons, traits de race, aptitudes de classe.
 - **Inventaire** : Équipement, poids, encombrement, catalogue d'objets.
 - **Histoire & Notes** : Biographie, liens, idéaux, défauts, notes libres.
-- **Ambiance & Sons** : Soundboard SFX (267 sons, 4 vues, favoris), Bibliothèque Musicale (109 pistes, 7 tris, favoris, lecteur avancé).
+- **Ambiance & Sons** : Architecture d'événements (CustomEvents), Soundboard SFX (267 sons, 4 vues, favoris), Bibliothèque Musicale (109 pistes, 7 tris, favoris, lecteur avancé).
 - **Gestion des Données** : Import/Export JSON & Markdown.
 
 ---

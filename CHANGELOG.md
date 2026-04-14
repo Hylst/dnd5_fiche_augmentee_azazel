@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.4.0] - 2026-04-14
+### Ajouté
+- **Tracker Tactique de Combat** (`CombatModule`) :
+  - Sous-panneau permettant de suivre les cibles (nom, CA estimée).
+  - Gestion des effets et buffs tactiques avec décompte des tours.
+  - Bouton "Tour Suivant" qui décrémente les tours et notifie l'expiration des effets.
+- **Automatisation des Contraintes (Désavantage auto)** (`characterStore`) :
+  - Le `rollDice` détecte intelligemment les conditions (Empoisonné, Effrayé, etc.) et le niveau d'épuisement (1+).
+  - Lancement automatique de 2d20 (conservation du pire) et notification de la cause.
+- **Moteur Audio Dual** (`SoundboardModule` & `IdentityHeader`) :
+  - Lecture simultanée d'un SFX ponctuel par-dessus la musique de fond.
+  - L'Avatar (Portrait) déclenche via `CustomEvent` la piste "Awakening Tension" au clic.
+  - Contrôles de volume indépendants (Musique/SFX) synchronisés.
+- **Module de Statuts** (`StatusModule`) :
+  - Interface dédiée pour l'Épuisement (niveaux 0 à 6) avec affichage dynamique des malus appliqués.
+  - Gestion des Conditions tactiques majeures de D&D 5e avec impact direct sur les lancers de dés.
+- **Notifications** : Ajout du type `'info'` pour le retour d'information des désavantages automatiques et l'expiration des buffs.
+
+### Modifié
+- **Accessibilité (A11y)** :
+  - Amélioration complète du `SoundboardModule` (ARIA labels, structuration tab-index).
+  - Focus visuel clair sur les cartes et boutons d'interaction.
+- **Documentation et Modales** :
+  - Mise à jour architecturale (`structure.md`) pour formaliser le Dual Audio Engine et le Tracker de combat.
+  - Montée de version de l'application à **v1.4.0** dans la modale d'information.
+- **Importation** : Correction d'un feedback dans `ExportModal` lors du succès de l'import JSON.
+
+---
+
 ## [1.2.0] - 2026-04-13
 ### Ajouté
 - **Renommage de l'application** : Titre officiel mis à jour en **"Fiches D&D 5e Augmentées"** avec animation de défilement (marquee) dans la sidebar pour les titres longs.

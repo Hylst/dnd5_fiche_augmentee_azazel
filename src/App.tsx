@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
-import { BookOpen, Shield, Swords, Sparkles, Scroll, Backpack, Settings, Menu, ScrollText, Loader2, Info, Volume2 } from 'lucide-react';
+import { BookOpen, Shield, Swords, Sparkles, Scroll, Backpack, Settings, Menu, ScrollText, Loader2, Info, Volume2, Moon, Sun } from 'lucide-react';
 import { cn } from './lib/utils';
 import { IdentityHeader } from './components/IdentityHeader';
 import { StatsModule } from './components/StatsModule';
 import { CombatModule } from './components/CombatModule';
+import { StatusModule } from './components/StatusModule';
 import { SkillsModule } from './components/SkillsModule';
 import { ResourcesModule } from './components/ResourcesModule';
 import { RestModule } from './components/RestModule';
@@ -18,7 +19,8 @@ import { DiceRoller } from './components/DiceRoller';
 import { InfoModal } from './components/InfoModal';
 import { Notifications } from './components/Notifications';
 import { useCharacterStore } from './store/characterStore';
-import { saveCharacter } from './services/dbService';
+import { useSettingsStore } from './store/settingsStore';
+import { characterRepository } from './services/characterRepository';
 
 type Tab = 'overview' | 'combat' | 'spells' | 'features' | 'inventory' | 'background' | 'notebook' | 'soundboard';
 
@@ -28,7 +30,20 @@ export default function App() {
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
   
   const { isLoading, loadCharacter, getSerializableState } = useCharacterStore();
+  const { theme, toggleTheme } = useSettingsStore();
   const isInitialLoad = useRef(true);
+
+  useEffect(() => {
+    const isDark = 
+      theme === 'dark' || 
+      (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme]);
 
   useEffect(() => {
     // Load Azazel by default for now
@@ -50,7 +65,7 @@ export default function App() {
       
       const timeoutId = setTimeout(() => {
         const dataToSave = state.getSerializableState();
-        saveCharacter('char_azazel_01', dataToSave).catch(console.error);
+        characterRepository.saveCharacter('char_azazel_01', dataToSave).catch(console.error);
       }, 1000); // 1 second debounce
 
       return () => clearTimeout(timeoutId);
@@ -139,13 +154,22 @@ export default function App() {
         
         <div className="p-4 border-t-2 border-or/30 flex justify-between items-center text-xs text-cendre font-handwriting">
           <span>Azazel Varn - Collège des Murmures</span>
-          <button 
-            onClick={() => setIsInfoModalOpen(true)}
-            className="p-1 rounded-full hover:bg-pourpre-infernal/10 hover:text-pourpre-infernal transition-colors"
-            title="À propos de l'application"
-          >
-            <Info className="w-5 h-5" />
-          </button>
+          <div className="flex items-center gap-1">
+            <button 
+              onClick={toggleTheme}
+              className="p-1 rounded-full hover:bg-pourpre-infernal/10 hover:text-pourpre-infernal transition-colors"
+              title="Changer le thème"
+            >
+              {theme === 'dark' ? <Sun className="w-5 h-5 text-or-vif" /> : <Moon className="w-5 h-5" />}
+            </button>
+            <button 
+              onClick={() => setIsInfoModalOpen(true)}
+              className="p-1 rounded-full hover:bg-pourpre-infernal/10 hover:text-pourpre-infernal transition-colors"
+              title="À propos de l'application"
+            >
+              <Info className="w-5 h-5" />
+            </button>
+          </div>
         </div>
       </aside>
 
@@ -172,6 +196,7 @@ export default function App() {
                 <div className="lg:col-span-5 space-y-8">
                   <RestModule />
                   <CombatModule />
+                  <StatusModule />
                   <ResourcesModule />
                 </div>
                 <div className="lg:col-span-4">
@@ -184,6 +209,7 @@ export default function App() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="space-y-8">
                   <CombatModule />
+                  <StatusModule />
                   <ResourcesModule />
                 </div>
                 <div>

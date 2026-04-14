@@ -15,7 +15,9 @@
 - [x] Compléter la base de données des sorts D&D 5e (JSON statique étendu).
 - [x] Intégrer les listes complètes d'équipements, armes magiques et leurs statistiques.
 - [x] Permettre la création d'équipements / objets sur mesure.
-- [ ] Ajouter une gestion dynamique des **conditions & statuts** (Empoisonné, Charmé, Invisible…) avec effets sur les jets de dés.
+- [x] Ajouter une gestion dynamique des **conditions & statuts** (Empoisonné, Charmé, Invisible…) via le `StatusModule`.
+- [x] Lier les effets des conditions aux jets de dés (désavantage automatique sur fatigue/conditions).
+- [x] Tracker tactique de combat rudimentaire (Cibles, AC estimée, Durée des buffs tactiques).
 - [x] Calcul automatique de la CA en fonction de l'armure, du bouclier et du modificateur de DEX.
 - [ ] Permettre l'ajout d'**images personnalisées** pour les objets de l'inventaire.
 
@@ -28,14 +30,16 @@
 - [x] Favoris musiques : persistence `localStorage`.
 - [x] Tri musiques : 7 modes (Alpha, Favoris, Durée, BPM, Genre, Ambiance, Usage).
 - [ ] Ajouter un **fondu enchaîné** (crossfade) entre deux musiques lors du changement de piste.
-- [ ] Permettre la **lecture simultanée** d'un SFX ponctuel par-dessus la musique de fond.
+- [x] Permettre la **lecture simultanée** d'un SFX ponctuel par-dessus la musique de fond (Dual Audio Engine).
+- [x] Déclenchement d'un thème musical spécifique au clic sur le portrait.
 - [ ] Créer des **playlists** personnalisées sauvegardées localement.
 
 ---
 
 ## 🖥️ UX / UI
-- [ ] Implémenter un **mode Sombre (Dark Mode)** complet.
+- [x] Implémenter un **mode Sombre (Dark Mode)** complet.
 - [x] Notifications visuelles pour Nat 20 / Nat 1 dans le dé roller.
 - [x] Historique des jets de dés filtrable et exportable.
-- [ ] Améliorer l'accessibilité (ARIA labels, navigation clavier complète).
+- [x] Améliorer l'accessibilité (ARIA labels, navigation clavier complète) sur le SoundboardModule.
+- [ ] Étendre l'accessibilité ARIA aux menus globaux et barres latérales.
 - [ ] Responsive mobile amélioré pour la sidebar et les modules complexes.

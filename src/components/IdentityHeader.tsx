@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import { useCharacterStore, calculateModifier } from '../store/characterStore';
 import { Sparkles, ArrowUpCircle, Plus, X, Download } from 'lucide-react';
 import { cn } from '../lib/utils';
@@ -32,42 +32,12 @@ export function IdentityHeader() {
     }
   };
 
-  const playMelody = useCallback(() => {
-    try {
-      const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
-      
-      const playNote = (frequency: number, startTime: number, duration: number) => {
-        const oscillator = audioCtx.createOscillator();
-        const gainNode = audioCtx.createGain();
-        
-        oscillator.type = 'sine';
-        oscillator.frequency.value = frequency;
-        
-        gainNode.gain.setValueAtTime(0, startTime);
-        gainNode.gain.linearRampToValueAtTime(0.3, startTime + 0.1);
-        gainNode.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
-        
-        oscillator.connect(gainNode);
-        gainNode.connect(audioCtx.destination);
-        
-        oscillator.start(startTime);
-        oscillator.stop(startTime + duration);
-      };
-
-      const now = audioCtx.currentTime;
-      // Simple magical/bardic arpeggio
-      playNote(392.00, now, 0.5); // G4
-      playNote(493.88, now + 0.2, 0.5); // B4
-      playNote(587.33, now + 0.4, 0.5); // D5
-      playNote(783.99, now + 0.6, 1.0); // G5
-    } catch (e) {
-      console.error("Audio playback failed", e);
-    }
-  }, []);
-
   const handlePortraitClick = () => {
     setIsPortraitExpanded(true);
-    playMelody();
+    // Dispatch a custom event to trigger 'Awakening Tension' in the SoundboardModule
+    window.dispatchEvent(new CustomEvent('audioPlayRequest', {
+      detail: { filename: 'awakening_tension.mp3', type: 'music' }
+    }));
   };
 
   const confirmLevelUp = () => {

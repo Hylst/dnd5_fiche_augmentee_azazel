@@ -92,22 +92,23 @@ function saveFavorites(favs: Set<string>) {
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
 
-function VolumeControl({ volume, onChange }: { volume: number; onChange: (v: number) => void }) {
+const VolumeControl: React.FC<{ volume: number; onChange: (v: number) => void; label: string; icon?: React.ReactNode }> = ({ volume, onChange, label, icon }) => {
   return (
-    <div className="flex items-center gap-2 text-encre">
-      <Volume2 className="w-5 h-5 text-pourpre-infernal shrink-0" />
+    <div className="flex items-center gap-2 text-encre" role="group" aria-label={`Contrôle du volume : ${label}`}>
+      {icon ? icon : <Volume2 className="w-5 h-5 text-pourpre-infernal shrink-0" aria-hidden="true" />}
       <input type="range" min="0" max="1" step="0.05" value={volume}
+        aria-label={`Volume ${label}`}
         onChange={e => onChange(parseFloat(e.target.value))}
-        className="w-24 md:w-32 accent-pourpre-infernal" />
+        className="w-20 md:w-24 accent-pourpre-infernal" />
     </div>
   );
 }
 
-function SoundButton({ filename, reason, playingTrack, onPlay, isFavorite, onToggleFavorite }: {
-  filename: string; reason?: string; playingTrack: string | null; onPlay: (f: string) => void;
+const SoundButton: React.FC<{
+  filename: string; reason?: string; playingSfxTrack: string | null; onPlay: (f: string) => void;
   isFavorite?: boolean; onToggleFavorite?: (f: string) => void;
-}) {
-  const isPlaying = playingTrack === filename;
+}> = ({ filename, reason, playingSfxTrack, onPlay, isFavorite, onToggleFavorite }) => {
+  const isPlaying = playingSfxTrack === filename;
   const displayName = soundsIndex.get(filename) || filename;
   return (
     <div className={cn(
@@ -120,18 +121,21 @@ function SoundButton({ filename, reason, playingTrack, onPlay, isFavorite, onTog
       {onToggleFavorite && (
         <button
           onClick={e => { e.stopPropagation(); onToggleFavorite(filename); }}
+          aria-label={isFavorite ? `Retirer ${displayName} des favoris SFX` : `Ajouter ${displayName} aux favoris SFX`}
           title={isFavorite ? 'Retirer des favoris' : 'Ajouter aux favoris'}
           className={cn(
-            'absolute top-1.5 left-1.5 z-10 p-1 rounded-full transition-colors',
+            'absolute top-1.5 left-1.5 z-10 p-1 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-or',
             isFavorite ? 'bg-red-100/90' : 'bg-parchemin/70 hover:bg-or/20'
           )}>
-          <Heart className={cn('w-3 h-3', isFavorite ? 'fill-red-500 text-red-500' : 'text-cendre/60')} />
+          <Heart className={cn('w-3 h-3', isFavorite ? 'fill-red-500 text-red-500' : 'text-cendre/60')} aria-hidden="true" />
         </button>
       )}
       {/* Bouton principal : texte à gauche (décalé si favori), icône play en bas à droite */}
       <button onClick={() => onPlay(filename)}
+        aria-label={`${isPlaying ? 'Arrêter' : 'Jouer'} le son ${displayName}`}
+        aria-pressed={isPlaying}
         className={cn(
-          'flex flex-col p-3 text-left w-full h-full flex-1 rounded-lg transition-all min-h-[64px]',
+          'flex flex-col p-3 text-left w-full h-full flex-1 rounded-lg transition-all min-h-[64px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-or',
           isPlaying
             ? 'bg-or/20 text-pourpre-infernal animate-pulse'
             : 'hover:bg-black/5 text-encre bg-parchemin-clair'
@@ -139,10 +143,10 @@ function SoundButton({ filename, reason, playingTrack, onPlay, isFavorite, onTog
         <span className={cn(
           'font-title-main text-sm md:text-base leading-tight',
           onToggleFavorite ? 'pl-5' : ''  /* espace pour le cœur */
-        )}>{displayName}</span>
-        {reason && <span className="text-xs text-cendre italic mt-1 leading-tight line-clamp-2">{reason}</span>}
+        )} aria-hidden="true">{displayName}</span>
+        {reason && <span className="text-xs text-cendre italic mt-1 leading-tight line-clamp-2" aria-hidden="true">{reason}</span>}
         {/* Icône play en bas à droite */}
-        <div className="mt-auto pt-1 self-end">
+        <div className="mt-auto pt-1 self-end" aria-hidden="true">
           {isPlaying
             ? <Square fill="currentColor" className="w-3.5 h-3.5 text-or-vif" />
             : <Play className="w-3.5 h-3.5 text-cendre/50" />}
@@ -152,7 +156,7 @@ function SoundButton({ filename, reason, playingTrack, onPlay, isFavorite, onTog
   );
 }
 
-function EqBars({ playing }: { playing: boolean }) {
+const EqBars: React.FC<{ playing: boolean }> = ({ playing }) => {
   if (!playing) return null;
   return (
     <div className="flex gap-0.5 items-end h-3 shrink-0">
@@ -164,14 +168,14 @@ function EqBars({ playing }: { playing: boolean }) {
   );
 }
 
-function MusicCard({ track, playingTrack, isFavorite, onPlay, onToggleFavorite, showDetail }: {
+const MusicCard: React.FC<{
   track: MusicTrack;
   playingTrack: string | null;
   isFavorite: boolean;
   onPlay: (f: string) => void;
   onToggleFavorite: (f: string) => void;
   showDetail: (t: MusicTrack) => void;
-}) {
+}> = ({ track, playingTrack, isFavorite, onPlay, onToggleFavorite, showDetail }) => {
   const isPlaying = playingTrack === track.filename;
   const [imgError, setImgError] = useState(false);
 
@@ -183,48 +187,54 @@ function MusicCard({ track, playingTrack, isFavorite, onPlay, onToggleFavorite, 
         : 'border-or/20 hover:border-or/60 hover:shadow-md hover:scale-[1.01]'
     )}>
       {/* Album art */}
-      <div className="relative aspect-square bg-pourpre-infernal/10 overflow-hidden cursor-pointer"
-        onClick={() => onPlay(track.filename)}>
+      <button 
+        className="relative aspect-square bg-pourpre-infernal/10 overflow-hidden cursor-pointer block w-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-or focus-visible:ring-inset"
+        onClick={() => onPlay(track.filename)}
+        aria-label={`${isPlaying ? 'Arrêter' : 'Jouer'} la musique ${track.title}`}
+        aria-pressed={isPlaying}
+      >
         {!imgError ? (
-          <img src={`${MUSIC_BASE_URL}${track.imageName}`} alt={track.title}
+          <img src={`${MUSIC_BASE_URL}${track.imageName}`} alt="" aria-hidden="true"
             onError={() => setImgError(true)}
             className={cn('w-full h-full object-cover transition-transform duration-500',
               'group-hover:scale-105', isPlaying && 'scale-105')} />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-pourpre-infernal/40 to-encre/60">
-            <Disc3 className={cn('w-12 h-12 text-or-vif opacity-60', isPlaying && 'animate-spin')} />
+            <Disc3 className={cn('w-12 h-12 text-or-vif opacity-60', isPlaying && 'animate-spin')} aria-hidden="true" />
           </div>
         )}
         <div className={cn(
           'absolute inset-0 flex items-center justify-center bg-black/40 transition-opacity duration-200',
           isPlaying ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-        )}>
+        )} aria-hidden="true">
           {isPlaying ? <Pause fill="white" className="w-10 h-10 text-white drop-shadow-lg" />
             : <Play fill="white" className="w-10 h-10 text-white drop-shadow-lg" />}
         </div>
         {isPlaying && (
-          <div className="absolute top-2 right-2 flex gap-0.5 items-end h-4">
+          <div className="absolute top-2 right-2 flex gap-0.5 items-end h-4" aria-hidden="true">
             {[1, 2, 3].map(i => (
               <div key={i} className="w-1 bg-or-vif rounded-full animate-bounce"
                 style={{ animationDelay: `${i * 0.15}s`, height: `${40 + i * 20}%` }} />
             ))}
           </div>
         )}
-      </div>
+      </button>
 
       {/* Metadata */}
       <div className={cn('p-3 flex flex-col gap-1 flex-1', isPlaying ? 'bg-or/10' : 'bg-parchemin-clair')}>
         <div className="flex items-start justify-between gap-1">
-          <h4 className="font-title-main text-sm leading-tight line-clamp-2 text-encre flex-1">{track.title}</h4>
+          <h4 className="font-title-main text-sm leading-tight line-clamp-2 text-encre flex-1" aria-hidden="true">{track.title}</h4>
           <div className="flex gap-1 shrink-0">
             <button onClick={() => onToggleFavorite(track.filename)}
-              className="p-0.5 rounded hover:bg-or/20 transition-colors"
+              className="p-0.5 rounded hover:bg-or/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-or"
+              aria-label={isFavorite ? `Retirer ${track.title} des favoris` : `Ajouter ${track.title} aux favoris`}
               title={isFavorite ? 'Retirer des favoris' : 'Ajouter aux favoris'}>
-              <Heart className={cn('w-3.5 h-3.5', isFavorite ? 'fill-red-500 text-red-500' : 'text-cendre')} />
+              <Heart className={cn('w-3.5 h-3.5', isFavorite ? 'fill-red-500 text-red-500' : 'text-cendre')} aria-hidden="true" />
             </button>
             <button onClick={() => showDetail(track)}
-              className="p-0.5 rounded hover:bg-or/20 transition-colors" title="Détails">
-              <Info className="w-3.5 h-3.5 text-cendre" />
+              aria-label={`Détails de la musique ${track.title}`}
+              className="p-0.5 rounded hover:bg-or/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-or" title="Détails">
+              <Info className="w-3.5 h-3.5 text-cendre" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -248,10 +258,10 @@ function MusicCard({ track, playingTrack, isFavorite, onPlay, onToggleFavorite, 
 }
 
 // Detail modal
-function TrackDetailModal({ track, isFavorite, onToggleFavorite, onClose, onPlay, playingTrack }: {
+const TrackDetailModal: React.FC<{
   track: MusicTrack; isFavorite: boolean; onToggleFavorite: (f: string) => void;
   onClose: () => void; onPlay: (f: string) => void; playingTrack: string | null;
-}) {
+}> = ({ track, isFavorite, onToggleFavorite, onClose, onPlay, playingTrack }) => {
   const isPlaying = playingTrack === track.filename;
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
@@ -377,24 +387,30 @@ export function SoundboardModule() {
   }, []);
 
   // Audio state
-  const [playingTrack, setPlayingTrack] = useState<string | null>(null);
-  const [volume, setVolume] = useState(0.5);
+  const [playingMusicTrack, setPlayingMusicTrack] = useState<string | null>(null);
+  const [playingSfxTrack, setPlayingSfxTrack] = useState<string | null>(null);
+  
+  const [musicVolume, setMusicVolume] = useState(0.5);
+  const [sfxVolume, setSfxVolume] = useState(0.8);
+  
   const [loopMode, setLoopMode] = useState<LoopMode>('none');
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  
+  const musicAudioRef = useRef<HTMLAudioElement | null>(null);
+  const sfxAudioRef = useRef<HTMLAudioElement | null>(null);
 
   // Current track object
   const currentMusicTrack = useMemo(
-    () => playingTrack ? musicTracks.find(t => t.filename === playingTrack) ?? null : null,
-    [playingTrack]
+    () => playingMusicTrack ? musicTracks.find(t => t.filename === playingMusicTrack) ?? null : null,
+    [playingMusicTrack]
   );
   const isMusicPlaying = !!currentMusicTrack;
 
-  // Init audio
+  // Init audio for Music
   useEffect(() => {
-    if (!audioRef.current) {
+    if (!musicAudioRef.current) {
       const audio = new Audio();
       audio.onended = () => {
         if (loopRef.current === 'one') {
@@ -403,24 +419,38 @@ export function SoundboardModule() {
         } else if (loopRef.current === 'all') {
           playNextTrack();
         } else {
-          setPlayingTrack(null);
+          setPlayingMusicTrack(null);
         }
       };
-      audio.onerror = () => { console.error('Audio error'); setPlayingTrack(null); setIsLoading(false); };
+      audio.onerror = () => { console.error('Music Audio error'); setPlayingMusicTrack(null); setIsLoading(false); };
       audio.ontimeupdate = () => setCurrentTime(audio.currentTime);
       audio.ondurationchange = () => setDuration(audio.duration || 0);
       audio.oncanplay = () => setIsLoading(false);
       audio.onwaiting = () => setIsLoading(true);
-      audioRef.current = audio;
+      musicAudioRef.current = audio;
+    }
+  }, []); // playNextTrack not in deps because loopMode handles it via ref
+
+  // Init audio for SFX
+  useEffect(() => {
+    if (!sfxAudioRef.current) {
+      const audio = new Audio();
+      audio.onended = () => {
+        setPlayingSfxTrack(null);
+      };
+      audio.onerror = () => { console.error('SFX Audio error'); setPlayingSfxTrack(null); };
+      sfxAudioRef.current = audio;
     }
   }, []);
+
 
   // Keep loopMode in a ref for onended closure
   const loopRef = useRef<LoopMode>('none');
   loopRef.current = loopMode;
 
   // Volume sync
-  useEffect(() => { if (audioRef.current) audioRef.current.volume = volume; }, [volume]);
+  useEffect(() => { if (musicAudioRef.current) musicAudioRef.current.volume = musicVolume; }, [musicVolume]);
+  useEffect(() => { if (sfxAudioRef.current) sfxAudioRef.current.volume = sfxVolume; }, [sfxVolume]);
 
   // Persist favorites
   useEffect(() => { saveFavorites(favorites); }, [favorites]);
@@ -463,53 +493,85 @@ export function SoundboardModule() {
 
   const playNextTrack = useCallback(() => {
     const list = filteredMusic;
-    const idx = list.findIndex(t => t.filename === playingTrack);
+    const idx = list.findIndex(t => t.filename === playingMusicTrack);
     const next = list[(idx + 1) % list.length];
-    if (next) startPlaying(next.filename, MUSIC_BASE_URL);
-  }, [filteredMusic, playingTrack]);
+    if (next) playMusic(next.filename, true);
+  }, [filteredMusic, playingMusicTrack]);
 
   const playPrevTrack = useCallback(() => {
     const list = filteredMusic;
-    const idx = list.findIndex(t => t.filename === playingTrack);
+    const idx = list.findIndex(t => t.filename === playingMusicTrack);
     const prev = list[(idx - 1 + list.length) % list.length];
-    if (prev) startPlaying(prev.filename, MUSIC_BASE_URL);
-  }, [filteredMusic, playingTrack]);
+    if (prev) playMusic(prev.filename, true);
+  }, [filteredMusic, playingMusicTrack]);
 
-  const startPlaying = (filename: string, baseUrl: string) => {
-    if (!audioRef.current) return;
-    audioRef.current.src = `${baseUrl}${filename}`;
-    setIsLoading(true);
-    setCurrentTime(0);
-    setDuration(0);
-    audioRef.current.play().catch(e => { console.error('Play error:', e); setPlayingTrack(null); setIsLoading(false); });
-    setPlayingTrack(filename);
-  };
-
-  const playTrack = useCallback((filename: string, baseUrl: string) => {
-    if (!audioRef.current) return;
-    if (playingTrack === filename) {
-      if (audioRef.current.paused) {
-        audioRef.current.play().catch(() => {});
+  const playMusic = useCallback((filename: string, forceStart = false) => {
+    if (!musicAudioRef.current) return;
+    if (playingMusicTrack === filename && !forceStart) {
+      if (musicAudioRef.current.paused) {
+        musicAudioRef.current.play().catch(() => {});
       } else {
-        audioRef.current.pause();
-        setPlayingTrack(null);
+        musicAudioRef.current.pause();
+        setPlayingMusicTrack(null);
       }
       return;
     }
-    startPlaying(filename, baseUrl);
-  }, [playingTrack]);
+    musicAudioRef.current.src = `${MUSIC_BASE_URL}${filename}`;
+    setIsLoading(true);
+    setCurrentTime(0);
+    setDuration(0);
+    musicAudioRef.current.play().catch(e => { console.error('Play error:', e); setPlayingMusicTrack(null); setIsLoading(false); });
+    setPlayingMusicTrack(filename);
+  }, [playingMusicTrack]);
 
-  const playSfx = useCallback((f: string) => playTrack(f, SFX_BASE_URL), [playTrack]);
-  const playMusic = useCallback((f: string) => playTrack(f, MUSIC_BASE_URL), [playTrack]);
+  const playSfx = useCallback((filename: string) => {
+    if (!sfxAudioRef.current) return;
+    if (playingSfxTrack === filename) {
+      if (!sfxAudioRef.current.paused) {
+        sfxAudioRef.current.pause();
+        sfxAudioRef.current.currentTime = 0;
+        setPlayingSfxTrack(null);
+        return;
+      }
+    }
+    sfxAudioRef.current.src = `${SFX_BASE_URL}${filename}`;
+    sfxAudioRef.current.play().catch(e => { console.error('Play SFX error:', e); setPlayingSfxTrack(null); });
+    setPlayingSfxTrack(filename);
+  }, [playingSfxTrack]);
+
+  // Listen for external audio play requests (e.g., portrait click triggering 'Awakening Tension')
+  // Use refs to hold current callbacks so the listener never needs re-registration
+  const playMusicRef = useRef(playMusic);
+  const playSfxRef = useRef(playSfx);
+  playMusicRef.current = playMusic;
+  playSfxRef.current = playSfx;
+
+  useEffect(() => {
+    const handleExternalPlay = (e: Event) => {
+      const { filename, type } = (e as CustomEvent<{ filename: string; type: 'music' | 'sfx' }>).detail;
+      if (type === 'music') {
+        playMusicRef.current(filename, true);
+      } else if (type === 'sfx') {
+        playSfxRef.current(filename);
+      }
+    };
+    window.addEventListener('audioPlayRequest', handleExternalPlay);
+    return () => window.removeEventListener('audioPlayRequest', handleExternalPlay);
+  }, []); // Registered once — refs always point to the latest callbacks
+
 
   const stopAll = () => {
-    if (audioRef.current) { audioRef.current.pause(); audioRef.current.currentTime = 0; }
-    setPlayingTrack(null); setCurrentTime(0); setDuration(0);
+    if (musicAudioRef.current) { musicAudioRef.current.pause(); musicAudioRef.current.currentTime = 0; }
+    if (sfxAudioRef.current) { sfxAudioRef.current.pause(); sfxAudioRef.current.currentTime = 0; }
+    setPlayingMusicTrack(null);
+    setPlayingSfxTrack(null);
+    setCurrentTime(0);
+    setDuration(0);
   };
 
   const seekTo = (e: React.ChangeEvent<HTMLInputElement>) => {
     const t = parseFloat(e.target.value);
-    if (audioRef.current) audioRef.current.currentTime = t;
+    if (musicAudioRef.current) musicAudioRef.current.currentTime = t;
     setCurrentTime(t);
   };
 
@@ -550,16 +612,20 @@ export function SoundboardModule() {
           <h2 className="font-title-main text-3xl text-pourpre-infernal mb-2">Ambiance & Sons</h2>
           <p className="text-cendre italic font-handwriting text-lg">Effets sonores & bibliothèque musicale Heroic Fantasy.</p>
         </div>
-        <div className="flex items-center gap-4 bg-parchemin-clair p-3 rounded-xl border-2 border-or/30 w-full md:w-auto">
-          <button onClick={stopAll} disabled={!playingTrack}
+        <div className="flex items-center gap-3 bg-parchemin-clair p-3 rounded-xl border-2 border-or/30 w-full md:w-auto flex-wrap">
+          <button onClick={stopAll} disabled={!playingMusicTrack && !playingSfxTrack}
+            aria-label="Arrêter toute lecture audio"
             className={cn(
               'flex items-center gap-2 px-3 py-1.5 rounded-lg font-title-main text-sm transition-colors',
-              playingTrack ? 'bg-red-900/10 text-red-800 hover:bg-red-900/20' : 'text-cendre opacity-50 cursor-not-allowed'
+              (playingMusicTrack || playingSfxTrack) ? 'bg-red-900/10 text-red-800 hover:bg-red-900/20' : 'text-cendre opacity-50 cursor-not-allowed'
             )}>
-            <Square fill="currentColor" className="w-4 h-4" /> Arrêter
+            <Square fill="currentColor" className="w-4 h-4" aria-hidden="true" /> Arrêter
           </button>
-          <div className="border-l border-or/30 pl-4">
-            <VolumeControl volume={volume} onChange={setVolume} />
+          <div className="border-l border-or/30 pl-3 flex items-center gap-3">
+            <VolumeControl volume={musicVolume} onChange={setMusicVolume} label="Musique"
+              icon={<Music2 className="w-4 h-4 text-pourpre-infernal shrink-0" aria-hidden="true" />} />
+            <VolumeControl volume={sfxVolume} onChange={setSfxVolume} label="SFX"
+              icon={<Activity className="w-4 h-4 text-or-vif shrink-0" aria-hidden="true" />} />
           </div>
         </div>
       </header>
@@ -619,7 +685,7 @@ export function SoundboardModule() {
             {activeMode === 'top12' && (
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                 {associationsData.top_20_most_useful_rpg_sounds.map(item => (
-                  <SoundButton key={item.filename} filename={item.filename} reason={item.reason} playingTrack={playingTrack} onPlay={playSfx} isFavorite={sfxFavorites.has(item.filename)} onToggleFavorite={toggleSfxFavorite} />
+                  <SoundButton key={item.filename} filename={item.filename} reason={item.reason} playingSfxTrack={playingSfxTrack} onPlay={playSfx} isFavorite={sfxFavorites.has(item.filename)} onToggleFavorite={toggleSfxFavorite} />
                 ))}
               </div>
             )}
@@ -629,7 +695,7 @@ export function SoundboardModule() {
                   <div key={scene}>
                     <h3 className="font-title-main text-xl text-or-vif mb-3 border-b border-or/20 pb-1">{scene}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
-                      {files.map(f => <SoundButton key={f} filename={f as string} playingTrack={playingTrack} onPlay={playSfx} isFavorite={sfxFavorites.has(f as string)} onToggleFavorite={toggleSfxFavorite} />)}
+                      {files.map(f => <SoundButton key={f} filename={f as string} playingSfxTrack={playingSfxTrack} onPlay={playSfx} isFavorite={sfxFavorites.has(f as string)} onToggleFavorite={toggleSfxFavorite} />)}
                     </div>
                   </div>
                 ))}
@@ -641,7 +707,7 @@ export function SoundboardModule() {
                   <div key={tension}>
                     <h3 className="font-title-main text-xl text-pourpre-infernal mb-3 border-b border-or/20 pb-1">{tension}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
-                      {files.map(f => <SoundButton key={f} filename={f as string} playingTrack={playingTrack} onPlay={playSfx} isFavorite={sfxFavorites.has(f as string)} onToggleFavorite={toggleSfxFavorite} />)}
+                      {files.map(f => <SoundButton key={f} filename={f as string} playingSfxTrack={playingSfxTrack} onPlay={playSfx} isFavorite={sfxFavorites.has(f as string)} onToggleFavorite={toggleSfxFavorite} />)}
                     </div>
                   </div>
                 ))}
@@ -653,7 +719,7 @@ export function SoundboardModule() {
                   <div key={category}>
                     <h3 className="font-title-main text-xl text-encre mb-3 border-b border-or/20 pb-1">{category}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
-                      {files.map(f => <SoundButton key={f} filename={f as string} playingTrack={playingTrack} onPlay={playSfx} isFavorite={sfxFavorites.has(f as string)} onToggleFavorite={toggleSfxFavorite} />)}
+                      {files.map(f => <SoundButton key={f} filename={f as string} playingSfxTrack={playingSfxTrack} onPlay={playSfx} isFavorite={sfxFavorites.has(f as string)} onToggleFavorite={toggleSfxFavorite} />)}
                     </div>
                   </div>
                 ))}
@@ -670,7 +736,7 @@ export function SoundboardModule() {
                 ) : (
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
                     {[...sfxFavorites].map(f => (
-                      <SoundButton key={f} filename={f} playingTrack={playingTrack} onPlay={playSfx} isFavorite={true} onToggleFavorite={toggleSfxFavorite} />
+                      <SoundButton key={f} filename={f} playingSfxTrack={playingSfxTrack} onPlay={playSfx} isFavorite={true} onToggleFavorite={toggleSfxFavorite} />
                     ))}
                   </div>
                 )}
@@ -792,7 +858,7 @@ export function SoundboardModule() {
               {filteredMusic.map(track => (
                 <MusicCard
                   key={track.filename} track={track}
-                  playingTrack={playingTrack}
+                  playingTrack={playingMusicTrack}
                   isFavorite={favorites.has(track.filename)}
                   onPlay={playMusic}
                   onToggleFavorite={toggleFavorite}
@@ -845,6 +911,7 @@ export function SoundboardModule() {
                     <SkipBack className="w-4 h-4" />
                   </button>
                   <button onClick={() => playMusic(currentMusicTrack.filename)}
+                    aria-label="Pause"
                     className="p-2 rounded-full bg-or-vif text-encre hover:bg-or transition-colors">
                     <Pause fill="currentColor" className="w-5 h-5" />
                   </button>
@@ -867,12 +934,13 @@ export function SoundboardModule() {
                     <Heart className={cn('w-4 h-4', favorites.has(currentMusicTrack.filename) ? 'fill-red-400 text-red-400' : 'text-white/50')} />
                   </button>
 
-                  {/* Volume */}
-                  <div className="flex items-center gap-1 pl-2 border-l border-white/10">
-                    <Volume2 className="w-4 h-4 text-white/50 shrink-0" />
-                    <input type="range" min="0" max="1" step="0.05" value={volume}
-                      onChange={e => setVolume(parseFloat(e.target.value))}
-                      className="w-16 accent-or-vif" />
+                  {/* Volume musique (barre Now Playing) */}
+                  <div className="flex items-center gap-1 pl-2 border-l border-white/10" role="group" aria-label="Volume musique">
+                    <Music2 className="w-3.5 h-3.5 text-white/50 shrink-0" aria-hidden="true" />
+                    <input type="range" min="0" max="1" step="0.05" value={musicVolume}
+                      aria-label="Volume musique"
+                      onChange={e => setMusicVolume(parseFloat(e.target.value))}
+                      className="w-14 accent-or-vif" />
                   </div>
 
                   <button onClick={stopAll} className="p-1.5 rounded-lg hover:bg-white/10 transition-colors text-white/50 hover:text-white">
@@ -893,7 +961,7 @@ export function SoundboardModule() {
           onToggleFavorite={toggleFavorite}
           onClose={() => setDetailTrack(null)}
           onPlay={playMusic}
-          playingTrack={playingTrack}
+          playingTrack={playingMusicTrack}
         />
       )}
     </div>
