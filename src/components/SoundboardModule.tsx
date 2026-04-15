@@ -4,7 +4,7 @@ import {
   FolderTree, AlertCircle, Music2, Search, ChevronDown,
   Disc3, Clock, Pause, Heart, Repeat, Repeat1,
   SkipBack, SkipForward, Gauge, Zap, Tag, Info,
-  SlidersHorizontal, ArrowUpDown,
+  SlidersHorizontal, ArrowUpDown, Swords, Sparkles, PawPrint, CloudRain, Package, Speech, CircleHelp
 } from 'lucide-react';
 import { cn } from '../lib/utils';
 import soundsData from '../data/sounds.json';
@@ -46,7 +46,24 @@ type LoopMode = 'none' | 'one' | 'all';
 // ─── Static Data ───────────────────────────────────────────────────────────────
 
 const soundsIndex = new Map<string, string>();
-(soundsData as SoundData[]).forEach(s => soundsIndex.set(s.filename, s.frenchName));
+const soundsCategory = new Map<string, string>();
+(soundsData as SoundData[]).forEach(s => {
+  soundsIndex.set(s.filename, s.frenchName);
+  soundsCategory.set(s.filename, s.category);
+});
+
+const getCategoryIcon = (category: string) => {
+  switch (category) {
+    case 'Combat & Armes': return Swords;
+    case 'Magie & Surnaturel': return Sparkles;
+    case 'Créatures & Animaux': return PawPrint;
+    case 'Ambiance & Environnement': return CloudRain;
+    case 'Objets & Interactions': return Package;
+    case 'Voix & Émotions': return Speech;
+    case 'Musique & Interface': return Music2;
+    default: return CircleHelp;
+  }
+};
 
 const musicTracks = musicsData as MusicTrack[];
 const SFX_BASE_URL = 'https://hylst.fr/mp3/sfx/';
@@ -110,6 +127,9 @@ const SoundButton: React.FC<{
 }> = ({ filename, reason, playingSfxTrack, onPlay, isFavorite, onToggleFavorite }) => {
   const isPlaying = playingSfxTrack === filename;
   const displayName = soundsIndex.get(filename) || filename;
+  const category = soundsCategory.get(filename) || 'Non classé';
+  const CatIcon = getCategoryIcon(category);
+
   return (
     <div className={cn(
       'relative flex flex-col rounded-lg border transition-all w-full h-full overflow-hidden',
@@ -117,20 +137,27 @@ const SoundButton: React.FC<{
         ? 'border-or-vif shadow-[inset_0_0_10px_rgba(201,147,58,0.3)]'
         : 'border-or/30'
     )}>
-      {/* Favori : coin sup gauche, hors de la zone du bouton play */}
+      {/* Icone dynamique / Favori : coin sup droit, interaction au survol */}
       {onToggleFavorite && (
         <button
           onClick={e => { e.stopPropagation(); onToggleFavorite(filename); }}
           aria-label={isFavorite ? `Retirer ${displayName} des favoris SFX` : `Ajouter ${displayName} aux favoris SFX`}
           title={isFavorite ? 'Retirer des favoris' : 'Ajouter aux favoris'}
           className={cn(
-            'absolute top-1.5 left-1.5 z-10 p-1 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-or',
-            isFavorite ? 'bg-red-100/90' : 'bg-parchemin/70 hover:bg-or/20'
+            'group absolute top-1.5 right-1.5 z-10 p-1.5 rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-or',
+            isFavorite ? 'bg-red-100/90' : 'bg-transparent hover:bg-red-50/80 hover:text-red-400'
           )}>
-          <Heart className={cn('w-3 h-3', isFavorite ? 'fill-red-500 text-red-500' : 'text-cendre/60')} aria-hidden="true" />
+          {isFavorite ? (
+            <Heart className="w-3.5 h-3.5 fill-red-500 text-red-500" aria-hidden="true" />
+          ) : (
+            <div className="relative flex items-center justify-center">
+              <CatIcon className="w-3.5 h-3.5 text-cendre/40 transition-opacity group-hover:opacity-0" aria-hidden="true" />
+              <Heart className="w-3 h-3 text-red-400 absolute opacity-0 transition-opacity group-hover:opacity-100" aria-hidden="true" />
+            </div>
+          )}
         </button>
       )}
-      {/* Bouton principal : texte à gauche (décalé si favori), icône play en bas à droite */}
+      {/* Bouton principal : texte écourté par le coeur à droite, icône play en bas à droite */}
       <button onClick={() => onPlay(filename)}
         aria-label={`${isPlaying ? 'Arrêter' : 'Jouer'} le son ${displayName}`}
         aria-pressed={isPlaying}
@@ -142,7 +169,7 @@ const SoundButton: React.FC<{
         )}>
         <span className={cn(
           'font-title-main text-sm md:text-base leading-tight',
-          onToggleFavorite ? 'pl-5' : ''  /* espace pour le cœur */
+          onToggleFavorite ? 'pr-6' : ''  /* espace pour le bouton interactif à droite */
         )} aria-hidden="true">{displayName}</span>
         {reason && <span className="text-xs text-cendre italic mt-1 leading-tight line-clamp-2" aria-hidden="true">{reason}</span>}
         {/* Icône play en bas à droite */}

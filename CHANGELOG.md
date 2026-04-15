@@ -19,6 +19,8 @@
 - **Notifications** : Ajout du type `'info'` pour le retour d'information des désavantages automatiques et l'expiration des buffs.
 
 ### Modifié
+- **UI/UX (Soundboard)** :
+  - Remplacement de l'icône statique de favori par des icônes contextuelles dynamiques (selon la catégorie du son) révélateurs de favori au survol.
 - **Accessibilité (A11y)** :
   - Amélioration complète du `SoundboardModule` (ARIA labels, structuration tab-index).
   - Focus visuel clair sur les cartes et boutons d'interaction.
