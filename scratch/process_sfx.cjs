@@ -1,6 +1,12 @@
 const fs = require('fs');
+const path = require('path');
 
-const rawData = fs.readFileSync('d:/0CODE/AntiGravity/Cours_Memos/Docker/mp3/sfx_catalog.json', 'utf8');
+// Racine du projet, deduite de l'emplacement du script (le dossier a quitte AIstudio le 18/11/2026)
+const RACINE = path.resolve(__dirname, '..');
+// Hub Hylst (catalogue des bruitages), surchargeable par HYLST_HUB
+const HUB = process.env.HYLST_HUB || path.resolve(RACINE, '../../../hylst.fr.platforms/it.hylst.fr');
+
+const rawData = fs.readFileSync(path.join(HUB, 'mp3', 'sfx_catalog.json'), 'utf8');
 const data = JSON.parse(rawData.replace(/^\uFEFF/, ''));
 
 // Dictionnaire de traduction partiel pour de plus jolis noms
@@ -121,5 +127,5 @@ const categorizedData = data.map(item => {
     };
 });
 
-fs.writeFileSync('d:/0CODE/AIstudio/dnd5-azazel/src/data/sounds.json', JSON.stringify(categorizedData, null, 4));
-console.log('Script done ! file written to d:/0CODE/AIstudio/dnd5-azazel/src/data/sounds.json');
+fs.writeFileSync(path.join(RACINE, 'src/data/sounds.json'), JSON.stringify(categorizedData, null, 4));
+console.log('Script done ! file written to ' + path.join(RACINE, 'src/data/sounds.json'));

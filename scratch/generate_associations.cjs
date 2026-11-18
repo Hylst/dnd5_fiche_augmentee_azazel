@@ -1,6 +1,10 @@
 const fs = require('fs');
+const path = require('path');
 
-const sounds = JSON.parse(fs.readFileSync('d:/0CODE/AIstudio/dnd5-azazel/src/data/sounds.json', 'utf8'));
+// Racine du projet, deduite de l'emplacement du script (le dossier a quitte AIstudio le 18/11/2026)
+const RACINE = path.resolve(__dirname, '..');
+
+const sounds = JSON.parse(fs.readFileSync(path.join(RACINE, 'src/data/sounds.json'), 'utf8'));
 
 // 1. Catégorisation Primaire (Déjà déterminée mais on rassemble les noms de fichiers par catégorie)
 const primaryCategories = {};
@@ -71,5 +75,5 @@ const output = {
     "top_12_most_useful_rpg_sounds": top12
 };
 
-fs.writeFileSync('d:/0CODE/AIstudio/dnd5-azazel/src/data/sfx_associations.json', JSON.stringify(output, null, 4), 'utf8');
+fs.writeFileSync(path.join(RACINE, 'src/data/sfx_associations.json'), JSON.stringify(output, null, 4), 'utf8');
 console.log('Done! Generated association lists in src/data/sfx_associations.json');

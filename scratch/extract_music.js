@@ -1,4 +1,8 @@
 const fs = require('fs');
+const path = require('path');
+
+// Racine du projet, deduite de l'emplacement du script (le dossier a quitte AIstudio le 18/11/2026)
+const RACINE = path.resolve(__dirname, '..');
 
 const userFilesList = [
     "ancient_dragon_s_lament.mp3",
@@ -115,7 +119,7 @@ const userFilesList = [
 // Clean formatting if necessary
 const targetFiles = new Set(userFilesList.map(f => f.trim()));
 
-const content = fs.readFileSync('d:/0CODE/AIstudio/dnd5-azazel/mp3_online.csv', 'utf8');
+const content = fs.readFileSync(path.join(RACINE, 'mp3_online.csv'), 'utf8');
 // Handle possible BOM
 const cleanContent = content.charCodeAt(0) === 0xFEFF ? content.slice(1) : content;
 
@@ -171,5 +175,5 @@ if (missedFiles.length > 0) {
     console.log("Missed files:", missedFiles);
 }
 
-fs.writeFileSync('d:/0CODE/AIstudio/dnd5-azazel/src/data/musics.json', JSON.stringify(results, null, 2));
+fs.writeFileSync(path.join(RACINE, 'src/data/musics.json'), JSON.stringify(results, null, 2));
 console.log(`Generated musics.json with ${results.length} items`);
