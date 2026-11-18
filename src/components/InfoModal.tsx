@@ -247,14 +247,14 @@ export function InfoModal({ isOpen, onClose }: InfoModalProps) {
                 
                 <div className="flex items-center justify-center gap-3">
                   <a 
-                    href="mailto:geoffroy.streit@gmail.com"
+                    href="mailto:geoffroy.streit@ik.me"
                     className="flex items-center gap-2 bg-pourpre-infernal hover:bg-pourpre-infernal/80 text-parchemin px-6 py-3 rounded-lg font-section transition-transform hover:scale-105 active:scale-95 shadow-md"
                   >
                     <span>Me contacter</span>
                   </a>
                 </div>
                 <div className="mt-4 text-xs font-mono text-cendre">
-                  geoffroy.streit@gmail.com
+                  geoffroy.streit@ik.me
                 </div>
               </div>
             </div>

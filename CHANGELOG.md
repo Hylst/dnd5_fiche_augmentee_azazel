@@ -1,5 +1,9 @@
 # Changelog
 
+## [Non publié] - 2026-11-18
+### Corrigé
+- **Source alignée sur la version en ligne** (`hylst.fr/dnd5_fiche_azazel/`, build du commit `ed272db` retouché dans le dépôt du hub) : adresse de contact `geoffroy.streit@ik.me` dans `InfoModal` (retouche du 12/11), polices auto-hébergées de hylst.fr via `/assets/fonts/fonts.css` à la place de Google Fonts (retouche du 26/10), URL canonique absolue dans `index.html` (retouche du 03/10). Un nouveau build ne fait donc plus régresser ces trois points.
+
 ## [1.4.0] - 2026-04-14
 ### Ajouté
 - **Tracker Tactique de Combat** (`CombatModule`) :
