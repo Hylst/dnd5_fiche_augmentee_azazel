@@ -23,8 +23,40 @@ export const fetchCharacter = async (characterId: string) => {
     }
   }
 
-  // Fallback to initial mock data
+  // Fallback to initial mock data, en reprenant d'abord l'ancien etat Zustand
+  // (`dnd-character-storage`) quand la fiche n'avait jamais ete sauvegardee
+  // par l'ancienne version. Les donnees restent dans le navigateur.
   if (characterId === 'char_azazel_01') {
+    const persisted = localStorage.getItem('dnd-character-storage');
+    if (persisted) {
+      try {
+        const state = JSON.parse(persisted)?.state;
+        if (state?.identity?.name && state?.stats && state?.combat) {
+          return {
+            id: characterId,
+            identity: state.identity,
+            stats: state.stats,
+            combat: state.combat,
+            savingThrows: state.savingThrows || [],
+            skills: state.skills || [],
+            resources: state.resources || [],
+            spellSlots: state.spellSlots || [],
+            knownSpellsIds: (state.spells || []).map((spell: any) => spell.id),
+            favoriteSpellsIds: (state.spells || []).filter((spell: any) => spell.isFavorite).map((spell: any) => spell.id),
+            knownFeatsIds: (state.feats || []).map((feat: any) => feat.id),
+            knownTraitsIds: (state.traits || []).map((trait: any) => trait.id),
+            inventory: (state.inventory || []).map((item: any) => ({
+              itemId: item.id,
+              quantity: item.quantity,
+              equipped: item.equipped,
+            })),
+            currency: state.currency || { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 },
+          };
+        }
+      } catch {
+        // Etat persiste illisible : on garde la fiche modele.
+      }
+    }
     return characterData;
   }
   throw new Error('Character not found');
