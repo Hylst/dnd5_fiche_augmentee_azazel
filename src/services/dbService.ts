@@ -36,6 +36,46 @@ export const saveCharacter = async (characterId: string, data: any): Promise<voi
   console.log(`Character ${characterId} saved to mock backend.`);
 };
 
+export interface CharacterSummary {
+  id: string;
+  name: string;
+}
+
+const DEFAULT_CHARACTER_ID = 'char_azazel_01';
+
+/** Liste les personnages enregistres dans ce navigateur, sans toucher au reste du stockage. */
+export const listCharacters = (): CharacterSummary[] => {
+  const found = new Map<string, string>();
+  const fallbackName = (characterData as any)?.identity?.name || 'Azazel Varn';
+  const defaultDeleted = localStorage.getItem('dnd5_default_deleted') === '1';
+  if (!defaultDeleted) found.set(DEFAULT_CHARACTER_ID, fallbackName);
+
+  for (let index = 0; index < localStorage.length; index += 1) {
+    const key = localStorage.key(index);
+    if (!key || !key.startsWith('character_')) continue;
+    const id = key.slice('character_'.length);
+    if (!id) continue;
+    try {
+      const data = JSON.parse(localStorage.getItem(key) || '{}');
+      found.set(id, data?.identity?.name || found.get(id) || id);
+    } catch {
+      found.set(id, found.get(id) || id);
+    }
+  }
+
+  return [...found.entries()]
+    .map(([id, name]) => ({ id, name }))
+    .sort((a, b) => a.name.localeCompare(b.name, 'fr'));
+};
+
+/** Supprime la fiche d'un personnage ; les autres cles du navigateur restent intactes. */
+export const deleteCharacter = (characterId: string): void => {
+  localStorage.removeItem(`character_${characterId}`);
+  if (characterId === DEFAULT_CHARACTER_ID) {
+    localStorage.setItem('dnd5_default_deleted', '1');
+  }
+};
+
 export const fetchSpellsByIds = async (spellIds: string[]): Promise<Spell[]> => {
   await delay(100);
   return (spellsData as Spell[]).filter(spell => spellIds.includes(spell.id));

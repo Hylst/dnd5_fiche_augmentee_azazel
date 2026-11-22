@@ -2,10 +2,16 @@ import { useState, useEffect, useMemo } from 'react';
 import { useCharacterStore } from '../store/characterStore';
 import { Dices, X, Trash2, Search, Download } from 'lucide-react';
 import { cn } from '../lib/utils';
+import { playSfx } from '../lib/sfx';
 
 export function DiceRoller() {
   const { diceRolls, rollDice, clearRolls } = useCharacterStore();
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleRoll = (notation: string, reason: string) => {
+    rollDice(notation, reason);
+    playSfx('dice_roll.mp3');
+  };
 
   // Auto-open when a new roll is added
   useEffect(() => {
@@ -93,7 +99,7 @@ export function DiceRoller() {
             {quickRolls.map((qr) => (
               <button
                 key={qr.label}
-                onClick={() => rollDice(qr.notation, `Jet de ${qr.label}`)}
+                onClick={() => handleRoll(qr.notation, `Jet de ${qr.label}`)}
                 className="py-1.5 px-2 bg-parchemin border border-or/30 rounded font-numbers text-encre hover:bg-or/20 hover:text-pourpre-infernal transition-colors shadow-sm text-sm"
               >
                 {qr.label}

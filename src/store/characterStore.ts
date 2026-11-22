@@ -130,6 +130,7 @@ export interface CharacterState {
     hair: string;
     origin: string;
     player: string;
+    portrait?: string;
     description: string;
     quote: string;
     notes: string;
@@ -177,6 +178,7 @@ export interface CharacterState {
   }[];
   inventory: Item[];
   currency: Currency;
+  characterId: string;
   isLoading: boolean;
   diceRolls: RollResult[];
   notifications: Notification[];
@@ -187,6 +189,7 @@ export interface CharacterState {
   loadCharacter: (id: string) => Promise<void>;
   loadCharacterFromJson: (data: any) => Promise<void>;
   getSerializableState: () => any;
+  updateIdentity: (patch: Partial<CharacterState['identity']>) => void;
   addXp: (amount: number) => void;
   levelUp: () => void;
   updateHp: (amount: number) => void;
@@ -228,7 +231,8 @@ export interface CharacterState {
   removeBuff: (id: string) => void;
 }
 
-const defaultState: Omit<CharacterState, 'addNotification' | 'removeNotification' | 'loadCharacter' | 'loadCharacterFromJson' | 'getSerializableState' | 'addXp' | 'levelUp' | 'updateHp' | 'updateHpMax' | 'updateTempHp' | 'toggleInspiration' | 'updateStat' | 'useResource' | 'shortRest' | 'longRest' | 'castSpell' | 'toggleSpellFavorite' | 'toggleSpellPrepared' | 'addSpell' | 'removeSpell' | 'toggleSpellSlot' | 'addFeat' | 'removeFeat' | 'addTrait' | 'removeTrait' | 'addItem' | 'removeItem' | 'updateItemQuantity' | 'toggleItemEquipped' | 'updateCurrency' | 'updateNotes' | 'rollDice' | 'clearRolls' | 'addCondition' | 'removeCondition' | 'setExhaustion' | 'nextTurn' | 'resetCombatTracker' | 'addTarget' | 'removeTarget' | 'addBuff' | 'removeBuff'> = {
+const defaultState: Omit<CharacterState, 'addNotification' | 'removeNotification' | 'loadCharacter' | 'loadCharacterFromJson' | 'getSerializableState' | 'updateIdentity' | 'addXp' | 'levelUp' | 'updateHp' | 'updateHpMax' | 'updateTempHp' | 'toggleInspiration' | 'updateStat' | 'useResource' | 'shortRest' | 'longRest' | 'castSpell' | 'toggleSpellFavorite' | 'toggleSpellPrepared' | 'addSpell' | 'removeSpell' | 'toggleSpellSlot' | 'addFeat' | 'removeFeat' | 'addTrait' | 'removeTrait' | 'addItem' | 'removeItem' | 'updateItemQuantity' | 'toggleItemEquipped' | 'updateCurrency' | 'updateNotes' | 'rollDice' | 'clearRolls' | 'addCondition' | 'removeCondition' | 'setExhaustion' | 'nextTurn' | 'resetCombatTracker' | 'addTarget' | 'removeTarget' | 'addBuff' | 'removeBuff'> = {
+  characterId: 'char_azazel_01',
   isLoading: true,
   notifications: [],
   identity: {
@@ -331,6 +335,7 @@ export const useCharacterStore = create<CharacterState>()(
           const inventory = await fetchItemsByIds(charData.inventory);
 
           set({
+            characterId: id,
             identity: charData.identity,
             stats: charData.stats as Record<Stat, number>,
             combat: {
@@ -371,6 +376,7 @@ export const useCharacterStore = create<CharacterState>()(
           const inventory = await fetchItemsByIds(charData.inventory || []);
 
           set({
+            characterId: charData.id || get().characterId,
             identity: charData.identity,
             stats: charData.stats as Record<Stat, number>,
             combat: {
@@ -398,7 +404,7 @@ export const useCharacterStore = create<CharacterState>()(
       getSerializableState: () => {
         const state = get();
         return {
-          id: "char_azazel_01", // Or dynamic if we support multiple characters
+          id: state.characterId,
           identity: state.identity,
           stats: state.stats,
           combat: state.combat,
@@ -414,6 +420,10 @@ export const useCharacterStore = create<CharacterState>()(
           currency: state.currency
         };
       },
+
+      updateIdentity: (patch) => set((state) => ({
+        identity: { ...state.identity, ...patch }
+      })),
 
       addXp: (amount: number) => set((state) => ({
         identity: { ...state.identity, xp: state.identity.xp + amount }

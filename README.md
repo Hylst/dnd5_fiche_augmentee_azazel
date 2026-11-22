@@ -95,4 +95,11 @@ src/
 
 ## 📄 Licence
 
-Projet personnel — © Geoffroy Streit (Hylst). Usage libre pour sessions de JDR. Les musiques sont des compositions originales de l'auteur.
+Code : AGPL-3.0-or-later (voir `LICENSE`). Les musiques et effets sonores sont des compositions originales de Geoffroy Streit (Hylst), tous droits réservés.
+
+## Publication Hylst
+
+- Application servie sur `https://games.hylst.fr/dnd5_fiche_azazel/` depuis le 22/11/2026 (301 depuis `hylst.fr/dnd5_fiche_azazel/`).
+- Multi-personnages : creation, renommage, portrait, suppression, sauvegarde locale ; une fiche modele Azazel reste disponible.
+- Sonorisation : 108 musiques et 267 effets du hub Hylst, son de des sur chaque jet.
+- Ancienne adresse : export des donnees sur `https://hylst.fr/recuperation-dnd5.html`, restauration sur `https://games.hylst.fr/restauration-dnd5.html`.

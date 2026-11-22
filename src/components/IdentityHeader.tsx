@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, type ChangeEvent } from 'react';
 import { useCharacterStore, calculateModifier } from '../store/characterStore';
-import { Sparkles, ArrowUpCircle, Plus, X, Download } from 'lucide-react';
+import { Sparkles, ArrowUpCircle, Plus, X, Download, Pencil, Upload } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { ExportModal } from './ExportModal';
 
@@ -10,12 +10,14 @@ const XP_THRESHOLDS = [
 ];
 
 export function IdentityHeader() {
-  const { identity, combat, stats, toggleInspiration, addXp, levelUp, updateHpMax } = useCharacterStore();
+  const { identity, combat, stats, toggleInspiration, addXp, levelUp, updateHpMax, updateIdentity } = useCharacterStore();
   const [xpInput, setXpInput] = useState('');
   const [isPortraitExpanded, setIsPortraitExpanded] = useState(false);
   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
   const [isExportModalOpen, setIsExportModalOpen] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [hpIncrease, setHpIncrease] = useState('');
+  const portrait = identity.portrait || './azazel.webp';
   
   const currentLevelIndex = identity.level - 1;
   const xpForCurrentLevel = XP_THRESHOLDS[currentLevelIndex] || 0;
@@ -65,7 +67,7 @@ export function IdentityHeader() {
           onClick={handlePortraitClick}
         >
           <div className="absolute inset-0 bg-pourpre-infernal/20 group-hover:bg-pourpre-infernal/40 transition-colors z-10" />
-          <img src="./azazel.webp" alt={identity.name} className="w-full h-full object-cover relative z-0 group-hover:scale-110 transition-transform duration-500" />
+          <img src={portrait} alt={identity.name} className="w-full h-full object-cover relative z-0 group-hover:scale-110 transition-transform duration-500" />
         </div>
         
         <div className="flex-1 space-y-4 w-full">
@@ -103,6 +105,14 @@ export function IdentityHeader() {
                 >
                   <Download className="w-4 h-4" />
                   Exporter
+                </button>
+                <button 
+                  onClick={() => setIsEditModalOpen(true)}
+                  className="flex items-center gap-2 px-3 py-1 rounded-full border bg-parchemin border-or/30 text-cendre hover:text-encre transition-colors text-sm font-section uppercase no-print"
+                  title="Modifier l'identité du personnage"
+                >
+                  <Pencil className="w-4 h-4" />
+                  Éditer
                 </button>
                 <button 
                   onClick={toggleInspiration}
@@ -187,7 +197,7 @@ export function IdentityHeader() {
           onClick={() => setIsPortraitExpanded(false)}
         >
           <div className="relative max-w-2xl w-full aspect-square md:aspect-auto md:h-[80vh] rounded-2xl overflow-hidden border-4 border-or shadow-[0_0_50px_rgba(201,147,58,0.5)] animate-in fade-in zoom-in duration-300">
-            <img src="./azazel.webp" alt={identity.name} className="w-full h-full object-cover" />
+            <img src={portrait} alt={identity.name} className="w-full h-full object-cover" />
             <button 
               className="absolute top-4 right-4 bg-noir-velours/50 text-parchemin p-2 rounded-full hover:bg-rouge-sang transition-colors"
               onClick={(e) => { e.stopPropagation(); setIsPortraitExpanded(false); }}
@@ -280,6 +290,141 @@ export function IdentityHeader() {
         isOpen={isExportModalOpen} 
         onClose={() => setIsExportModalOpen(false)} 
       />
+
+      {isEditModalOpen && (
+        <IdentityEditModal
+          identity={identity}
+          onSave={(patch) => updateIdentity(patch)}
+          onClose={() => setIsEditModalOpen(false)}
+        />
+      )}
+    </div>
+  );
+}
+
+const identityFields: { key: string; label: string; type?: string }[] = [
+  { key: 'name', label: 'Nom' },
+  { key: 'nickname', label: 'Surnom' },
+  { key: 'race', label: 'Race' },
+  { key: 'subrace', label: 'Sous-race' },
+  { key: 'class', label: 'Classe' },
+  { key: 'subclass', label: 'Sous-classe' },
+  { key: 'level', label: 'Niveau', type: 'number' },
+  { key: 'alignment', label: 'Alignement' },
+  { key: 'age', label: 'Âge', type: 'number' },
+  { key: 'height', label: 'Taille' },
+  { key: 'weight', label: 'Poids' },
+  { key: 'eyes', label: 'Yeux' },
+  { key: 'skin', label: 'Peau' },
+  { key: 'hair', label: 'Cheveux' },
+  { key: 'origin', label: 'Origine' },
+  { key: 'player', label: 'Joueur' },
+];
+
+function IdentityEditModal({ identity, onSave, onClose }: { identity: any; onSave: (patch: any) => void; onClose: () => void }) {
+  const [draft, setDraft] = useState<any>(() => ({ ...identity }));
+
+  const setField = (key: string, value: string | number | undefined) => {
+    setDraft((current: any) => ({ ...current, [key]: value }));
+  };
+
+  const handlePortrait = (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    if (file.size > 4 * 1024 * 1024) {
+      window.alert('Image trop lourde (4 Mo maximum).');
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      const image = new Image();
+      image.onload = () => {
+        const size = Math.min(512, image.width, image.height);
+        const canvas = document.createElement('canvas');
+        canvas.width = size;
+        canvas.height = size;
+        const context = canvas.getContext('2d');
+        if (!context) return;
+        const sourceX = (image.width - size) / 2;
+        const sourceY = (image.height - size) / 2;
+        context.drawImage(image, sourceX, sourceY, size, size, 0, 0, size, size);
+        setField('portrait', canvas.toDataURL('image/webp', 0.82));
+      };
+      image.src = String(reader.result);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  return (
+    <div
+      className="fixed inset-0 z-[110] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+      onClick={onClose}
+    >
+      <div
+        className="bg-parchemin-fonce border-2 border-or rounded-xl shadow-2xl max-w-2xl w-full p-6 max-h-[90vh] overflow-y-auto"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="font-title-main text-2xl text-pourpre-infernal">Identité du personnage</h2>
+          <button onClick={onClose} className="p-1 rounded-full hover:bg-or/10" aria-label="Fermer">
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <div className="flex items-center gap-4 mb-5">
+          <img
+            src={draft.portrait || './azazel.webp'}
+            alt=""
+            className="w-20 h-20 rounded-full object-cover border-2 border-or/50"
+          />
+          <div className="flex flex-col gap-2">
+            <label className="inline-flex items-center gap-2 px-3 py-1.5 rounded border border-or/30 bg-parchemin text-sm font-section uppercase cursor-pointer hover:bg-or/10">
+              <Upload className="w-4 h-4" /> Changer le portrait
+              <input type="file" accept="image/*" className="hidden" onChange={handlePortrait} />
+            </label>
+            {draft.portrait && (
+              <button
+                onClick={() => setField('portrait', undefined)}
+                className="text-xs text-rouge-sang underline text-left"
+              >
+                Revenir au portrait par défaut
+              </button>
+            )}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 font-body text-sm">
+          {identityFields.map((field) => (
+            <label key={field.key} className="flex flex-col gap-1">
+              <span className="text-[10px] uppercase tracking-wider text-cendre">{field.label}</span>
+              <input
+                type={field.type || 'text'}
+                value={draft[field.key] ?? ''}
+                onChange={(event) => setField(
+                  field.key,
+                  field.type === 'number' ? Number(event.target.value) : event.target.value,
+                )}
+                className="bg-parchemin border border-or/30 rounded px-2 py-1.5 text-encre focus:outline-none focus:border-or-vif"
+              />
+            </label>
+          ))}
+        </div>
+
+        <div className="flex justify-end gap-3 mt-6 pt-4 border-t border-or/30">
+          <button
+            onClick={onClose}
+            className="px-4 py-2 rounded border border-or/30 bg-parchemin text-cendre hover:text-encre"
+          >
+            Annuler
+          </button>
+          <button
+            onClick={() => { onSave(draft); onClose(); }}
+            className="px-4 py-2 rounded bg-pourpre-infernal text-parchemin hover:bg-pourpre-infernal/90"
+          >
+            Enregistrer
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

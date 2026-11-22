@@ -1,5 +1,11 @@
 import { CharacterState } from '../store/characterStore';
-import { fetchCharacter as dbFetchCharacter, saveCharacter as dbSaveCharacter } from './dbService';
+import {
+  fetchCharacter as dbFetchCharacter,
+  saveCharacter as dbSaveCharacter,
+  listCharacters as dbListCharacters,
+  deleteCharacter as dbDeleteCharacter,
+  type CharacterSummary,
+} from './dbService';
 
 export interface ICharacterRepository {
   /**
@@ -17,6 +23,12 @@ export interface ICharacterRepository {
    * Instantiates or imports character data from an external source (e.g. JSON file).
    */
   importCharacter(jsonData: string): Promise<any>;
+
+  /** Liste les personnages enregistres localement. */
+  listCharacters(): CharacterSummary[];
+
+  /** Supprime une fiche locale. */
+  deleteCharacter(id: string): void;
 }
 
 /**
@@ -47,6 +59,14 @@ class LocalCharacterRepository implements ICharacterRepository {
     } catch (e) {
       throw new Error(`Erreur lors de l'import : ${(e as Error).message}`);
     }
+  }
+
+  listCharacters(): CharacterSummary[] {
+    return dbListCharacters();
+  }
+
+  deleteCharacter(id: string): void {
+    dbDeleteCharacter(id);
   }
 }
 
