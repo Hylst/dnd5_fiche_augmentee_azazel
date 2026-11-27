@@ -101,7 +101,7 @@ export function InfoModal({ isOpen, onClose }: InfoModalProps) {
                   <span className="text-or-vif font-bold">2</span>
                   <div>
                     <strong className="text-pourpre-infernal text-lg">Moteur Audio Dual & Bibliothèque</strong>
-                    <p className="text-sm mt-1">Lisez simultanément vos pistes d'ambiance et vos bruitages avec des volumes indépendants ! Lecteur musical avec 109 pistes originales, et une Soundboard de 267 effets sonores classés.</p>
+                    <p className="text-sm mt-1">Lisez simultanément vos pistes d'ambiance et vos bruitages avec des volumes indépendants ! Lecteur musical avec 108 pistes originales, et une Soundboard de 267 effets sonores classés.</p>
                   </div>
                 </li>
                 <li className="flex gap-4 p-3 bg-parchemin-fonce rounded border border-or/10">
@@ -152,7 +152,7 @@ export function InfoModal({ isOpen, onClose }: InfoModalProps) {
               
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="p-4 border border-or/20 rounded bg-parchemin-fonce">
-                  <h4 className="font-section text-or-vif mb-2 border-b border-or/10 pb-2">🎵 109 Musiques Originales</h4>
+                  <h4 className="font-section text-or-vif mb-2 border-b border-or/10 pb-2">🎵 108 Musiques Originales</h4>
                   <p className="text-sm font-body">
                     Une bibliothèque musicale Heroic Fantasy (streamée), riche de métadonnées techniques et narratives. Modes de tri variés, filtres croisés et lecteur persistant.
                   </p>
@@ -239,9 +239,10 @@ export function InfoModal({ isOpen, onClose }: InfoModalProps) {
                   Développé et conçu avec passion pour offrir une alternative moderne, luxueuse et sécurisée aux fiches papier et PDF. 
                 </p>
                 
+                <p className="font-body text-encre-claire mb-6 italic">Création assistée par IA, sous la direction de l'auteur.</p>
                 <div className="bg-or/10 border border-or/20 rounded p-3 mb-6">
                   <p className="text-sm font-body font-medium text-encre text-center">
-                    À l'exception des effets sonores (SFX), l'ensemble de la <strong className="text-pourpre-infernal">bibliothèque musicale des 109 pistes</strong> intégrée dans l'application est une composition originale de Geoffroy, réalisée pour amplifier vos émotions en JDR.
+                    À l'exception des effets sonores (SFX), l'ensemble de la <strong className="text-pourpre-infernal">bibliothèque musicale des 108 pistes</strong> intégrée dans l'application est une composition originale de Geoffroy, réalisée pour amplifier vos émotions en JDR.
                   </p>
                 </div>
                 

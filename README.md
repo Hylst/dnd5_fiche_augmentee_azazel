@@ -25,7 +25,7 @@ Aucun appel à des IA ou API externes. Tout fonctionne dans votre navigateur, av
 - **Moteur Audio Dual** : Lecture **simultanée** d'une musique d'ambiance et d'un effet sonore ponctuel.
 - **Déclencheurs Événementiels** : Activation de thèmes sonores spécifiques (ex: clic sur l'avatar) via un système de CustomEvents.
 - **Soundboard SFX** : 267 effets sonores en 4 vues (Top 20, Par Situation, Par Tension, Par Catégorie) avec système de **favoris persistants** et contrôles de volume indépendants.
-- **Bibliothèque Musicale** : 109 compositions Heroic Fantasy originales (Geoffroy / Hylst) avec :
+- **Bibliothèque Musicale** : 108 compositions Heroic Fantasy originales (Geoffroy / Hylst) avec :
   - Lecteur "Now Playing" fixe (seekbar, loop, prev/next, volume musique dédié)
   - 7 modes de tri (Alpha, Favoris, Durée, BPM, Genre, Ambiance, Usage)
   - Panneau de filtres + modal de détails avec métadonnées complètes
@@ -83,7 +83,7 @@ src/
 │   ├── CombatModule.tsx       # Combat & attaques
 │   └── ...
 ├── data/                # Données statiques JSON
-│   ├── musics.json            # Métadonnées des 109 pistes musicales
+│   ├── musics.json            # Métadonnées des 108 pistes musicales
 │   ├── sfx_associations.json  # Organisation catégorielle des SFX
 │   └── sounds.json            # Index des 267 effets sonores
 ├── store/               # Zustand (état global)
